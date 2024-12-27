@@ -6,7 +6,7 @@ const buttonVariants = tv({
   variants: {
     variant: {
       primary: 'bg-blue-800 text-zinc-50 hover:bg-blue-900',
-      secondary: 'bg-zinc-900 text-zinc-50 hover:bg-zjinc-800',
+      secondary: 'bg-zinc-900 text-zinc-50 hover:bg-zinc-800',
     },
   },
   defaultVariants: {
