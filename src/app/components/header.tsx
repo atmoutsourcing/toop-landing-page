@@ -7,37 +7,37 @@ import { Button } from './button'
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between px-8 py-4 bg-zinc-950">
+    <header className="flex items-center justify-between bg-zinc-950 px-12 py-4">
       <Link href="/" className="cursor-pointer">
-        <Image src={logo} alt="Logo" className="w-28 h-9" />
+        <Image src={logo} alt="Logo" className="h-9 w-28" />
       </Link>
 
-      <div className="hidden md:flex space-x-6 text-zinc-100 text-md">
-        <div className="flex flex-row items-center gap-1 hover:text-blue-500 transition cursor-pointer">
+      <div className="text-md hidden space-x-6 text-zinc-100 md:flex">
+        <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
           <Link href="/">Home</Link>
         </div>
 
-        <div className="flex flex-row items-center gap-1 hover:text-blue-500 transition cursor-pointer">
+        <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
           <Link href="/aboutUs">Sobre nós</Link>
         </div>
 
-        <div className="flex flex-row items-center gap-1 hover:text-blue-500 transition cursor-pointer">
+        <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
           <Link href="/plans">Planos</Link>
         </div>
 
-        <div className="flex flex-row items-center gap-1 hover:text-blue-500 transition cursor-pointer">
+        <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
           <Link href="/contacts">Contatos</Link>
         </div>
 
-        <div className="flex flex-row items-center gap-1 hover:text-blue-500 transition cursor-pointer">
+        <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
           <Link href="/blog">Blog</Link>
         </div>
       </div>
 
       <div className="space-x-4">
-        <Button>Login</Button>
+        <Button>Teste grátis por 15 dias</Button>
 
-        <Button> Teste de graça</Button>
+        <Button>Login</Button>
       </div>
     </header>
   )
