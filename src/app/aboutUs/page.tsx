@@ -5,13 +5,14 @@ import atmEvs from '../../../public/atm_evs_logo.jpg'
 import atmHome from '../../../public/atm_home.jpg'
 import grupoAtm from '../../../public/grupo_atm.png'
 import valores from '../../../public/valores_atm.png'
+import atmX50 from '../../../public/atmX50.png'
 
-import { House, Smartphone, SmartphoneCharging } from 'lucide-react'
+import { Award, Headset, House, Pin, Smartphone, SmartphoneCharging } from 'lucide-react'
 
 export default function AboutUs() {
   return (
     <div className="flex flex-col ">
-      <div className="bg-zinc-950  min-h-screen flex flex-row items-center justify-center gap-6">
+      <div className="bg-zinc-950  min-h-screen flex flex-row items-center justify-center gap-6 p-10">
         <div className="mb-4 md:mb-0 md:ml-16">
           <Image
             className="h-auto w-full rounded-xl md:w-[1500px]"
@@ -43,17 +44,17 @@ export default function AboutUs() {
 
       <div className=" bg-zinc-950 min-h-[300px] gap-8 flex items-center  justify-center">
         <div className="flex items-center min-w-[50%] justify-center flex-col">
-          <div>proposito</div>
+          <div>imagem proposito</div>
           <div>
-            Ajudar e inspirar com exemplo para dar sentido a vida em Deus.
+            "Ajudar e inspirar com exemplo para dar sentido a vida em Deus."
           </div>
         </div>
         <div className="flex items-center justify-center flex-col">
-          <div>missao</div>
+          <div>imagem missao</div>
           <div>
-            A nossa missão é ajudar os clientes e colaboradores a garantirem uma
+            "A nossa missão é ajudar os clientes e colaboradores a garantirem uma
             qualidade de vida e realização no seu trabalho com suporte da
-            tecnologia.
+            tecnologia."
           </div>
         </div>
       </div>
@@ -87,9 +88,9 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="bg-zinc-950  min-h-screen flex flex-row items-center justify-center gap-6 p-8">
-        <div className="flex flex-col gap-8 max-w-[700px]">
-          <h1 className="h-auto w-full text-center text-zinc-100 lg:text-8xl ">
+      <div className="bg-zinc-950 flex flex-row items-center justify-center gap-20 p-10">
+        <div className="flex flex-col gap-8 max-w-[800px]">
+          <h1 className="h-auto w-full text-center text-zinc-100 lg:text-8xl">
             ATM Outsourcing
           </h1>
           <div className="text-zinc-100">
@@ -114,12 +115,45 @@ export default function AboutUs() {
 
         <div className="mb-4 md:mb-0 md:ml-16">
           <Image
-            className="h-auto w-full rounded-xl md:w-[1500px]"
-            src={imageExample}
+            className="h-auto w-full rounded-xl md:w-[360px]"
+            src={atmX50}
             alt="Example image"
           />
         </div>
       </div>
-    </div>
+
+      <div className=" bg-zinc-9 min-h-[150px] gap-8 flex items-center  justify-between px-10 ">
+          <div className='flex flex-col max-w-[30%] items-center text-center'>
+            <div className='flex flex-row gap-2'>
+
+            <h1 className='text-2xl pb-2 font-bold'>Suporte humanizado</h1>
+            <Headset size={30} />
+            </div>
+            <div className='text-zinc-100'>O ATM Suporte é a solução ideal para sanar os problemas de telefonia móvel da sua empresa.</div>
+          </div>
+
+          <div className="w-[1px] h-24 bg-gray-500 "></div>
+
+          <div className='flex flex-col max-w-[30%] items-center text-center'>
+            <div className='flex flex-row gap-2'>
+              <h1 className='text-2xl pb-2 font-bold'>Líder de mercado</h1>
+              <Award size={30} />
+            </div>
+            <div className='text-zinc-100'>Fundada em 2007, atualmente, somos líderes no segmento de Outsourcing de mobilidade no Brasil.</div>
+          </div>
+
+          <div className="w-[1px] h-24 bg-gray-500 "></div>
+
+          <div className='flex flex-col max-w-[30%] items-center text-center'>
+            <div className='flex flex-row gap-2'>
+              <h1 className='text-2xl pb-2 font-bold'>Manutenção e reparo</h1>
+              <Pin size={30} />
+            </div>
+            <div className='text-zinc-100'>A ATM conta com um laboratório próprio de manutenção, onde realizamos todos os reparos dos equipamentos.</div>
+          </div>
+      </div>
+      
+  
+  </div> 
   )
 }
