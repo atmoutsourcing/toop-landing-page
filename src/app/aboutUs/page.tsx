@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import atmOutsourcing from '../../../public/atm_outsourcing.jpg'
 import atmEvs from '../../../public/atm_evs_logo.jpg'
 import atmHome from '../../../public/atm_home.jpg'
@@ -23,139 +24,137 @@ import {
 export default function AboutUs() {
   return (
     <div className="flex flex-col">
-      <div className="relative flex flex-col gap-6 bg-zinc-950">
-        <div className="flex flex-row items-center justify-between px-[15%]">
-          <div className="flex w-[50%] flex-col gap-4">
-            <h1 className="text-6xl font-bold text-blue-500">Quem Somos</h1>
-            <div className="text-justify">
-              A ATM Outsourcing foi fundada em 2007, atualmente, somos líderes
-              no segmento de Outsourcing de mobilidade no Brasil. Fabricante de
-              Smartphones corporativos homologados pela ANATEL e desenvolvedora
-              de sistemas de MDM, a ATM Outsourcing é referência em soluções de
-              mobilidade corporativa.
-            </div>
+      <div className="flex flex-col items-center justify-between bg-zinc-950 px-[5%] md:flex-row md:px-[15%]">
+        <div className="flex w-full flex-col gap-4 text-center md:w-[50%] md:text-justify">
+          <h1 className="text-4xl font-bold text-blue-500 md:text-6xl">
+            Quem Somos
+          </h1>
+          <div>
+            A ATM Outsourcing foi fundada em 2007, atualmente, somos líderes no
+            segmento de Outsourcing de mobilidade no Brasil. Fabricante de
+            Smartphones corporativos homologados pela ANATEL e desenvolvedora de
+            sistemas de MDM, a ATM Outsourcing é referência em soluções de
+            mobilidade corporativa.
           </div>
+        </div>
+        <Image
+          className="hidden h-auto w-[80%] rounded-xl md:block md:w-[50%]"
+          src={toop}
+          alt="Example image"
+        />
+      </div>
+
+      <div className="flex flex-col bg-zinc-950 px-[5%] py-20 md:px-[15%]">
+        {/* Cabeçalho */}
+        <div className="flex flex-col items-center gap-4 p-5 text-center md:flex-row md:p-10 md:text-left">
+          <h1 className="font-sans text-3xl md:text-4xl">
+            Objetivo e vantagens de usar o{' '}
+          </h1>
           <Image
-            className="h-auto w-full rounded-xl md:w-[500px]"
-            src={toop}
+            className="h-auto w-[80px] md:w-[150px]"
+            src={logo}
             alt="Example image"
           />
         </div>
-        <div className="flex flex-col px-[15%] py-20">
-          <div className="flex flex-row items-center gap-2 p-10">
-            <h1 className="font-sans text-4xl">
-              Objetivo e vantagens de usar o{' '}
-            </h1>
-            <Image
-              className="h-auto w-full rounded-xl md:w-[150px]"
-              src={logo}
-              alt="Example image"
-            />
-          </div>
-          <div className="flex flex-col gap-10 px-10">
-            <div className="flex flex-row gap-10">
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
 
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
-
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
-
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
+        <div className="flex flex-col gap-10 px-5 md:px-10">
+          <div className="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:grid-cols-4 md:text-left">
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
             </div>
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
+            </div>
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
+            </div>
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
+            </div>
+          </div>
 
-            <div className="flex flex-row gap-10">
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
-
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
-
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
-
-              <div className="max-w-[250px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
+            </div>
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
+            </div>
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
+            </div>
+            <div className="max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nam
+              quae voluptates quos possimus nisi eligendi! Inventore, reiciendis
+              doloribus dolores modi corrupti earum veniam alias omnis amet?
+              Magni, ipsa pariatur!
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex min-h-screen flex-row items-center justify-center gap-6 bg-zinc-950 p-10">
-        <div className="mb-4 md:mb-0 md:ml-16">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-zinc-950 p-6 md:flex-row md:p-10">
+        <div className="mb-6 flex w-full justify-center md:mb-0 md:ml-16 md:w-auto">
           <Image
-            className="h-auto w-full rounded-xl md:w-[800px]"
+            className="h-auto w-[90%] rounded-xl md:w-[800px]"
             src={valores}
             alt="Example image"
           />
         </div>
-        <div className="flex flex-col gap-8">
+
+        <div className="flex flex-col items-center gap-8 md:items-start">
           <Image
-            className="mb-10 h-auto w-full rounded-xl md:w-[700px]"
+            className="h-auto w-[90%] rounded-xl md:w-[700px]"
             src={grupoAtm}
             alt="Example image"
           />
 
-          <div className="flex flex-row items-center justify-end gap-4 text-zinc-100">
+          <div className="flex flex-col items-center justify-end gap-4 text-zinc-100 md:flex-row">
             <Image
-              className="mb-10 h-auto w-full rounded-xl md:w-[200px]"
+              className="h-auto w-[60%] rounded-xl md:w-[200px]"
               src={manoel}
               alt="Example image"
             />
 
-            <div className="flex flex-col">
+            <div className="text-center md:text-end">
               <div className="text-2xl font-bold">Manoel de Cesare Filho</div>
-              <div className="text-end">CEO ATM Outsourcing</div>
+              <div>CEO ATM Outsourcing</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex min-h-[300px] items-center justify-center gap-8 bg-zinc-950 p-10 pb-32">
-        <div className="flex min-w-[50%] flex-col items-center justify-center pl-10">
+      <div className="flex min-h-[300px] flex-col items-center justify-center gap-8 bg-zinc-950 p-6 pb-16 md:flex-row md:p-10 md:pb-32">
+        <div className="flex flex-col items-center justify-center text-center md:w-[50%] md:pl-10">
           <svg
             className="text-blue-600"
             stroke="currentColor"
             fill="currentColor"
             strokeWidth="0"
             viewBox="0 0 576 512"
-            height="8em"
-            width="8em"
+            height="6em"
+            width="6em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M275.3 250.5c7 7.4 18.4 7.4 25.5 0l108.9-114.2c31.6-33.2 29.8-88.2-5.6-118.8-30.8-26.7-76.7-21.9-104.9 7.7L288 36.9l-11.1-11.6C248.7-4.4 202.8-9.2 172 17.5c-35.3 30.6-37.2 85.6-5.6 118.8l108.9 114.2zm290 77.6c-11.8-10.7-30.2-10-42.6 0L430.3 402c-11.3 9.1-25.4 14-40 14H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h78.3c15.9 0 30.7-10.9 33.3-26.6 3.3-20-12.1-37.4-31.6-37.4H192c-27 0-53.1 9.3-74.1 26.3L71.4 384H16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h356.8c14.5 0 28.6-4.9 40-14L564 377c15.2-12.1 16.4-35.3 1.3-48.9z"></path>
@@ -167,9 +166,9 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="h-80 w-[1px] bg-gray-500"></div>
+        <div className="hidden h-72 w-[1px] bg-gray-500 md:block"></div>
 
-        <div className="flex flex-col items-center justify-center pl-10">
+        <div className="flex flex-col items-center justify-center text-center md:w-[50%] md:pl-10 md:text-left">
           <svg
             className="text-blue-600"
             stroke="currentColor"
@@ -178,8 +177,8 @@ export default function AboutUs() {
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
-            height="8em"
-            width="8em"
+            height="6em"
+            width="6em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
@@ -285,32 +284,41 @@ export default function AboutUs() {
       </h1>
 
       <div className="bg-zinc-9 flex min-h-[300px] items-center justify-center gap-32">
-        <div className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500">
+        <Link
+          href="https://atmoutsourcing.com.br/"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
+        >
           <Image
             className="h-auto w-full rounded-xl md:w-[100px]"
             src={atmOutsourcing}
             alt="Example image"
           />
           <Smartphone size="60" />
-        </div>
+        </Link>
 
-        <div className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500">
+        <Link
+          href="https://atmevs.com.br/"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
+        >
           <Image
             className="h-auto w-full rounded-xl md:w-[100px]"
             src={atmEvs}
             alt="Example image"
           />
           <SmartphoneCharging size="60" />
-        </div>
+        </Link>
 
-        <div className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500">
+        <Link
+          href="https://atmhome.com.br/"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
+        >
           <Image
             className="h-auto w-full rounded-xl md:w-[100px]"
             src={atmHome}
             alt="Example image"
           />
           <House size="60" />
-        </div>
+        </Link>
       </div>
     </div>
   )
