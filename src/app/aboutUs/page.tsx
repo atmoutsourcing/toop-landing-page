@@ -202,7 +202,7 @@ export default function AboutUs() {
         <div className="text-center font-sans text-4xl">Nossos Valores</div>
 
         <div className="flex w-[100%] flex-row items-center justify-center gap-10 pt-10">
-          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:w-[800px] hover:items-start">
+          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[800px]">
             <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
               <Heart
                 size={80}
@@ -211,7 +211,7 @@ export default function AboutUs() {
             </div>
             <div
               style={{ pointerEvents: 'none' }}
-              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
             >
               <h1 className="text-3xl font-bold text-blue-800">Respeito</h1>
               <div className="absolute text-lg text-zinc-950">
@@ -222,13 +222,13 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:w-[850px] hover:items-start">
+          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
             <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
               <Sparkles size={80} className="text-blue-700" />
             </div>
             <div
               style={{ pointerEvents: 'none' }}
-              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
             >
               <h1 className="text-3xl font-bold text-blue-800">
                 Autenticidade
@@ -243,13 +243,13 @@ export default function AboutUs() {
         </div>
 
         <div className="flex w-[100%] flex-row items-center justify-center gap-10 pt-10">
-          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:w-[800px] hover:items-start">
+          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[800px]">
             <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
               <Lightbulb size={80} className="text-blue-800" />
             </div>
             <div
               style={{ pointerEvents: 'none' }}
-              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
             >
               <h1 className="text-3xl font-bold text-blue-800">Inovação</h1>
               <div className="absolute text-lg text-zinc-950">
@@ -260,12 +260,12 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:w-[850px] hover:items-start">
+          <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
             <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
               <Handshake size={80} className="text-blue-800" />
             </div>
             <div
-              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+              className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
               style={{ pointerEvents: 'none' }}
             >
               <h1 className="text-3xl font-bold text-blue-800">Confiança</h1>
@@ -279,17 +279,17 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <h1 className="pt-4 text-center font-sans text-4xl">
+      <h1 className="py-4 text-center font-sans text-xl md:text-4xl">
         Conheça mais sobre as outras nossas empresas:
       </h1>
 
-      <div className="bg-zinc-9 flex min-h-[300px] items-center justify-center gap-32">
+      <div className="bg-zinc-9 flex min-h-[300px] flex-col items-center justify-center gap-8 md:flex-row md:gap-x-28">
         <Link
           href="https://atmoutsourcing.com.br/"
           className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
         >
           <Image
-            className="h-auto w-full rounded-xl md:w-[100px]"
+            className="w-[100px]"
             src={atmOutsourcing}
             alt="Example image"
           />
@@ -300,11 +300,7 @@ export default function AboutUs() {
           href="https://atmevs.com.br/"
           className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
         >
-          <Image
-            className="h-auto w-full rounded-xl md:w-[100px]"
-            src={atmEvs}
-            alt="Example image"
-          />
+          <Image className="w-[100px]" src={atmEvs} alt="Example image" />
           <SmartphoneCharging size="60" />
         </Link>
 
@@ -312,11 +308,7 @@ export default function AboutUs() {
           href="https://atmhome.com.br/"
           className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
         >
-          <Image
-            className="h-auto w-full rounded-xl md:w-[100px]"
-            src={atmHome}
-            alt="Example image"
-          />
+          <Image className="w-[100px]" src={atmHome} alt="Example image" />
           <House size="60" />
         </Link>
       </div>
