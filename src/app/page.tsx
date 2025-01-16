@@ -52,9 +52,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div className="bg-zinc-905 max-h-[800px] min-h-[700px] flex-col bg-zinc-950 p-10">
-        <h1 className="font-barlow max-w-3xl text-left text-zinc-100 lg:text-5xl">
+        <h1 className="font-barlow max-w-3xl text-left text-xl text-zinc-100 lg:text-5xl">
           O sistema EMM que transforma a gestão de dispositivos em uma{' '}
-          <span className="animate-gradient-cyan-blue bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 bg-[length:200%_200%] bg-clip-text text-transparent">
+          <span className="animate-gradient-cyan-blue bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 bg-[length:200%_200%] bg-clip-text text-xl text-transparent">
             experiência prática e eficiente
           </span>
         </h1>
@@ -71,11 +71,11 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-14">
-            <span className="flex justify-center text-3xl tracking-tighter">
+            <span className="flex justify-center text-xl tracking-tighter md:text-3xl">
               O porquê de empresas adorarem o TOOP
             </span>
 
-            <p className="text-lg">
+            <p className="text-sm md:text-lg">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
 
         <div className="bg-zinc-9 mt-12 flex flex-col border-t border-zinc-950 bg-zinc-900 p-10">
-          <p className="flex justify-center text-3xl font-bold tracking-tighter text-zinc-100">
+          <p className="flex justify-center text-xl font-bold tracking-tighter text-zinc-100 md:text-3xl">
             Parceiros que confiam no TOOP
           </p>
 
@@ -124,8 +124,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="space-y-32 px-20 py-20">
-          <span className="flex justify-center text-4xl font-bold tracking-tighter">
+        <div className="space-y-10 py-20 md:space-y-32 md:px-20">
+          <span className="flex justify-center text-xl font-bold tracking-tighter md:text-4xl">
             Quais são os beneficios de usar o TOOP?
           </span>
 
@@ -536,7 +536,7 @@ export default function Home() {
             </div>
 
             <div className="flex w-[500px] flex-col items-center gap-2 rounded-2xl bg-zinc-900 p-10">
-              <WhatsappLogo className="h-14 w-14 text-green-400" />
+              {/* <WhatsappLogo className="h-14 w-14 text-green-400" /> */}
 
               <span className="flex font-sans text-2xl font-bold tracking-tighter">
                 Atendimento rápido
@@ -598,7 +598,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-36 flex h-[550px] w-full flex-col gap-8 bg-zinc-950 p-12 px-48">
+        {/* <div className="mt-36 flex h-[550px] w-full flex-col gap-8 bg-zinc-950 p-12 px-48">
           <div className="flex flex-row">
             <div className="mr-36 flex-shrink-0">
               <Image className="h-auto w-36" src={logo} alt="logo" />
@@ -730,7 +730,7 @@ export default function Home() {
               alt="teste"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

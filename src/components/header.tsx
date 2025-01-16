@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Button } from './button'
 
 import { useState } from 'react'
-import { AlignJustify, X } from 'lucide-react'
+import { AlignJustify } from 'lucide-react'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)

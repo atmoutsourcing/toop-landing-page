@@ -283,7 +283,7 @@ export default function AboutUs() {
         Conheça mais sobre as outras nossas empresas:
       </h1>
 
-      <div className="bg-zinc-9 flex min-h-[300px] flex-col items-center justify-center gap-8 md:flex-row md:gap-x-28">
+      <div className="bg-zinc-9 flex min-h-[250px] flex-col items-center justify-center gap-8 md:flex-row md:gap-x-28">
         <Link
           href="https://atmoutsourcing.com.br/"
           className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
