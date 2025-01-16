@@ -136,15 +136,11 @@ export default function Contacts() {
                     Qtd. de dispositivos
                   </label>
                   <select
+                    defaultValue="0"
                     id="devices"
                     className="h-[42px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-400 shadow-sm focus:border-blue-500 focus:text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
-                    <option
-                      className="text-zinc-400"
-                      value="0"
-                      disabled
-                      selected
-                    >
+                    <option className="text-zinc-400" value="0" disabled>
                       Clique para selecionar
                     </option>
                     <option value="option1">5 a 50</option>
