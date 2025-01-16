@@ -8,7 +8,7 @@ import { CalendarDays, Copyright, Mail, MapPin, Phone } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="mt-4 flex h-auto w-full flex-col gap-8 bg-zinc-950 p-12 md:mt-36">
+    <footer className="mt-4 flex w-full flex-col gap-8 bg-zinc-950 p-12">
       <div className="flex flex-col md:flex-row">
         <div className="flex items-center justify-center md:mr-24 md:flex-shrink-0 md:items-start">
           <Image className="h-auto w-36 pb-8" src={logo} alt="logo" />
@@ -142,33 +142,6 @@ export function Footer() {
           <Image className="h-auto w-48" src={seloSilverPartner} alt="teste" />
         </div>
       </div>
-
-      {/* <div>
-        <div className="flex flex-col items-center gap-4 pb-8">
-          <div className="flex items-center justify-center gap-2">
-            <div className="flex items-center justify-center gap-4 rounded-full border border-zinc-300 p-2">
-              <WhatsappLogo className="h-5 w-5" />
-            </div>
-
-            <div className="flex items-center justify-center gap-4 rounded-full border border-zinc-300 p-2">
-              <InstagramLogo className="h-5 w-5" />
-            </div>
-
-            <div className="flex items-center justify-center gap-4 rounded-full border border-zinc-300 p-2">
-              <YoutubeLogo className="h-5 w-5" />
-            </div>
-          </div>
-
-          <span className="flex flex-row items-center text-xs text-zinc-400">
-            <Copyright className="h-4 w-4 text-zinc-400" />
-            Copyright todos os direitos reservados - {new Date().getFullYear()}
-          </span>
-        </div>
-
-        <div className="flex items-center justify-center md:items-start md:justify-start">
-          <Image className="h-auto w-48" src={seloSilverPartner} alt="teste" />
-        </div>
-      </div> */}
     </footer>
   )
 }
