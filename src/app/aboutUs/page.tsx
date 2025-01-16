@@ -162,7 +162,7 @@ export default function AboutUs() {
 
           <h1 className="pb-4 text-4xl font-bold text-blue-600">Propósito</h1>
           <div className="font-sans text-xl text-blue-100">
-            "Ajudar e inspirar com exemplo para dar sentido a vida em Deus."
+            Ajudar e inspirar com exemplo para dar sentido a vida em Deus.
           </div>
         </div>
 
@@ -191,9 +191,9 @@ export default function AboutUs() {
           <h1 className="pb-4 text-4xl font-bold text-blue-600">Missão</h1>
 
           <div className="font-sans text-xl text-blue-100">
-            "A nossa missão é ajudar os clientes e colaboradores a garantirem
-            uma qualidade de vida e realização no seu trabalho com suporte da
-            tecnologia."
+            A nossa missão é ajudar os clientes e colaboradores a garantirem uma
+            qualidade de vida e realização no seu trabalho com suporte da
+            tecnologia.
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import logo from '../../../public/logo-white.png'
+import logo from '../../public/logo-white.png'
 import Image from 'next/image'
 import { Button } from './button'
 
