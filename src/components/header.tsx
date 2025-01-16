@@ -7,9 +7,12 @@ import { Button } from './button'
 
 import { useState } from 'react'
 import { AlignJustify } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+
+  const pathname = usePathname()
 
   return (
     <>
@@ -23,23 +26,33 @@ export function Header() {
         </div>
 
         <div className="text-md hidden space-x-6 text-zinc-100 md:flex">
-          <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
+          <div
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-500'}`}
+          >
             <Link href="/">Home</Link>
           </div>
 
-          <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
+          <div
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-blue-500'}`}
+          >
             <Link href="/aboutUs">Sobre nós</Link>
           </div>
 
-          <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
+          <div
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-500'}`}
+          >
             <Link href="/plans">Planos</Link>
           </div>
 
-          <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
+          <div
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/contacts' && 'text-blue-500'}`}
+          >
             <Link href="/contacts">Contatos</Link>
           </div>
 
-          <div className="flex cursor-pointer flex-row items-center gap-1 transition hover:text-blue-500">
+          <div
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/blog' && 'text-blue-500'}`}
+          >
             <Link href="/blog">Blog</Link>
           </div>
         </div>
