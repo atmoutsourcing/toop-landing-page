@@ -54,7 +54,7 @@ export default function Home() {
       <div className="bg-zinc-905 max-h-[800px] min-h-[700px] flex-col bg-zinc-950 p-10">
         <h1 className="font-barlow max-w-3xl text-left text-xl text-zinc-100 lg:text-5xl">
           O sistema EMM que transforma a gestão de dispositivos em uma{' '}
-          <span className="animate-gradient-cyan-blue bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 bg-[length:200%_200%] bg-clip-text text-xl text-transparent">
+          <span className="animate-gradient-cyan-blue bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-700 bg-[length:200%_200%] bg-clip-text text-xl text-transparent lg:text-5xl">
             experiência prática e eficiente
           </span>
         </h1>
@@ -536,8 +536,6 @@ export default function Home() {
             </div>
 
             <div className="flex w-[500px] flex-col items-center gap-2 rounded-2xl bg-zinc-900 p-10">
-              {/* <WhatsappLogo className="h-14 w-14 text-green-400" /> */}
-
               <span className="flex font-sans text-2xl font-bold tracking-tighter">
                 Atendimento rápido
               </span>

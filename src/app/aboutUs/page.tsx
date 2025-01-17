@@ -114,7 +114,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-zinc-950 md:flex-row">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-zinc-950 pb-10 md:flex-row md:pb-0">
           <div className="mb-6 flex w-full justify-center md:mb-0 md:ml-16 md:w-auto">
             <Image
               className="h-auto w-[90%] rounded-xl md:w-[800px]"
@@ -198,20 +198,27 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="flex min-h-[200px] flex-col gap-2 bg-zinc-950 pb-20">
+        <div className="min-h-[200px] flex-col gap-2 bg-zinc-950 pb-20">
           <div className="text-center font-sans text-4xl">Nossos Valores</div>
 
-          <div className="flex w-[100%] flex-row items-center justify-center gap-10 pt-10">
-            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[800px]">
-              <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
+          <div className="flex flex-col items-center justify-center gap-2 pt-10 md:hidden">
+            <h1 className="text-2xl font-bold">Respeito</h1>
+            <h1 className="text-2xl font-bold">Inovação</h1>
+            <h1 className="text-2xl font-bold">Autenticidade</h1>
+            <h1 className="text-2xl font-bold">Confiança</h1>
+          </div>
+
+          <div className="hidden w-[100%] flex-row items-center justify-center gap-10 pt-10 md:flex">
+            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
+              <div className="items-center justify-center p-5 text-center font-sans text-3xl">
                 <Heart
                   size={80}
-                  className="items-center justify-center text-center"
+                  className="items-center justify-center text-center md:block"
                 />
               </div>
               <div
                 style={{ pointerEvents: 'none' }}
-                className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
+                className="hidden pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:block md:group-hover:opacity-100"
               >
                 <h1 className="text-3xl font-bold text-blue-800">Respeito</h1>
                 <div className="absolute text-lg text-zinc-950">
@@ -228,7 +235,7 @@ export default function AboutUs() {
               </div>
               <div
                 style={{ pointerEvents: 'none' }}
-                className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
+                className="hidden pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:block md:group-hover:opacity-100"
               >
                 <h1 className="text-3xl font-bold text-blue-800">
                   Autenticidade
@@ -242,14 +249,14 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="flex w-[100%] flex-row items-center justify-center gap-10 pt-10">
+          <div className="hidden w-[100%] flex-row items-center justify-center gap-10 pt-10 md:flex">
             <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[800px]">
               <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
                 <Lightbulb size={80} className="text-blue-800" />
               </div>
               <div
                 style={{ pointerEvents: 'none' }}
-                className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
+                className="hidden pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:block md:group-hover:opacity-100"
               >
                 <h1 className="text-3xl font-bold text-blue-800">Inovação</h1>
                 <div className="absolute text-lg text-zinc-950">
@@ -265,7 +272,7 @@ export default function AboutUs() {
                 <Handshake size={80} className="text-blue-800" />
               </div>
               <div
-                className="pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:group-hover:opacity-100"
+                className="hidden pt-3 opacity-0 transition-opacity duration-300 ease-in-out md:block md:group-hover:opacity-100"
                 style={{ pointerEvents: 'none' }}
               >
                 <h1 className="text-3xl font-bold text-blue-800">Confiança</h1>
@@ -284,7 +291,7 @@ export default function AboutUs() {
         Conheça mais sobre as outras nossas empresas:
       </h1>
 
-      <div className="bg-zinc-9 flex min-h-[250px] flex-col items-center justify-center gap-8 md:flex-row md:gap-x-28">
+      <div className="bg-zinc-9 flex flex-col items-center justify-center gap-8 md:min-h-[250px] md:flex-row md:gap-x-28">
         <Link
           href="https://atmoutsourcing.com.br/"
           className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"

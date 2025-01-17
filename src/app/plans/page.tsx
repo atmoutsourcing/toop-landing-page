@@ -1,3 +1,3 @@
 export default function Plans() {
-  return <div>plans</div>
+  return <div className="w-full">plans</div>
 }
