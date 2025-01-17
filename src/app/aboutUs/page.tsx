@@ -39,7 +39,7 @@ export default function AboutUs() {
             </div>
           </div>
           <Image
-            className="hidden h-auto w-[80%] rounded-xl md:block md:w-[50%]"
+            className="hidden h-auto w-[80%] rounded-xl md:block md:w-[35%]"
             src={toop}
             alt="Example image"
           />
