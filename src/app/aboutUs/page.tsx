@@ -12,6 +12,8 @@ import toop from '../../../public/icon-white.png'
 import logo from '../../../public/logo-white.png'
 
 import {
+  CornerUpRight,
+  Dot,
   Handshake,
   Heart,
   House,
@@ -27,7 +29,7 @@ export default function AboutUs() {
       <div className="flex flex-col bg-zinc-950 p-[5%] md:px-[10%]">
         <div className="flex flex-col items-center justify-between bg-zinc-950 md:flex-row">
           <div className="flex w-full flex-col gap-4 text-center md:w-[50%] md:text-justify">
-            <h1 className="text-4xl font-bold text-blue-500 md:text-6xl">
+            <h1 className="text-4xl font-bold text-blue-600 md:text-6xl">
               Quem Somos
             </h1>
             <div>
@@ -45,10 +47,10 @@ export default function AboutUs() {
           />
         </div>
 
-        <div className="] flex flex-col bg-zinc-950 py-20">
-          <div className="flex flex-col items-center gap-4 p-5 text-center md:flex-row md:p-10 md:text-left">
+        <div className="flex flex-col bg-zinc-950 py-20">
+          <div className="flex flex-col items-center gap-4 pb-10 text-center md:flex-row md:text-left">
             <h1 className="font-sans text-3xl md:text-4xl">
-              Objetivo e vantagens de usar o{' '}
+              Vantagens de usar o{' '}
             </h1>
             <Image
               className="h-auto w-[80px] md:w-[150px]"
@@ -57,58 +59,105 @@ export default function AboutUs() {
             />
           </div>
 
-          <div className="flex flex-col gap-10 px-5 md:px-10">
-            <div className="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:grid-cols-4 md:text-left">
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
+          <div className="flex flex-col gap-10">
+            <div className="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:grid-cols-3 md:text-left">
+              <div className="md:max-w-[300px]">
+                <h2 className="pb-5 font-sans text-xl text-blue-500">
+                  Controle e Segurança
+                </h2>
+                <p className="pb-4 text-sm">
+                  - Controle total sobre dispositivos corporativos para proteger
+                  dados sensíveis.
+                </p>
+                <p className="pb-4 text-sm">
+                  - Capacidade de aplicar políticas de segurança, como
+                  autenticação forte e criptografia.
+                </p>
+                <p className="text-sm">
+                  - Remoção remota de dados em caso de perda ou roubo do
+                  dispositivo.
+                </p>
               </div>
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
+
+              <div className="md:max-w-[300px]">
+                <h2 className="pb-5 font-sans text-xl text-blue-500">
+                  Gestão Centralizada
+                </h2>
+                <p className="pb-4 text-sm">
+                  - Monitoramento e gerenciamento de todos os dispositivos em um
+                  único painel.
+                </p>
+                <p className="pb-4 text-sm">
+                  - Instalação e atualização de aplicativos de forma
+                  centralizada e sem necessidade de interação do usuário.
+                </p>
+                <p className="text-sm">
+                  - Definição de perfis de configuração personalizados por
+                  departamento ou função.
+                </p>
               </div>
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
+
+              <div className="md:max-w-[300px]">
+                <h2 className="pb-5 font-sans text-xl text-blue-500">
+                  Aumento da Produtividade
+                </h2>
+                <p className="pb-4 text-sm">
+                  - Acesso simplificado a ferramentas e aplicativos essenciais
+                  para o trabalho.
+                </p>
+                <p className="pb-4 text-sm">
+                  - Redução do tempo de inatividade com suporte remoto e
+                  diagnósticos em tempo real.
+                </p>
+                <p className="text-sm">
+                  - Controle sobre o uso de aplicativos para garantir o foco nas
+                  atividades corporativas.
+                </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4">
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
+            <div className="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:grid-cols-3 md:text-left">
+              <div className="md:max-w-[300px]">
+                <h2 className="pb-5 font-sans text-xl text-blue-500">
+                  Flexibilidade e Escalabilidade
+                </h2>
+                <p className="pb-4 text-sm">
+                  - Suporte a uma ampla gama de dispositivos Android, desde
+                  smartphones a tablets e dispositivos específicos (como
+                  coletores de dados).
+                </p>
+                <p className="pb-4 text-sm">
+                  - Capacidade de adicionar ou remover dispositivos e usuários
+                  conforme necessário.
+                </p>
               </div>
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
+
+              <div className="md:max-w-[300px]">
+                <h2 className="pb-5 font-sans text-xl text-blue-500">
+                  Conformidade e Auditoria
+                </h2>
+                <p className="pb-4 text-sm">
+                  - Relatórios detalhados para rastrear o uso e a conformidade
+                  com as políticas da empresa.
+                </p>
+                <p className="pb-4 text-sm">
+                  - Ferramentas de auditoria para garantir que os dispositivos
+                  estejam em conformidade com regulamentos específicos.
+                </p>
               </div>
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
-              </div>
-              <div className="max-w-[300px]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                nam quae voluptates quos possimus nisi eligendi! Inventore,
-                reiciendis doloribus dolores modi corrupti earum veniam alias
-                omnis amet? Magni, ipsa pariatur!
+
+              <div className="md:max-w-[300px]">
+                <h2 className="pb-5 font-sans text-xl text-blue-500">
+                  Redução de Custos Operacionais
+                </h2>
+                <p className="pb-4 text-sm">
+                  - Automação de tarefas de gerenciamento reduz a necessidade de
+                  suporte manual.
+                </p>
+                <p className="pb-4 text-sm">
+                  - Minimização de riscos de violações de dados que podem gerar
+                  custos elevados.
+                </p>
               </div>
             </div>
           </div>
@@ -161,7 +210,7 @@ export default function AboutUs() {
             </svg>
 
             <h1 className="pb-4 text-4xl font-bold text-blue-600">Propósito</h1>
-            <div className="font-sans text-xl text-blue-100">
+            <div className="font-sans text-xl">
               Ajudar e inspirar com exemplo para dar sentido a vida em Deus.
             </div>
           </div>
@@ -190,7 +239,7 @@ export default function AboutUs() {
 
             <h1 className="pb-4 text-4xl font-bold text-blue-600">Missão</h1>
 
-            <div className="font-sans text-xl text-blue-100">
+            <div className="font-sans text-xl">
               A nossa missão é ajudar os clientes e colaboradores a garantirem
               uma qualidade de vida e realização no seu trabalho com suporte da
               tecnologia.
@@ -199,7 +248,9 @@ export default function AboutUs() {
         </div>
 
         <div className="min-h-[200px] flex-col gap-2 bg-zinc-950 pb-20">
-          <div className="text-center font-sans text-4xl">Nossos Valores</div>
+          <div className="text-center font-sans text-3xl md:text-4xl">
+            Nossos Valores
+          </div>
 
           <div className="flex flex-col items-center justify-center gap-2 pt-10 md:hidden">
             <h1 className="text-2xl font-bold">Respeito</h1>
@@ -231,7 +282,7 @@ export default function AboutUs() {
 
             <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
               <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
-                <Sparkles size={80} className="text-blue-700" />
+                <Sparkles size={80} className="text-blue-800" />
               </div>
               <div
                 style={{ pointerEvents: 'none' }}
@@ -294,7 +345,7 @@ export default function AboutUs() {
       <div className="bg-zinc-9 flex flex-col items-center justify-center gap-8 md:min-h-[250px] md:flex-row md:gap-x-28">
         <Link
           href="https://atmoutsourcing.com.br/"
-          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500"
         >
           <Image
             className="w-[100px]"
@@ -306,7 +357,7 @@ export default function AboutUs() {
 
         <Link
           href="https://atmevs.com.br/"
-          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500"
         >
           <Image className="w-[100px]" src={atmEvs} alt="Example image" />
           <SmartphoneCharging size="60" />
@@ -314,7 +365,7 @@ export default function AboutUs() {
 
         <Link
           href="https://atmhome.com.br/"
-          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500"
         >
           <Image className="w-[100px]" src={atmHome} alt="Example image" />
           <House size="60" />
