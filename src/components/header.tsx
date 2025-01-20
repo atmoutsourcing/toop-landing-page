@@ -51,9 +51,9 @@ export function Header() {
           </div>
 
           <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/blog' && 'text-blue-500'}`}
+            className={`flex cursor-pointer flex-row items-center gap-1 transition`}
           >
-            <Link href="/blog">Blog</Link>
+            <Link href="https://www.google.com.br/?hl=pt-BR">Blog</Link>
           </div>
         </div>
 
