@@ -22,11 +22,11 @@ import {
   CalendarDays,
   Check,
   Copyright,
+  Lock,
   Mail,
   MapPin,
   NotebookPen,
   Phone,
-  X,
 } from 'lucide-react'
 
 import Autoplay from 'embla-carousel-autoplay'
@@ -182,7 +182,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-row gap-2 text-sm">
-                <X className="size-4 flex-shrink-0 text-red-500" />
+                <Lock className="size-4 flex-shrink-0 text-zinc-400" />
 
                 <span>Voz e dados ilimitado</span>
               </div>
@@ -194,19 +194,13 @@ export default function Home() {
               </div>
 
               <div className="flex flex-row gap-2 text-sm">
-                <X className="size-4 flex-shrink-0 text-red-500" />
+                <Lock className="size-4 flex-shrink-0 text-zinc-400" />
 
                 <span>Aluguel do smartphone ATM X50 Ultra</span>
               </div>
 
               <div className="flex flex-row gap-2 text-sm">
-                <X className="size-4 flex-shrink-0 text-red-500" />
-
-                <span>Aluguel do smartphone ATM X50 Ultra</span>
-              </div>
-
-              <div className="flex flex-row gap-2 text-sm">
-                <Check className="size-4 flex-shrink-0 text-green-500" />
+                <Lock className="size-4 flex-shrink-0 text-zinc-400" />
 
                 <span>Aluguel do smartphone ATM X50 Ultra</span>
               </div>
@@ -224,7 +218,13 @@ export default function Home() {
               </div>
 
               <div className="flex flex-row gap-2 text-sm">
-                <X className="size-4 flex-shrink-0 text-red-500" />
+                <Check className="size-4 flex-shrink-0 text-green-500" />
+
+                <span>Aluguel do smartphone ATM X50 Ultra</span>
+              </div>
+
+              <div className="flex flex-row gap-2 text-sm">
+                <Lock className="size-4 flex-shrink-0 text-zinc-400" />
 
                 <span>Aluguel do smartphone ATM X50 Ultra</span>
               </div>
@@ -268,13 +268,13 @@ export default function Home() {
               </div>
 
               <div className="flex flex-row gap-2 text-sm">
-                <X className="size-4 flex-shrink-0 text-red-500" />
+                <Lock className="size-4 flex-shrink-0 text-zinc-400" />
 
                 <span>Voz e dados ilimitado</span>
               </div>
 
               <div className="flex flex-row gap-2 text-sm">
-                <X className="size-4 flex-shrink-0 text-red-500" />
+                <Lock className="size-4 flex-shrink-0 text-zinc-400" />
 
                 <span>Aluguel do smartphone ATM X50 Ultra</span>
               </div>
@@ -372,7 +372,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-row gap-2 text-sm">
-                <X className="size-4 flex-shrink-0 text-red-500" />
+                <Lock className="size-4 flex-shrink-0 text-zinc-400" />
 
                 <span>Aluguel do smartphone ATM X50 Ultra</span>
               </div>
