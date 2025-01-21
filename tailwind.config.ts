@@ -9,12 +9,26 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      rotate: {
+        '-0.02': '-0.02deg',
+      },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],
       },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        textBase: '#C4C4CC',
+        placeholder: '#7C7C8A',
+        icons: '#505059',
+        shapePrimary: '#202024',
+        shapeSecondary: '#29292E',
+        shapeTertiary: '#323238',
+        textSupport: '#8D8D99',
+        title: '#E1E1E6',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
