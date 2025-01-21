@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import logo from '../../public/logo-white.png'
+import logoDark from '../../public/logo-dark.png'
+import logoLight from '../../public/logo-white.png'
 import Image from 'next/image'
 import { Button } from './button'
 
@@ -9,23 +10,38 @@ import { useState } from 'react'
 import { AlignJustify } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
+import { ToggleTheme } from './toggleTheme'
+import { useTheme } from 'next-themes'
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const pathname = usePathname()
 
   return (
-    <>
-      <header className="flex flex-row items-center justify-between bg-zinc-950 px-12 py-4">
+    <div className="border-b-2">
+      <header className="flex flex-row items-center justify-between px-12 py-4">
         <Link href="/" className="cursor-pointer">
-          <Image src={logo} alt="Logo" className="h-9 w-28" />
+          <Image
+            src={logoDark}
+            alt="Logo"
+            className="h-9 w-28 transition-all dark:hidden"
+            suppressHydrationWarning
+          />
+
+          <Image
+            src={logoLight}
+            alt="Logo"
+            className="hidden h-9 w-28 transition-all dark:block"
+            suppressHydrationWarning
+          />
         </Link>
 
         <div className="md:hidden">
           <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
         </div>
 
-        <div className="text-md hidden space-x-6 text-zinc-100 md:flex">
+        <div className="text-md hidden space-x-6 md:flex">
           <div
             className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-500'}`}
           >
@@ -57,7 +73,11 @@ export function Header() {
           </div>
         </div>
 
-        <div className="hidden space-x-4 md:flex">
+        <div className="hidden items-center space-x-4 md:flex">
+          <div>
+            <ToggleTheme />
+          </div>
+
           <Button>Teste grátis por 15 dias</Button>
 
           <Button>Login</Button>
@@ -101,6 +121,6 @@ export function Header() {
           Blog
         </Link>
       </div>
-    </>
+    </div>
   )
 }
