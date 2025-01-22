@@ -11,10 +11,10 @@ export default function Contacts() {
             <div className="pb-4 font-sans text-4xl font-bold text-blue-500">
               Alguma dúvida?
             </div>
-            <div className="font-sans text-2xl font-bold">
+            <div className="font-inter text-2xl font-bold">
               Entre em contato com nossa equipe de especialitas.
             </div>
-            <div className="font-sans text-xl">
+            <div className="font-inter text-xl">
               Nossa equipe irá saciar qualquer dúvida que você tiver.
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Contacts() {
         </div>
 
         <div className="w-full md:flex-1">
-          <div className="dark:bg-shapePrimary flex min-h-[600px] w-full flex-col gap-2 rounded-3xl bg-zinc-100 p-4 md:w-[70%] md:p-10">
+          <div className="flex min-h-[600px] w-full flex-col gap-2 rounded-3xl bg-zinc-100 p-4 dark:bg-shapePrimary md:w-[70%] md:p-10">
             <div className="flex flex-row items-center justify-center gap-4 md:gap-4">
               <MailPlus size={48} />
               <h1 className="text-2xl font-bold md:text-4xl">Mande Mensagem</h1>
