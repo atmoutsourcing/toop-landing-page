@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
-import { Geist, Geist_Mono, Montserrat } from 'next/font/google'
+import { Geist, Geist_Mono, Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
@@ -11,10 +11,9 @@ const geistSans = Geist({
   subsets: ['latin'],
 })
 
-const montserrat = Montserrat({
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-montserrat',
 })
 
 const geistMono = Geist_Mono({
@@ -35,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

@@ -10,7 +10,7 @@ import { CalendarDays, Copyright, Mail, MapPin, Phone } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="mt-4 flex w-full flex-col gap-8 border-t-2 p-12">
+    <footer className="flex w-full flex-col gap-8 border-t-2 bg-zinc-100 p-12 dark:bg-shapePrimary">
       <div className="flex flex-col font-sans md:flex-row">
         <div className="flex items-center justify-center md:mr-24 md:flex-shrink-0 md:items-start">
           <Image

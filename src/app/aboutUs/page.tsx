@@ -8,8 +8,10 @@ import atmHome from '../../../public/atm_home.jpg'
 import grupoAtm from '../../../public/grupo_atm.png'
 import valores from '../../../public/valores_atm.png'
 import manoel from '../../../public/Manoel.png'
-import toop from '../../../public/icon-white.png'
-import logo from '../../../public/logo-white.png'
+import iconLight from '../../../public/icon-white.png'
+import iconDark from '../../../public/icon-dark.png'
+import logoLight from '../../../public/logo-white.png'
+import logoDark from '../../../public/logo-dark.png'
 
 import {
   CornerUpRight,
@@ -26,8 +28,8 @@ import {
 export default function AboutUs() {
   return (
     <>
-      <div className="flex flex-col bg-zinc-950 p-[5%] md:px-[10%]">
-        <div className="flex flex-col items-center justify-between bg-zinc-950 md:flex-row">
+      <div className="flex flex-col p-[5%] md:px-[10%]">
+        <div className="flex flex-col items-center justify-between md:flex-row">
           <div className="flex w-full flex-col gap-4 text-center md:w-[50%] md:text-justify">
             <h1 className="text-4xl font-bold text-blue-600 md:text-6xl">
               Quem Somos
@@ -41,21 +43,31 @@ export default function AboutUs() {
             </div>
           </div>
           <Image
-            className="hidden h-auto w-[80%] rounded-xl md:block md:w-[35%]"
-            src={toop}
-            alt="Example image"
+            className="hidden h-auto w-[80%] rounded-xl transition-all md:w-[35%] dark:md:block"
+            src={iconLight}
+            alt="ícone Toop"
+          />
+          <Image
+            className="hidden h-auto w-[80%] rounded-xl transition-all dark:hidden md:block md:w-[35%]"
+            src={iconDark}
+            alt="ícone Toop"
           />
         </div>
 
-        <div className="flex flex-col bg-zinc-950 py-20">
+        <div className="flex flex-col py-20">
           <div className="flex flex-col items-center gap-4 pb-10 text-center md:flex-row md:text-left">
             <h1 className="font-sans text-3xl md:text-4xl">
-              Vantagens de usar o{' '}
+              Vantagens de usar o
             </h1>
             <Image
-              className="h-auto w-[80px] md:w-[150px]"
-              src={logo}
-              alt="Example image"
+              className="hidden h-auto w-[80px] dark:block md:w-[150px]"
+              src={logoLight}
+              alt="logo Toop"
+            />
+            <Image
+              className="block h-auto w-[80px] dark:hidden md:w-[150px]"
+              src={logoDark}
+              alt="logo Toop"
             />
           </div>
 
@@ -163,7 +175,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-zinc-950 pb-10 md:flex-row md:pb-0">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-6 pb-10 md:flex-row md:pb-0">
           <div className="mb-6 flex w-full justify-center md:mb-0 md:ml-16 md:w-auto">
             <Image
               className="h-auto w-[90%] rounded-xl md:w-[800px]"
@@ -194,7 +206,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="flex min-h-[300px] flex-col items-center justify-center gap-8 bg-zinc-950 pb-16 md:flex-row md:pb-32">
+        <div className="flex min-h-[300px] flex-col items-center justify-center gap-8 pb-16 md:flex-row md:pb-32">
           <div className="flex flex-col items-center justify-center text-center md:w-[50%] md:pl-10">
             <svg
               className="text-blue-600"
@@ -247,7 +259,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="min-h-[200px] flex-col gap-2 bg-zinc-950 pb-20">
+        <div className="min-h-[200px] flex-col gap-2 pb-20">
           <div className="text-center font-sans text-3xl md:text-4xl">
             Nossos Valores
           </div>
@@ -260,11 +272,11 @@ export default function AboutUs() {
           </div>
 
           <div className="hidden w-[100%] flex-row items-center justify-center gap-10 pt-10 md:flex">
-            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
+            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full border border-blue-800 bg-zinc-50 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
               <div className="items-center justify-center p-5 text-center font-sans text-3xl">
                 <Heart
                   size={80}
-                  className="items-center justify-center text-center md:block"
+                  className="items-center justify-center text-center text-blue-800 md:block"
                 />
               </div>
               <div
@@ -280,7 +292,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
+            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full border border-blue-800 bg-zinc-50 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
               <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
                 <Sparkles size={80} className="text-blue-800" />
               </div>
@@ -301,7 +313,7 @@ export default function AboutUs() {
           </div>
 
           <div className="hidden w-[100%] flex-row items-center justify-center gap-10 pt-10 md:flex">
-            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[800px]">
+            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full border border-blue-800 bg-zinc-50 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[800px]">
               <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
                 <Lightbulb size={80} className="text-blue-800" />
               </div>
@@ -318,7 +330,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full bg-zinc-50 text-blue-800 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
+            <div className="group flex min-h-[100px] w-[120px] transform cursor-pointer flex-row gap-2 rounded-full border border-blue-800 bg-zinc-50 shadow-lg transition-all duration-300 ease-in-out hover:items-start md:hover:w-[850px]">
               <div className="flex flex-col items-center justify-center p-5 text-center font-sans text-3xl">
                 <Handshake size={80} className="text-blue-800" />
               </div>
@@ -338,14 +350,14 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <h1 className="py-4 text-center font-sans text-xl md:text-4xl">
+      <h1 className="bg-zinc-100 py-4 text-center font-sans text-xl dark:bg-zinc-900 md:text-4xl">
         Conheça mais sobre as outras nossas empresas:
       </h1>
 
-      <div className="bg-zinc-9 flex flex-col items-center justify-center gap-8 md:min-h-[250px] md:flex-row md:gap-x-28">
+      <div className="bg-zinc-9 flex flex-col items-center justify-center gap-8 bg-zinc-100 dark:bg-zinc-900 md:min-h-[280px] md:flex-row md:gap-x-28">
         <Link
           href="https://atmoutsourcing.com.br/"
-          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl border-2 bg-zinc-100 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800 dark:bg-shapePrimary"
         >
           <Image
             className="w-[100px]"
@@ -357,7 +369,7 @@ export default function AboutUs() {
 
         <Link
           href="https://atmevs.com.br/"
-          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl border-2 bg-zinc-100 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800 dark:bg-shapePrimary"
         >
           <Image className="w-[100px]" src={atmEvs} alt="Example image" />
           <SmartphoneCharging size="60" />
@@ -365,7 +377,7 @@ export default function AboutUs() {
 
         <Link
           href="https://atmhome.com.br/"
-          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl bg-zinc-950 text-zinc-50 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-500"
+          className="flex min-h-[200px] min-w-[200px] transform cursor-pointer flex-col items-center gap-2 rounded-3xl border-2 bg-zinc-100 shadow-lg transition-all ease-in-out hover:scale-105 hover:text-blue-800 dark:bg-shapePrimary"
         >
           <Image className="w-[100px]" src={atmHome} alt="Example image" />
           <House size="60" />

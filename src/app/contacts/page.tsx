@@ -41,7 +41,7 @@ export default function Contacts() {
         </div>
 
         <div className="w-full md:flex-1">
-          <div className="flex min-h-[600px] w-full flex-col gap-2 rounded-3xl bg-zinc-950 p-4 md:w-[70%] md:p-10">
+          <div className="dark:bg-shapePrimary flex min-h-[600px] w-full flex-col gap-2 rounded-3xl bg-zinc-100 p-4 md:w-[70%] md:p-10">
             <div className="flex flex-row items-center justify-center gap-4 md:gap-4">
               <MailPlus size={48} />
               <h1 className="text-2xl font-bold md:text-4xl">Mande Mensagem</h1>

@@ -11,7 +11,6 @@ import { AlignJustify } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
 import { ToggleTheme } from './toggleTheme'
-import { useTheme } from 'next-themes'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,9 +18,9 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <div className="border-b-2">
+    <div>
       <header className="flex flex-row items-center justify-between px-12 py-4">
-        <Link href="/" className="cursor-pointer">
+        <Link href="/" className="cursor-pointer" style={{ zIndex: '1' }}>
           <Image
             src={logoDark}
             alt="Logo"
@@ -36,10 +35,6 @@ export function Header() {
             suppressHydrationWarning
           />
         </Link>
-
-        <div className="md:hidden">
-          <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
-        </div>
 
         <div className="text-md hidden space-x-6 md:flex">
           <div
@@ -73,14 +68,20 @@ export function Header() {
           </div>
         </div>
 
-        <div className="hidden items-center space-x-4 md:flex">
+        <div className="flex flex-row items-center space-x-4">
           <div>
             <ToggleTheme />
           </div>
 
-          <Button>Teste grátis por 15 dias</Button>
+          <div className="hidden flex-row items-center gap-2 md:flex">
+            <Button>Teste grátis por 15 dias</Button>
 
-          <Button>Login</Button>
+            <Button>Login</Button>
+          </div>
+        </div>
+
+        <div className="md:hidden">
+          <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
         </div>
       </header>
 
