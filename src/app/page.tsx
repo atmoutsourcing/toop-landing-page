@@ -321,7 +321,7 @@ export default function Home() {
               />
               <p className="font-inter text-sm">Toop</p>
 
-              <p className="ml-auto text-xs">Recomendado</p>
+              <p className="ml-auto text-xs">Popular</p>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -448,7 +448,7 @@ export default function Home() {
 
           <div className="py-2 font-inter text-xl font-bold">R$ 47,90/mês</div>
 
-          <Button variant="secondary">Contratar agora!</Button>
+          <Button variant="secondary">Entre em contato</Button>
 
           <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
 
