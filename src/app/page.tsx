@@ -11,8 +11,15 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import React from 'react'
-import { ArrowRight, Check } from 'lucide-react'
+import { ArrowRight, Check, SquarePen } from 'lucide-react'
 import { Button } from '@/components/button'
+import { WhatsappLogo } from 'phosphor-react'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 export default function Home() {
   const plugin = React.useRef(
@@ -70,7 +77,7 @@ export default function Home() {
       <div className="flex flex-row gap-10 px-[4%] py-[4%]">
         <Image src={cellToop} alt="Toop icon" />
         <div className="flex flex-col items-center gap-[20%] pt-[5%]">
-          <h1 className="text-2xl font-bold md:text-4xl">
+          <h1 className="text-2xl dark:text-zinc-300 md:text-4xl">
             O porquê de empresas adorarem o TOOP.
           </h1>
           <div className="max-w-[500px] text-sm md:text-lg">
@@ -87,7 +94,7 @@ export default function Home() {
       </div>
 
       <div className="flex h-[305px] w-full flex-col items-center bg-zinc-100 dark:bg-shapePrimary">
-        <h1 className="pt-[2%] text-center text-xl md:text-3xl">
+        <h1 className="pt-[2%] text-center text-2xl dark:text-zinc-300 md:text-4xl">
           Parceiros que confiam no TOOP
         </h1>
         <Carousel
@@ -111,14 +118,14 @@ export default function Home() {
         </Carousel>
       </div>
 
-      <div className="flex h-screen flex-col items-center gap-[20%] pt-[5%]">
-        <h1 className="pb-10 text-2xl font-bold md:text-4xl">
+      <div className="flex h-screen flex-col items-center justify-center gap-[20%]">
+        <div
+          className="absolute h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[180px]"
+          style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
+        ></div>
+        <h1 className="pb-24 text-2xl dark:text-zinc-300 md:text-4xl">
           Quais são os beneficios de usar o TOOP?
         </h1>
-        <div
-          className="absolute left-[800px] top-[2150px] h-full w-[131.74px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[200px]"
-          style={{ transform: 'rotate(132.67deg)' }}
-        ></div>
 
         <div className="flex w-full flex-col gap-10 pl-[10%]">
           <div className="grid grid-cols-1 justify-between gap-5 text-center sm:grid-cols-2 md:grid-cols-3 md:text-left">
@@ -471,6 +478,133 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col items-center gap-8 px-[10%] pt-[5%]">
+        <h1 className="text-2xl font-bold dark:text-zinc-300 md:text-4xl">
+          Contato rápido
+        </h1>
+        <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
+      </div>
+
+      <div className="flex flex-row justify-center gap-10 py-14">
+        <div className="flex h-[528px] w-[450px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+          <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
+            <SquarePen className="h-[32.72px] w-[35px]" />
+            <p className="text-2xl font-bold">Nos solicite uma proposta</p>
+            <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
+          </div>
+
+          <div className="flex flex-col gap-3 px-4">
+            <input
+              id="name"
+              type="text"
+              placeholder="Nome"
+              className="h-[42px] w-full rounded-xl p-4 text-base font-bold shadow-sm dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+            />
+
+            <input
+              id="email"
+              type="text"
+              placeholder="E-mail"
+              className="h-[42px] w-full rounded-xl p-4 text-base font-bold shadow-sm dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+            />
+
+            <textarea
+              id="message"
+              placeholder="Mensagem"
+              className="min-h-[108px] w-full rounded-xl p-3 text-base font-bold text-zinc-950 shadow-sm dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+            />
+          </div>
+
+          <Button
+            style={{ width: '90%', marginLeft: '5%', marginTop: '13%' }}
+            variant="secondary"
+          >
+            Solicitar proposta
+          </Button>
+        </div>
+
+        <div className="flex h-[528px] w-[450px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+          <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
+            <WhatsappLogo className="h-[32.72px] w-[35px] text-green-600" />
+
+            <p className="text-2xl font-bold">Atendimento rápido</p>
+            <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
+          </div>
+
+          <div className="flex flex-col gap-2 px-4 text-center font-bold dark:text-zinc-400">
+            <p>
+              Estamos comprometidos com a agilidade e excelência no atendimento.
+            </p>
+            <p>
+              Resolvemos 95% dos chamados em até 10 minutos e alcançamos 100% de
+              solução em até 8 horas, porque a sua satisfação é nossa
+              prioridade.
+            </p>
+          </div>
+
+          <Button
+            style={{ width: '90%', marginLeft: '5%', marginTop: '34%' }}
+            variant="secondary"
+          >
+            Solicitar proposta
+          </Button>
+        </div>
+      </div>
+
+      <h1 className="py-20 text-center text-2xl font-bold dark:text-zinc-300 md:text-4xl">
+        Dúvidas frequentes
+      </h1>
+
+      <div className="flex justify-center pb-24">
+        <Accordion type="single" collapsible className="w-[50%]">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>O que é MDM?</AccordionTrigger>
+            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+              Significa Mobile Device Management (Gerenciamento de Dispositivos
+              Móveis). É uma solução de software que permite às organizações
+              gerenciar, controlar e proteger dispositivos móveis, como
+              smartphones e tablets, usados pelos funcionários. Com o MDM, é
+              possível configurar dispositivos remotamente, aplicar políticas de
+              segurança, controlar aplicativos instalados e monitorar a
+              conformidade dos dispositivos com as normas da empresa.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>O que é EMM?</AccordionTrigger>
+            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+              Significa Enterprise Mobility Management (Gerenciamento de
+              Mobilidade Empresarial). Trata-se de um conjunto abrangente de
+              serviços e tecnologias que gerenciam dispositivos móveis,
+              aplicativos e conteúdo corporativo. O EMM inclui MDM, mas também
+              abrange outros aspectos, como gerenciamento de aplicativos móveis
+              (MAM), gerenciamento de identidade e acesso (IAM) e gerenciamento
+              de conteúdo móvel (MCM). O objetivo do EMM é proporcionar uma
+              experiência móvel segura e eficiente para os funcionários.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>O que é o TOOP?</AccordionTrigger>
+            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+              O TOOP é uma ferramenta poderosa que otimiza a gestão de dados,
+              simplifica processos e garante a segurança e conformidade. Ele
+              representa um avanço significativo na forma como interagimos com
+              dados e serviços públicos, tornando-os mais acessíveis e
+              eficientes.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>Como funciona nossos planos?</AccordionTrigger>
+            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+              Os planos do TOOP representam uma abordagem inovadora e eficiente
+              para a gestão de dados e serviços públicos. Eles garantem
+              segurança, conformidade e uma experiência aprimorada para todos os
+              usuários. Se precisar de mais informações ou tiver outras
+              perguntas, estou aqui para ajudar!
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   )
