@@ -27,7 +27,7 @@ export default function Home() {
   )
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col font-inter">
       <div className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
 
       <div className="relative flex min-h-screen flex-col overflow-hidden">
