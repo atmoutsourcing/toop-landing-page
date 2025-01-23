@@ -20,7 +20,7 @@ export default function Home() {
   )
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col font-inter">
       <div className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
 
       <div className="relative flex min-h-screen flex-col overflow-hidden">
@@ -70,7 +70,7 @@ export default function Home() {
       <div className="flex flex-row gap-10 px-[4%] py-[4%]">
         <Image src={cellToop} alt="Toop icon" />
         <div className="flex flex-col items-center gap-[20%] pt-[5%]">
-          <h1 className="text-2xl font-bold md:text-4xl">
+          <h1 className="text-2xl font-bold tracking-tighter md:text-4xl">
             O porquê de empresas adorarem o TOOP.
           </h1>
           <div className="max-w-[500px] text-sm md:text-lg">
@@ -112,7 +112,7 @@ export default function Home() {
       </div>
 
       <div className="flex h-screen flex-col items-center gap-[20%] pt-[5%]">
-        <h1 className="pb-10 text-2xl font-bold md:text-4xl">
+        <h1 className="pb-10 text-2xl font-bold tracking-tighter md:text-4xl">
           Quais são os beneficios de usar o TOOP?
         </h1>
         <div
