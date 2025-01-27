@@ -91,28 +91,28 @@ export function Header() {
         <Link
           href="/"
           onClick={() => setIsOpen(false)}
-          className={`border-b-2 border-zinc-700 p-4`}
+          className={`border-b-[1px] border-zinc-700 p-4`}
         >
           Home
         </Link>
         <Link
           href="/aboutUs"
           onClick={() => setIsOpen(false)}
-          className={`border-b-2 border-zinc-700 p-4`}
+          className={`border-b-[1px] border-zinc-700 p-4`}
         >
           Sobre nós
         </Link>
         <Link
           href="/plans"
           onClick={() => setIsOpen(false)}
-          className={`border-b-2 border-zinc-700 p-4`}
+          className={`border-b-[1px] border-zinc-700 p-4`}
         >
           Planos
         </Link>
         <Link
           href="/contacts"
           onClick={() => setIsOpen(false)}
-          className={`border-b-2 border-zinc-700 p-4`}
+          className={`border-b-[1px] border-zinc-700 p-4`}
         >
           Contatos
         </Link>

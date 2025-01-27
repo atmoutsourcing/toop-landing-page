@@ -25,15 +25,17 @@ export default function AboutUs() {
       <div className="group relative flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <h1
           style={{ zIndex: '100' }}
-          className="text-center text-5xl font-bold dark:text-zinc-200"
+          className="text-center text-3xl font-bold dark:text-zinc-200 md:text-5xl"
         >
           Conectando eficiência e segurança para{' '}
         </h1>
-        <h1 className="text-center text-5xl font-bold">
+        <h1
+          style={{ zIndex: '10' }}
+          className="text-center text-3xl font-bold md:text-5xl"
+        >
           <span className="text-yellow-400">transformar</span> sua gestão!
         </h1>
-        <div className="absolute left-[0%] top-[20%] flex h-[140px] w-[213px] bg-blue-500 blur-[100px] before:rounded-full md:hidden" />
-        <div className="absolute left-[60%] top-[55%] flex h-[140px] w-[100px] bg-blue-500 blur-[80px] before:rounded-full md:hidden" />
+        <div className="absolute flex h-[140px] w-[213px] bg-blue-500 blur-[100px] before:rounded-full md:hidden" />
 
         <div className="hidden before:absolute before:left-[25%] before:top-[40%] before:h-[204px] before:w-[213px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-500 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[350%] md:flex" />
         <div className="hidden before:absolute before:left-[68%] before:top-[55%] before:h-[168px] before:w-[151px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-600 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[-500%] md:flex" />
