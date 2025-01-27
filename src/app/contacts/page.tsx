@@ -56,18 +56,6 @@ export default function Contacts() {
           </div>
         </div>
       </div>
-      {/* 
-      <Image
-        src={iconWhite}
-        alt="Toop icon"
-        className="hidden h-8 w-8 dark:block"
-      />
-
-      <Image
-        src={iconDark}
-        alt="Toop icon"
-        className="block h-8 w-8 dark:hidden"
-      /> */}
 
       <div className="relative flex items-center">
         <Image
