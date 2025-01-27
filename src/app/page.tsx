@@ -18,13 +18,13 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex flex-col font-inter">
+    <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
       <div
         style={{ zIndex: '-1' }}
         className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]"
       />
 
-      <div className="relative flex min-h-screen flex-col overflow-hidden">
+      <div className="relative flex min-h-screen flex-col">
         <div className="min-h-full">
           <div className="mt-28 items-center font-bold md:mt-52">
             <div className="flex flex-col items-center gap-2 text-center md:text-start">
@@ -73,10 +73,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <div className="absolute left-[1256px] top-[291px] h-[438px] w-[1056px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
         </div>
       </div>
+
+      <div className="absolute left-[1256px] top-[291px] h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
+
       <div className="flex flex-col justify-center gap-10 px-[4%] py-[4%] md:flex-row">
         <Image src={cellToop} alt="Toop icon" />
         <div className="flex flex-col items-center gap-[20%] pt-[5%]">

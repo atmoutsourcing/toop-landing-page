@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <div>
-      <header className="flex flex-row items-center justify-between px-12 py-4">
+      <header className="mx-auto flex max-w-[1440px] flex-row items-center justify-between px-12 py-4">
         <Link href="/" className="cursor-pointer" style={{ zIndex: '1' }}>
           <Image
             src={logoDark}
