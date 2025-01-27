@@ -11,7 +11,6 @@ import React from 'react'
 import manoel from '../../../public/Manoel.png'
 import recepcao from '../../../public/recepcaoATM.jpeg'
 import valores from '../../../public/valores_atm.png'
-import grupoAtm from '../../../public/grupo_atm.png'
 
 import Image from 'next/image'
 

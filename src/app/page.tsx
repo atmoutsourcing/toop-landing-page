@@ -2,14 +2,9 @@
 import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import cellToop from '@/../public/cellToop.png'
-import Autoplay from 'embla-carousel-autoplay'
 
 import Image from 'next/image'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from '@/components/ui/carousel'
+
 import React from 'react'
 import { ArrowRight, Check, SquarePen } from 'lucide-react'
 import { Button } from '@/components/button'
@@ -22,10 +17,6 @@ import {
 } from '@/components/ui/accordion'
 
 export default function Home() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
-  )
-
   return (
     <div className="flex flex-col font-inter">
       <div
@@ -86,7 +77,7 @@ export default function Home() {
           <div className="absolute left-[1256px] top-[291px] h-[438px] w-[1056px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
         </div>
       </div>
-      <div className="flex flex-col gap-10 px-[4%] py-[4%] md:flex-row">
+      <div className="flex flex-col justify-center gap-10 px-[4%] py-[4%] md:flex-row">
         <Image src={cellToop} alt="Toop icon" />
         <div className="flex flex-col items-center gap-[20%] pt-[5%]">
           <h1 className="pb-[5%] text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
