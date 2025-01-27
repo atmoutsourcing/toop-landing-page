@@ -1,200 +1,108 @@
-import { Mail, MailPlus, MapPin, Phone } from 'lucide-react'
-import { Checkbox } from '../../components/ui/checkbox'
-import Link from 'next/link'
+import Image from 'next/image'
+import Ellipse from '../../../public/Ellipse.svg'
+import { Checkbox } from '@/components/ui/checkbox'
 
 export default function Contacts() {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col items-center gap-8 p-10 md:flex-row">
-        <div className="flex w-auto flex-1 flex-col items-center justify-center gap-10 md:items-end">
-          <div className="gap-10 text-center md:w-[60%] md:text-left">
-            <div className="pb-4 font-sans text-4xl font-bold text-blue-500">
-              Alguma dúvida?
-            </div>
-            <div className="font-inter text-2xl font-bold">
-              Entre em contato com nossa equipe de especialitas.
-            </div>
-            <div className="font-inter text-xl">
-              Nossa equipe irá saciar qualquer dúvida que você tiver.
-            </div>
-          </div>
+    <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] items-center gap-36">
+      <div className="flex flex-col gap-3">
+        <span className="text-3xl font-bold tracking-tight">
+          Será um prazer atendê-lo
+        </span>
 
-          <div className="flex flex-col text-left md:w-[60%]">
-            <div className="mb-3 flex flex-row items-center gap-2">
-              <Mail size={20} />
-              <p className="text-sx text-zinc-500">contatoAtm@gmail.com</p>
-            </div>
+        <hr className="my-4 border-t border-zinc-300 dark:border-zinc-600" />
 
-            <div className="flex flex-row items-center gap-2">
-              <Phone size={20} />
-              <p className="text-sx text-zinc-500">(17) 3211-5353</p>
-            </div>
+        <p className="text-sm">
+          No Grupo ATM, estamos comprometidos em oferecer soluções que atendam
+          às necessidades específicas do seu negócio. O TOOP foi desenvolvido
+          para ser uma plataforma prática e eficiente, permitindo que você
+          configure sua integração de forma simples e rápida. Se a sua empresa
+          precisa de uma abordagem mais avançada, nossa equipe de especialistas
+          está aqui para ajudar. Com o nosso suporte, você encontrará a solução
+          ideal para integrar o TOOP ao seu fluxo de trabalho, garantindo
+          eficiência e resultados alinhados aos seus objetivos. Entre em contato
+          conosco, será um prazer entender suas necessidades e ajudá-lo a
+          encontrar o melhor caminho para aproveitar tudo o que o TOOP tem a
+          oferecer.
+        </p>
+      </div>
 
-            <div className="mt-1 flex flex-row gap-1">
-              <MapPin size={40} />
-              <p className="text-sx mt-3 text-zinc-500">
-                Georgina Business Park - Av Anísio Haddad, 8001, Milan Sul, Sala
-                413, São José do Rio Preto - SP, 15091-751
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="relative flex items-center">
+        <Image src={Ellipse} alt="ellipse" className="absolute scale-125" />
+        <div className="inset-0 z-10 flex items-center justify-center">
+          <div className="bg-b-zinc-200 h-[550px] w-[612px] max-w-[652px] flex-col rounded-2xl border bg-white p-8 shadow-lg">
+            <h1 className="flex justify-center text-2xl font-bold">
+              Mande mensagem
+            </h1>
 
-        <div className="w-full md:flex-1">
-          <div className="flex min-h-[600px] w-full flex-col gap-2 rounded-3xl bg-zinc-100 p-4 dark:bg-shapePrimary md:w-[70%] md:p-10">
-            <div className="flex flex-row items-center justify-center gap-4 md:gap-4">
-              <MailPlus size={48} />
-              <h1 className="text-2xl font-bold md:text-4xl">Mande Mensagem</h1>
-            </div>
+            <form className="mt-6 flex flex-col gap-4">
+              <div className="flex flex-row gap-2">
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="Nome"
+                  className="h-10 w-full rounded-xl border border-b-zinc-200 p-4 text-sm font-medium text-zinc-800 shadow-sm outline-none placeholder:font-bold dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+                />
 
-            <div className="flex flex-col gap-4 pt-10">
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4">
-                <div className="flex flex-1 flex-col">
-                  <label
-                    htmlFor="name"
-                    className="font-sans text-base md:text-xl"
-                  >
-                    Nome
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Digite seu nome"
-                    className="h-[42px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-950 placeholder-zinc-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-
-                <div className="flex flex-1 flex-col">
-                  <label
-                    htmlFor="surname"
-                    className="font-sans text-base md:text-xl"
-                  >
-                    Sobrenome
-                  </label>
-                  <input
-                    id="surname"
-                    type="text"
-                    placeholder="Digite seu sobrenome"
-                    className="h-[42px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-950 placeholder-zinc-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4">
-                <div className="flex flex-1 flex-col">
-                  <label
-                    htmlFor="email"
-                    className="font-sans text-base md:text-xl"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Digite seu email"
-                    className="h-[42px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-950 placeholder-zinc-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-
-                <div className="flex flex-1 flex-col">
-                  <label
-                    htmlFor="whatsapp"
-                    className="font-sans text-base md:text-xl"
-                  >
-                    Whatsapp
-                  </label>
-                  <input
-                    id="whatsapp"
-                    type="text"
-                    placeholder="Digite seu whatsapp"
-                    className="h-[42px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-950 placeholder-zinc-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-4 md:flex-row md:gap-4">
-                <div className="flex flex-1 flex-col">
-                  <label
-                    htmlFor="company"
-                    className="font-sans text-base md:text-xl"
-                  >
-                    Empresa
-                  </label>
-                  <input
-                    id="company"
-                    type="text"
-                    placeholder="Digite sua empresa"
-                    className="h-[42px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-950 placeholder-zinc-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-
-                <div className="flex flex-1 flex-col">
-                  <label
-                    htmlFor="devices"
-                    className="font-sans text-base md:text-xl"
-                  >
-                    Qtd. de dispositivos
-                  </label>
-                  <select
-                    defaultValue="0"
-                    id="devices"
-                    className="h-[42px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-400 shadow-sm focus:border-blue-500 focus:text-zinc-950 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
-                    <option className="text-zinc-400" value="0" disabled>
-                      Clique para selecionar
-                    </option>
-                    <option value="option1">5 a 50</option>
-                    <option value="option2">51 a 100</option>
-                    <option value="option3">101 a 200</option>
-                    <option value="option4">201 a 400</option>
-                    <option value="option5">500 a 1000</option>
-                    <option value="option6">1000+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="flex-1">
-                <label
-                  htmlFor="message"
-                  className="font-sans text-base md:text-xl"
-                >
-                  Mensagem
-                </label>
-                <textarea
-                  id="message"
-                  placeholder="Digite sua mensagem"
-                  className="min-h-[100px] w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-zinc-950 placeholder-zinc-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="Sobrenome"
+                  className="h-10 w-full rounded-xl border border-b-zinc-200 p-4 text-sm font-medium text-zinc-800 shadow-sm outline-none placeholder:font-bold dark:bg-zinc-700 placeholder:dark:text-zinc-500"
                 />
               </div>
 
-              <div className="flex space-x-2">
-                <Checkbox id="terms1" />
-                <div className="grid leading-none">
-                  <label htmlFor="terms1" className="text-sm">
-                    Declaro que li e <span className="font-bold">concordo</span>{' '}
-                    com a{' '}
-                    <Link
-                      href=""
-                      className="text-blue-600 underline transition duration-300 ease-in-out hover:text-blue-800"
-                    >
-                      Política de Privacidade
-                    </Link>{' '}
-                    e os{' '}
-                    <Link
-                      href=""
-                      className="text-blue-600 underline transition duration-300 ease-in-out hover:text-blue-800"
-                    >
-                      Termos de Uso
-                    </Link>
-                    .
-                  </label>
-                </div>
+              <div className="flex flex-row gap-2">
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="E-mail"
+                  className="h-10 w-full rounded-xl border border-b-zinc-200 p-4 text-sm font-medium text-zinc-800 shadow-sm outline-none placeholder:font-bold dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+                />
+
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="WhatsApp"
+                  className="h-10 w-full rounded-xl border border-b-zinc-200 p-4 text-sm font-medium text-zinc-800 shadow-sm outline-none placeholder:font-bold dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+                />
               </div>
 
-              <button className="focus:shadow-outline mt-4 w-full rounded-lg bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none">
+              <div className="flex flex-row gap-2">
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="Empresa"
+                  className="h-10 w-full rounded-xl border border-b-zinc-200 p-4 text-sm font-medium text-zinc-800 shadow-sm outline-none placeholder:font-bold dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+                />
+
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="Qtd. de dispositivos"
+                  className="h-10 w-full rounded-xl border border-b-zinc-200 p-4 text-sm font-medium text-zinc-800 shadow-sm outline-none placeholder:font-bold dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+                />
+              </div>
+
+              <textarea
+                id="remarks"
+                placeholder="Mensagem"
+                className="h-32 w-full rounded-xl border border-b-zinc-200 p-4 text-sm font-medium text-zinc-800 shadow-sm outline-none placeholder:font-bold dark:bg-zinc-700 placeholder:dark:text-zinc-500"
+              />
+
+              <div className="flex items-center gap-2">
+                <Checkbox id="terms1" />
+
+                <span className="text-sm">
+                  Declaro que li e concordo com a Política de Privacidade e os
+                  Termos de Uso.
+                </span>
+              </div>
+
+              <button className="bg-b-zinc-400 left-1/2 mt-10 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-white shadow-md hover:bg-zinc-800">
                 Enviar
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
