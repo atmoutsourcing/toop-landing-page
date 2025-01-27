@@ -276,9 +276,8 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-10 pb-20 md:h-screen md:flex-row">
+      <div className="flex items-center justify-center gap-10 pb-20 md:h-screen md:flex-row">
         <Image src={valores} alt="Valores" className="w-[80%] md:w-[40%]" />
-        <Image src={grupoAtm} alt="Valores" className="w-[80%] md:w-[40%]" />
       </div>
     </div>
   )
