@@ -2,14 +2,9 @@
 import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import cellToop from '@/../public/cellToop.png'
-import Autoplay from 'embla-carousel-autoplay'
 
 import Image from 'next/image'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from '@/components/ui/carousel'
+
 import React from 'react'
 import { ArrowRight, Check, SquarePen } from 'lucide-react'
 import { Button } from '@/components/button'
@@ -22,18 +17,17 @@ import {
 } from '@/components/ui/accordion'
 
 export default function Home() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
-  )
-
   return (
     <div className="flex flex-col font-inter">
-      <div className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
+      <div
+        style={{ zIndex: '-1' }}
+        className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]"
+      />
 
       <div className="relative flex min-h-screen flex-col overflow-hidden">
         <div className="min-h-full">
-          <div className="mt-52 items-center font-bold">
-            <div className="flex flex-col items-center gap-2">
+          <div className="mt-28 items-center font-bold md:mt-52">
+            <div className="flex flex-col items-center gap-2 text-center md:text-start">
               <Image
                 src={iconWhite}
                 alt="Toop icon"
@@ -46,11 +40,11 @@ export default function Home() {
                 className="block h-28 w-28 dark:hidden"
               />
 
-              <h1 className="flex justify-center text-4xl">
+              <h1 className="flex justify-center text-3xl md:text-4xl">
                 O sistema EMM que transforma a gestão de
               </h1>
 
-              <h1 className="flex justify-center text-4xl">
+              <h1 className="flex justify-center text-3xl md:text-4xl">
                 dispositivos em uma experiência prática e eficiente
               </h1>
 
@@ -83,13 +77,13 @@ export default function Home() {
           <div className="absolute left-[1256px] top-[291px] h-[438px] w-[1056px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
         </div>
       </div>
-      <div className="flex flex-row gap-10 px-[4%] py-[4%]">
+      <div className="flex flex-col justify-center gap-10 px-[4%] py-[4%] md:flex-row">
         <Image src={cellToop} alt="Toop icon" />
         <div className="flex flex-col items-center gap-[20%] pt-[5%]">
-          <h1 className="text-2xl dark:text-zinc-300 md:text-4xl">
+          <h1 className="pb-[5%] text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
             O porquê de empresas adorarem o TOOP.
           </h1>
-          <div className="max-w-[500px] text-sm md:text-lg">
+          <div className="max-w-[500px] text-center text-sm md:text-start md:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, minus
             vero architecto optio nobis quidem recusandae veritatis
             reprehenderit quo odio cum qui, illum neque consequuntur alias
@@ -102,42 +96,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex h-[305px] w-full flex-col items-center bg-zinc-100 dark:bg-shapePrimary">
-        <h1 className="pt-[2%] text-center text-2xl dark:text-zinc-300 md:text-4xl">
-          Parceiros que confiam no TOOP
-        </h1>
-        <Carousel
-          plugins={[plugin.current]}
-          className="w-full max-w-[60%]"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
-        >
-          <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem
-                key={index}
-                className="pt-10 md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="flex h-[122px] w-[248px] items-center justify-center rounded-lg border">
-                  {index + 1}
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
-
-      <div className="flex h-screen flex-col items-center justify-center gap-[20%]">
+      <div className="flex flex-col items-center justify-center gap-[20%] py-10 md:h-screen">
         <div
-          className="absolute h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[180px]"
+          className="absolute hidden h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[180px] md:flex"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
-        ></div>
-        <h1 className="pb-24 text-2xl dark:text-zinc-300 md:text-4xl">
+        />
+        <h1 className="pb-[5%] text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
           Quais são os beneficios de usar o TOOP?
         </h1>
 
-        <div className="flex w-full flex-col gap-10 pl-[10%]">
-          <div className="grid grid-cols-1 justify-between gap-5 text-center sm:grid-cols-2 md:grid-cols-3 md:text-left">
+        <div className="flex w-full flex-col gap-16 md:pl-[10%]">
+          <div className="grid grid-cols-1 justify-between gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
             <div className="md:max-w-[300px]">
               <h2 className="pb-5 font-sans text-xl text-blue-500">
                 Controle e Segurança
@@ -205,7 +174,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 text-center sm:grid-cols-2 md:grid-cols-3 md:text-left">
+          <div className="grid grid-cols-1 gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
             <div className="md:max-w-[300px]">
               <h2 className="pb-5 font-sans text-xl text-blue-500">
                 Flexibilidade e Escalabilidade
@@ -264,8 +233,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex h-full flex-row justify-center gap-8 p-8">
-        <div className="flex h-[450px] w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+      <div className="flex h-full flex-col items-center justify-center gap-8 p-8 md:flex-row md:items-start">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -321,7 +290,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="ml-3 mr-4 flex h-[450px] w-[380px] scale-110 flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:ml-3 md:mr-4 md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -378,7 +347,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex h-[450px] w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -433,7 +402,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex h-[450px] w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -496,8 +465,8 @@ export default function Home() {
         <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
       </div>
 
-      <div className="flex flex-row justify-center gap-10 py-14">
-        <div className="flex h-[528px] w-[450px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+      <div className="flex flex-col items-center justify-center gap-10 py-14 md:flex-row md:items-start">
+        <div className="flex h-[528px] w-[350px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:w-[450px]">
           <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
             <SquarePen className="h-[32.72px] w-[35px]" />
             <p className="text-2xl font-bold">Nos solicite uma proposta</p>
@@ -534,7 +503,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="flex h-[528px] w-[450px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+        <div className="flex h-[528px] w-[350px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:w-[450px]">
           <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
             <WhatsappLogo className="h-[32.72px] w-[35px] text-green-600" />
 
@@ -554,20 +523,20 @@ export default function Home() {
           </div>
 
           <Button
-            style={{ width: '90%', marginLeft: '5%', marginTop: '34%' }}
+            style={{ width: '90%', marginLeft: '5%', marginTop: '29%' }}
             variant="secondary"
           >
-            Solicitar proposta
+            Chamar no WhatsApp
           </Button>
         </div>
       </div>
 
-      <h1 className="py-20 text-center text-2xl font-bold dark:text-zinc-300 md:text-4xl">
+      <h1 className="pb-10 text-center text-2xl font-bold dark:text-zinc-300 md:py-20 md:text-4xl">
         Dúvidas frequentes
       </h1>
 
       <div className="flex justify-center pb-24">
-        <Accordion type="single" collapsible className="w-[50%]">
+        <Accordion type="single" collapsible className="w-[80%] md:w-[50%]">
           <AccordionItem value="item-1">
             <AccordionTrigger>O que é MDM?</AccordionTrigger>
             <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
