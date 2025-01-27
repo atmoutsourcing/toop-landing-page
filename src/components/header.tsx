@@ -116,7 +116,11 @@ export function Header() {
         >
           Contatos
         </Link>
-        <Link href="/blog" onClick={() => setIsOpen(false)} className={`p-4`}>
+        <Link
+          href="/blog"
+          onClick={() => setIsOpen(false)}
+          className={`border-b-[1px] border-zinc-700 p-4`}
+        >
           Blog
         </Link>
       </div>
