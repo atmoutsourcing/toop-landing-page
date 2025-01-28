@@ -24,13 +24,13 @@ export default function AboutUs() {
       <div className="group relative flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <h1
           style={{ zIndex: '100' }}
-          className="text-center text-3xl font-bold dark:text-zinc-200 md:text-5xl"
+          className="text-center text-3xl font-bold dark:text-zinc-200 md:text-6xl"
         >
           Conectando eficiência e segurança para{' '}
         </h1>
         <h1
           style={{ zIndex: '10' }}
-          className="text-center text-3xl font-bold md:text-5xl"
+          className="text-center text-3xl font-bold md:text-6xl"
         >
           <span className="text-yellow-400">transformar</span> sua gestão!
         </h1>
@@ -105,12 +105,12 @@ export default function AboutUs() {
       </div>
 
       <div className="flex flex-col items-center py-10 text-center dark:text-zinc-300">
-        <div className="flex flex-col pb-10 text-2xl font-bold md:text-4xl">
+        <div className="flex flex-col pb-10 text-xl font-bold md:text-3xl">
           <div>Toop</div>
           <div>Inovação e Agilidade</div>
         </div>
 
-        <div className="max-w-[80%] pb-16 text-sm md:max-w-[50%] md:text-xl">
+        <div className="max-w-[80%] pb-16 text-xs md:max-w-[50%] md:text-sm">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
           itaque consequuntur perspiciatis et ut veniam facilis nemo libero
           voluptatibus tempora, animi iusto nesciunt reprehenderit obcaecati
