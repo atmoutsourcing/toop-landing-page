@@ -6,7 +6,7 @@ import cellToop from '@/../public/cellToop.png'
 import Image from 'next/image'
 
 import React from 'react'
-import { ArrowRight, Check, SquarePen } from 'lucide-react'
+import { ArrowRight, Check, Clock, Lock, SquarePen } from 'lucide-react'
 import { Button } from '@/components/button'
 import { WhatsappLogo } from 'phosphor-react'
 import {
@@ -48,12 +48,17 @@ export default function Home() {
                 dispositivos em uma experiência prática e eficiente
               </h1>
 
-              <span className="mt-2 text-sm text-zinc-600 dark:text-textBase">
+              <span className="mt-2 text-lg text-zinc-600 dark:text-textBase">
                 Gerenciamento dispositivos móveis de maneira segura inteligente.
               </span>
 
               <div className="mt-2">
-                <Button>Saiba mais</Button>
+                <button
+                  className="isolation-auto flex h-[45px] items-center justify-center gap-2 overflow-hidden rounded-full bg-zinc-50 px-6 py-3 text-[16px] font-bold text-shapePrimary shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-shapePrimary before:transition-all before:duration-700 hover:text-zinc-50 before:hover:left-0 before:hover:w-full dark:bg-shapePrimary dark:text-zinc-50 dark:before:bg-zinc-50 dark:hover:text-zinc-950"
+                  type="submit"
+                >
+                  Saiba mais
+                </button>
                 {/* <button
                   className="group relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 bg-[#0A0D2D] px-4 py-2 font-sans text-lg font-bold text-gray-50 shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-zinc-50 before:transition-all before:duration-700 hover:text-zinc-950 before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-700 lg:font-semibold"
                   type="submit"
@@ -80,21 +85,68 @@ export default function Home() {
 
       <div className="flex flex-col justify-center gap-10 px-[4%] py-[4%] md:flex-row">
         <Image src={cellToop} alt="Toop icon" />
-        <div className="flex flex-col items-center gap-[20%] pt-[5%]">
-          <h1 className="pb-[5%] text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
+        <div className="flex flex-col gap-4 rounded-xl p-6 shadow-md dark:text-zinc-100">
+          <h1 className="text-center text-2xl dark:text-zinc-300 md:text-4xl">
+            Por que as empresas adoram o Toop?
+          </h1>
+          <p>
+            Empresas escolhem o TOOP porque ele transforma a gestão de
+            dispositivos móveis em uma experiência simples, segura e eficiente.
+            Nossa plataforma EMM é projetada para atender às necessidades de
+            negócios modernos, oferecendo:
+          </p>
+          <ul className="list-inside list-disc">
+            <li className="pb-2">
+              <strong>Segurança de ponta a ponta:</strong> Protegemos dados
+              sensíveis com controles avançados e políticas robustas, garantindo
+              tranquilidade às empresas.
+            </li>
+            <li className="pb-2">
+              <strong>Gestão centralizada:</strong> Administradores podem
+              monitorar, configurar e gerenciar dispositivos em um único painel
+              intuitivo.
+            </li>
+            <li className="pb-2">
+              <strong>Produtividade maximizada:</strong> Com ferramentas fáceis
+              de usar, os colaboradores têm acesso rápido e seguro aos recursos
+              necessários para o trabalho.
+            </li>
+            <li className="pb-2">
+              <strong>Flexibilidade para crescer:</strong> O TOOP se adapta às
+              demandas de empresas de qualquer tamanho, com soluções escaláveis
+              que acompanham o crescimento do negócio.
+            </li>
+            <li className="pb-2">
+              <strong>Suporte confiável:</strong> Nossa equipe está sempre
+              pronta para oferecer assistência, ajudando as empresas a superar
+              desafios e alcançar seus objetivos.
+            </li>
+          </ul>
+          <p className="">
+            O TOOP é mais do que uma ferramenta — é um parceiro estratégico para
+            empresas que valorizam inovação e eficiência. 🚀
+          </p>
+        </div>
+
+        {/* <div className="flex flex-col items-center gap-[15%] pt-[5%]">
+          <h1 className="text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
             O porquê de empresas adorarem o TOOP.
           </h1>
-          <div className="max-w-[500px] text-center text-sm md:text-start md:text-lg">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, minus
-            vero architecto optio nobis quidem recusandae veritatis
-            reprehenderit quo odio cum qui, illum neque consequuntur alias
-            deserunt dolorum doloremque! Ab?Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Facilis deleniti rem a velit
-            architecto repellendus alias. Quis labore natus veritatis aspernatur
-            voluptates! Quo hic, enim dignissimos corrupti at necessitatibus
-            repellendus!
+          <div className="flex max-w-[550px] flex-col text-center text-sm md:text-start md:text-lg">
+            <div>
+              Empresas escolhem o TOOP porque ele transforma a gestão de
+              dispositivos móveis em uma experiência simples, segura e
+              eficiente. Nossa plataforma EMM é projetada para atender às
+              necessidades de negócios modernos, oferecendo:
+            </div>
+            <div className="flex flex-row text-sm">
+              <DotOut />
+              Segurança de ponta a ponta: Protegemos dados sensíveis com
+              controles avançados e políticas robustas, garantindo tranquilidade
+              às empresas.
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="flex flex-col items-center justify-center gap-[20%] py-10 md:h-screen">
@@ -234,8 +286,76 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex h-full flex-col items-center justify-center gap-8 p-8 md:flex-row md:items-start">
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+      <div className="flex h-full flex-col items-center justify-center gap-10 p-8 md:flex-row md:items-start">
+        <div>
+          <div
+            className="absolute flex min-h-[450px] w-[380px] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300"
+            style={{ zIndex: '1' }}
+          >
+            <Clock className="h-[40px] w-[40px]" />
+            Disponível em breve
+          </div>
+          <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 opacity-[.25] blur-[5px] dark:bg-shapePrimary">
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-row items-center gap-1 pt-3">
+                <Image
+                  src={iconWhite}
+                  alt="Toop icon"
+                  className="hidden h-8 w-8 dark:block"
+                />
+
+                <Image
+                  src={iconDark}
+                  alt="Toop icon"
+                  className="block h-8 w-8 dark:hidden"
+                />
+                <p className="font-inter text-sm">Toop</p>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
+                  PRO
+                </h1>
+
+                <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
+                  Solução robusta para empresas que buscam gerenciar aplicativos
+                  e dispositivos de forma integrada, com análises avançadas e
+                  suporte especializado.
+                </p>
+              </div>
+            </div>
+
+            <div className="py-2 font-inter text-xl font-bold">
+              R$ **,**/mês
+            </div>
+
+            <Button variant="secondary">Contratar agora!</Button>
+
+            <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
+
+            <div className="flex flex-col gap-2 pt-4">
+              <div className="flex flex-row gap-2 font-inter text-xs">
+                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
+                Configuração de políticas de segurança e restrições de uso para
+                dispositivos.
+              </div>
+
+              <div className="flex flex-row gap-2 font-inter text-xs">
+                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
+                Relatórios básicos com informações sobre dispositivos
+                cadastrados.
+              </div>
+
+              <div className="flex flex-row gap-2 font-inter text-xs">
+                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
+                Atendimento por e-mail com prioridade para resolução de
+                problemas
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -291,169 +411,69 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:ml-3 md:mr-4 md:scale-110">
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-row items-center gap-1 pt-3">
-              <Image
-                src={iconWhite}
-                alt="Toop icon"
-                className="hidden h-8 w-8 dark:block"
-              />
-
-              <Image
-                src={iconDark}
-                alt="Toop icon"
-                className="block h-8 w-8 dark:hidden"
-              />
-              <p className="font-inter text-sm">Toop</p>
-
-              <p className="ml-auto text-xs">Popular</p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                PRO
-              </h1>
-
-              <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                Solução robusta para empresas que buscam gerenciar aplicativos e
-                dispositivos de forma integrada, com análises avançadas e
-                suporte especializado.
-              </p>
-            </div>
+        <div className="flex">
+          <div
+            className="absolute flex min-h-[450px] w-[380px] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300"
+            style={{ zIndex: '1' }}
+          >
+            <Clock className="h-[40px] w-[40px]" />
+            Disponível em breve
           </div>
+          <div className="opacity- flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 opacity-[.25] blur-[5px] dark:bg-shapePrimary">
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-row items-center gap-1 pt-3">
+                <Image
+                  src={iconWhite}
+                  alt="Toop icon"
+                  className="hidden h-8 w-8 dark:block"
+                />
 
-          <div className="py-2 font-inter text-xl font-bold">R$ 27,90/mês</div>
+                <Image
+                  src={iconDark}
+                  alt="Toop icon"
+                  className="block h-8 w-8 dark:hidden"
+                />
+                <p className="font-inter text-sm">Toop</p>
+              </div>
 
-          <Button variant="secondary">Contratar agora!</Button>
+              <div className="flex flex-col gap-2">
+                <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
+                  ULTRA
+                </h1>
 
-          <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
-
-          <div className="flex flex-col gap-2 pt-4">
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Configuração de políticas de segurança e restrições de uso para
-              dispositivos.
+                <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
+                  Implantação e gerenciamento de aplicativos corporativos
+                  remotamente.
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Relatórios básicos com informações sobre dispositivos cadastrados.
+            <div className="py-2 font-inter text-xl font-bold">
+              R$ **,**/mês
             </div>
 
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Atendimento por e-mail com prioridade para resolução de problemas
-            </div>
-          </div>
-        </div>
+            <Button variant="secondary">Contratar agora!</Button>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-row items-center gap-1 pt-3">
-              <Image
-                src={iconWhite}
-                alt="Toop icon"
-                className="hidden h-8 w-8 dark:block"
-              />
+            <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
 
-              <Image
-                src={iconDark}
-                alt="Toop icon"
-                className="block h-8 w-8 dark:hidden"
-              />
-              <p className="font-inter text-sm">Toop</p>
-            </div>
+            <div className="flex flex-col gap-2 pt-4">
+              <div className="flex flex-row gap-2 font-inter text-xs">
+                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
+                Relatórios preditivos sobre vulnerabilidades e riscos de
+                segurança.
+              </div>
 
-            <div className="flex flex-col gap-2">
-              <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                ULTRA
-              </h1>
+              <div className="flex flex-row gap-2 font-inter text-xs">
+                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
+                Relatórios básicos com informações sobre dispositivos
+                cadastrados.
+              </div>
 
-              <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                Implantação e gerenciamento de aplicativos corporativos
-                remotamente.
-              </p>
-            </div>
-          </div>
-
-          <div className="py-2 font-inter text-xl font-bold">R$ 34,90/mês</div>
-
-          <Button variant="secondary">Contratar agora!</Button>
-
-          <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
-
-          <div className="flex flex-col gap-2 pt-4">
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Relatórios preditivos sobre vulnerabilidades e riscos de
-              segurança.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Relatórios básicos com informações sobre dispositivos cadastrados.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Sessões exclusivas para capacitação da equipe de TI no uso da
-              plataforma.h
-            </div>
-          </div>
-        </div>
-
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-row items-center gap-1 pt-3">
-              <Image
-                src={iconWhite}
-                alt="Toop icon"
-                className="hidden h-8 w-8 dark:block"
-              />
-
-              <Image
-                src={iconDark}
-                alt="Toop icon"
-                className="block h-8 w-8 dark:hidden"
-              />
-              <p className="font-inter text-sm">Toop</p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <h1 className="flex items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                ENTERPRISE
-              </h1>
-
-              <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                Implantação e gerenciamento de aplicativos corporativos
-                remotamente.
-              </p>
-            </div>
-          </div>
-
-          <div className="py-2 font-inter text-xl font-bold">R$ 47,90/mês</div>
-
-          <Button variant="secondary">Entre em contato</Button>
-
-          <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
-
-          <div className="flex flex-col gap-2 pt-4">
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Relatórios preditivos sobre vulnerabilidades e riscos de
-              segurança.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Relatórios básicos com informações sobre dispositivos cadastrados.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Sessões exclusivas para capacitação da equipe de TI no uso da
-              plataforma.h
+              <div className="flex flex-row gap-2 font-inter text-xs">
+                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
+                Sessões exclusivas para capacitação da equipe de TI no uso da
+                plataforma.h
+              </div>
             </div>
           </div>
         </div>
