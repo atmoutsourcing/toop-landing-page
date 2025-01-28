@@ -16,10 +16,12 @@ export default function Plans() {
           className="absolute hidden h-[180%] w-[10%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[230px] md:flex"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
-        <div className="text-3xl font-bold md:text-6xl">
+        <div className="text-3xl font-bold dark:text-zinc-200 md:text-6xl">
           Veja nossos planos e escolha a melhor
         </div>
-        <div className="text-3xl font-bold md:text-6xl">solução para você!</div>
+        <div className="text-3xl font-bold dark:text-zinc-200 md:text-6xl">
+          solução para você!
+        </div>
         <div className="flex flex-row items-center gap-1 pt-8">
           <div>
             Conheça também o plano{' '}
