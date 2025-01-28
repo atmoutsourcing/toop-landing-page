@@ -3,7 +3,7 @@
 import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import Image from 'next/image'
-import { ArrowRight, Check, CircleCheckBig } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import { Button } from '@/components/button'
 import { WhatsappLogo } from 'phosphor-react'
 import { TablePlans } from './tablePlans'
