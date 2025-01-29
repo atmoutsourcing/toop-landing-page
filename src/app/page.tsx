@@ -15,6 +15,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -53,35 +54,20 @@ export default function Home() {
               </span>
 
               <div className="mt-2">
-                <button
+                <Link
+                  href={'/plans'}
                   className="isolation-auto flex h-[45px] items-center justify-center gap-2 overflow-hidden rounded-full bg-zinc-50 px-6 py-3 text-[16px] font-bold text-shapePrimary shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-shapePrimary before:transition-all before:duration-700 hover:text-zinc-50 before:hover:left-0 before:hover:w-full dark:bg-shapePrimary dark:text-zinc-50 dark:before:bg-zinc-50 dark:hover:text-zinc-950"
                   type="submit"
                 >
                   Saiba mais
-                </button>
-                {/* <button
-                  className="group relative isolation-auto z-10 mx-auto flex items-center justify-center gap-2 overflow-hidden rounded-full border-2 bg-[#0A0D2D] px-4 py-2 font-sans text-lg font-bold text-gray-50 shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-zinc-50 before:transition-all before:duration-700 hover:text-zinc-950 before:hover:left-0 before:hover:w-full before:hover:scale-150 before:hover:duration-700 lg:font-semibold"
-                  type="submit"
-                >
-                  Saiba mais
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 19"
-                    className="h-8 w-8 rotate-45 justify-end rounded-full border border-gray-700 bg-gray-50 p-2 text-gray-50 duration-300 ease-linear group-hover:rotate-90 group-hover:border-none group-hover:bg-gray-800"
-                  >
-                    <path
-                      className="fill-gray-800 group-hover:fill-gray-50"
-                      d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                    />
-                  </svg>
-                </button> */}
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute left-[1256px] top-[291px] h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
+      <div className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex" />
 
       <div className="flex flex-col items-center justify-center gap-10 px-[4%] py-[4%] md:flex-row">
         <Image src={cellToop} alt="Toop icon" className="h-[400px] w-[400px]" />
@@ -238,15 +224,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex h-full flex-col items-center justify-center gap-10 p-8 md:flex-row md:items-start">
+      <div className="flex h-full flex-col items-center justify-center gap-10 md:flex-row md:items-start md:p-8">
         <div>
           <div
-            className="absolute flex min-h-[450px] w-[380px] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300"
+            className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
           >
             <Clock className="h-[40px] w-[40px]" />
             Disponível em breve
           </div>
+
           <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 opacity-[.25] blur-[5px] dark:bg-shapePrimary">
             <div className="flex flex-col gap-4">
               <div className="flex flex-row items-center gap-1 pt-3">
@@ -331,9 +318,9 @@ export default function Home() {
               </h1>
 
               <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                Ideal para pequenas empresas ou equipes iniciando no
-                gerenciamento de dispositivos móveis. Oferece funcionalidades
-                básicas para controle e segurança sem custo.
+                Oferece uma solução simples e completa de forma gratuita, nosso
+                plano Free permite que você faça controle dos dispositivos de
+                forma segura e fornecendo relatórios.
               </p>
             </div>
           </div>
@@ -365,7 +352,7 @@ export default function Home() {
 
         <div className="flex">
           <div
-            className="absolute flex min-h-[450px] w-[380px] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300"
+            className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
           >
             <Clock className="h-[40px] w-[40px]" />
@@ -431,7 +418,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-8 px-[10%] pt-[5%]">
+      <div className="flex flex-col items-center gap-8 px-[10%] pt-[20%] md:pt-[10%]">
         <h1 className="text-2xl font-bold dark:text-zinc-300 md:text-4xl">
           Contato rápido
         </h1>
@@ -442,7 +429,9 @@ export default function Home() {
         <div className="flex h-[528px] w-[350px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:w-[450px]">
           <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
             <SquarePen className="h-[32.72px] w-[35px]" />
-            <p className="text-2xl font-bold">Nos solicite uma proposta</p>
+            <p className="text-xl font-bold md:text-2xl">
+              Nos solicite uma proposta
+            </p>
             <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
           </div>
 
@@ -468,19 +457,18 @@ export default function Home() {
             />
           </div>
 
-          <Button
-            style={{ width: '90%', marginLeft: '5%', marginTop: '13%' }}
-            variant="secondary"
-          >
-            Solicitar proposta
-          </Button>
+          <div className="flex h-full items-end justify-center pb-8">
+            <Button style={{ width: '90%' }} variant="secondary">
+              Solicitar proposta
+            </Button>
+          </div>
         </div>
 
         <div className="flex h-[528px] w-[350px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:w-[450px]">
           <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
             <WhatsappLogo className="h-[32.72px] w-[35px] text-green-600" />
 
-            <p className="text-2xl font-bold">Atendimento rápido</p>
+            <p className="text-xl font-bold md:text-2xl">Atendimento rápido</p>
             <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
           </div>
 
@@ -495,12 +483,11 @@ export default function Home() {
             </p>
           </div>
 
-          <Button
-            style={{ width: '90%', marginLeft: '5%', marginTop: '29%' }}
-            variant="secondary"
-          >
-            Chamar no WhatsApp
-          </Button>
+          <div className="flex h-full items-end justify-center pb-8">
+            <Button style={{ width: '90%' }} variant="secondary">
+              Chamar no WhatsApp
+            </Button>
+          </div>
         </div>
       </div>
 

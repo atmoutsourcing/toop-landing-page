@@ -7,6 +7,7 @@ import logoDark from '../../public/logo-dark.png'
 
 import seloSilverPartner from '../../public/Selo Silver Partner do Google.png'
 import { CalendarDays, Copyright, Mail, MapPin, Phone } from 'lucide-react'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -39,21 +40,33 @@ export function Footer() {
                 Suporte
               </span>
 
-              <span className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300">
+              <Link
+                href={'/plans'}
+                className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300"
+              >
                 Planos
-              </span>
+              </Link>
 
-              <span className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300">
+              <Link
+                href={'/contact'}
+                className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300"
+              >
                 Contatos
-              </span>
+              </Link>
 
-              <span className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300">
+              <Link
+                href="/aboutUs"
+                className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300"
+              >
                 Sobre nós
-              </span>
+              </Link>
 
-              <span className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300">
+              <Link
+                href={'/'}
+                className="flex cursor-pointer gap-2 text-sm font-bold text-zinc-600 hover:text-zinc-800 hover:underline dark:text-zinc-300"
+              >
                 Blog
-              </span>
+              </Link>
             </div>
           </div>
 

@@ -36,8 +36,10 @@ export default function AboutUs() {
         >
           <span className="text-yellow-400">transformar</span> sua gestão!
         </h1>
-        <div className="absolute flex h-[140px] w-[213px] bg-blue-500 blur-[100px] before:rounded-full md:hidden" />
-
+        <div
+          className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[130px] md:hidden"
+          style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
+        />
         <div className="hidden before:absolute before:left-[25%] before:top-[40%] before:h-[204px] before:w-[213px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-500 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[350%] md:flex" />
         <div className="hidden before:absolute before:left-[68%] before:top-[55%] before:h-[168px] before:w-[151px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-600 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[-500%] md:flex" />
       </div>
@@ -106,28 +108,6 @@ export default function AboutUs() {
         </Carousel>
       </div>
 
-      <div className="flex flex-col items-center py-10 text-center dark:text-zinc-300">
-        <div className="flex flex-col pb-10 text-xl font-bold md:text-3xl">
-          <div>Toop</div>
-          <div>Inovação e Agilidade</div>
-        </div>
-
-        <div className="max-w-[80%] pb-16 text-xs md:max-w-[50%] md:text-sm">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-          itaque consequuntur perspiciatis et ut veniam facilis nemo libero
-          voluptatibus tempora, animi iusto nesciunt reprehenderit obcaecati
-          sapiente. Sunt natus iure atque. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Earum voluptate perferendis eveniet
-          numquam consequatur eligendi fugiat pariatur quasi aut nostrum veniam,
-          magnam officiis aperiam similique iste ipsa, consectetur asperiores.
-          Nostrum!
-        </div>
-
-        <div className="flex h-[350px] w-[50%] items-center justify-center rounded-3xl bg-zinc-600 dark:bg-zinc-50">
-          <Play className="dark:text-zinc-950" />
-        </div>
-      </div>
-
       <div className="flex flex-col items-center pt-10">
         <Image src={manoel} alt="foto do Manoel" className="w-56" />
         <div className="text-2xl font-bold dark:text-zinc-200 md:text-3xl">
@@ -138,7 +118,17 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-8 px-[10%] py-20">
+      <div className="flex flex-col items-center py-10 text-center dark:text-zinc-300">
+        <iframe
+          className="h-[250px] w-[80%] rounded-3xl md:h-[450px] md:w-[40%] md:min-w-[750px]"
+          src="https://www.youtube.com/embed/YK_ZRNtf_U4"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+
+      <div className="flex flex-col items-center gap-8 px-[10%] py-10">
         <div className="h-[1px] w-full bg-gray-500" />
       </div>
 
