@@ -40,15 +40,15 @@ export default function Home() {
                 className="block h-28 w-28 dark:hidden"
               />
 
-              <h1 className="flex justify-center text-3xl md:text-4xl">
+              <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
                 O sistema EMM que transforma a gestão de
               </h1>
 
-              <h1 className="flex justify-center text-3xl md:text-4xl">
+              <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
                 dispositivos em uma experiência prática e eficiente
               </h1>
 
-              <span className="mt-2 text-lg text-zinc-600 dark:text-textBase">
+              <span className="mt-2 font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase">
                 Gerenciamento dispositivos móveis de maneira segura inteligente.
               </span>
 
@@ -83,11 +83,11 @@ export default function Home() {
 
       <div className="absolute left-[1256px] top-[291px] h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]" />
 
-      <div className="flex flex-col justify-center gap-10 px-[4%] py-[4%] md:flex-row">
-        <Image src={cellToop} alt="Toop icon" />
-        <div className="flex flex-col gap-4 rounded-xl p-6 shadow-md dark:text-zinc-100">
-          <h1 className="text-center text-2xl dark:text-zinc-300 md:text-4xl">
-            Por que as empresas adoram o Toop?
+      <div className="flex flex-col items-center justify-center gap-10 px-[4%] py-[4%] md:flex-row">
+        <Image src={cellToop} alt="Toop icon" className="h-[400px] w-[400px]" />
+        <div className="flex flex-col gap-4 rounded-xl p-6 shadow-md">
+          <h1 className="text-2xl font-bold">
+            Por que as empresas adoram o TOOP?
           </h1>
           <p>
             Empresas escolhem o TOOP porque ele transforma a gestão de
@@ -96,57 +96,33 @@ export default function Home() {
             negócios modernos, oferecendo:
           </p>
           <ul className="list-inside list-disc">
-            <li className="pb-2">
+            <li className="pb-4">
               <strong>Segurança de ponta a ponta:</strong> Protegemos dados
               sensíveis com controles avançados e políticas robustas, garantindo
               tranquilidade às empresas.
             </li>
-            <li className="pb-2">
+            <li className="pb-4">
               <strong>Gestão centralizada:</strong> Administradores podem
               monitorar, configurar e gerenciar dispositivos em um único painel
               intuitivo.
             </li>
-            <li className="pb-2">
+            <li className="pb-4">
               <strong>Produtividade maximizada:</strong> Com ferramentas fáceis
               de usar, os colaboradores têm acesso rápido e seguro aos recursos
               necessários para o trabalho.
             </li>
-            <li className="pb-2">
+            <li className="pb-4">
               <strong>Flexibilidade para crescer:</strong> O TOOP se adapta às
               demandas de empresas de qualquer tamanho, com soluções escaláveis
               que acompanham o crescimento do negócio.
             </li>
-            <li className="pb-2">
+            <li className="pb-4">
               <strong>Suporte confiável:</strong> Nossa equipe está sempre
               pronta para oferecer assistência, ajudando as empresas a superar
               desafios e alcançar seus objetivos.
             </li>
           </ul>
-          <p className="">
-            O TOOP é mais do que uma ferramenta — é um parceiro estratégico para
-            empresas que valorizam inovação e eficiência. 🚀
-          </p>
         </div>
-
-        {/* <div className="flex flex-col items-center gap-[15%] pt-[5%]">
-          <h1 className="text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
-            O porquê de empresas adorarem o TOOP.
-          </h1>
-          <div className="flex max-w-[550px] flex-col text-center text-sm md:text-start md:text-lg">
-            <div>
-              Empresas escolhem o TOOP porque ele transforma a gestão de
-              dispositivos móveis em uma experiência simples, segura e
-              eficiente. Nossa plataforma EMM é projetada para atender às
-              necessidades de negócios modernos, oferecendo:
-            </div>
-            <div className="flex flex-row text-sm">
-              <DotOut />
-              Segurança de ponta a ponta: Protegemos dados sensíveis com
-              controles avançados e políticas robustas, garantindo tranquilidade
-              às empresas.
-            </div>
-          </div>
-        </div> */}
       </div>
 
       <div className="flex flex-col items-center justify-center gap-[20%] py-10 md:h-screen">
@@ -176,10 +152,6 @@ export default function Home() {
                 Remoção remota de dados em caso de perda ou roubo do
                 dispositivo.
               </p>
-
-              <div className="flex cursor-pointer flex-row items-center gap-1 pl-4 text-xs">
-                Saiba mais <ArrowRight size={12.5} />
-              </div>
             </div>
 
             <div className="md:max-w-[300px]">
@@ -198,10 +170,6 @@ export default function Home() {
                 Definição de perfis de configuração personalizados por
                 departamento ou função.
               </p>
-
-              <div className="flex cursor-pointer flex-row items-center gap-1 pl-4 text-center text-xs">
-                Saiba mais <ArrowRight size={12.5} />
-              </div>
             </div>
 
             <div className="md:max-w-[300px]">
@@ -220,10 +188,6 @@ export default function Home() {
                 Controle sobre o uso de aplicativos para garantir o foco nas
                 atividades corporativas.
               </p>
-
-              <div className="flex cursor-pointer flex-row items-center gap-1 pl-4 text-center text-xs">
-                Saiba mais <ArrowRight size={12.5} />
-              </div>
             </div>
           </div>
 
@@ -241,10 +205,6 @@ export default function Home() {
                 Capacidade de adicionar ou remover dispositivos e usuários
                 conforme necessário.
               </p>
-
-              <div className="flex cursor-pointer flex-row items-center gap-1 pl-4 text-center text-xs">
-                Saiba mais <ArrowRight size={12.5} />
-              </div>
             </div>
 
             <div className="md:max-w-[300px]">
@@ -259,10 +219,6 @@ export default function Home() {
                 Ferramentas de auditoria para garantir que os dispositivos
                 estejam em conformidade com regulamentos específicos.
               </p>
-
-              <div className="flex cursor-pointer flex-row items-center gap-1 pl-4 text-center text-xs">
-                Saiba mais <ArrowRight size={12.5} />
-              </div>
             </div>
 
             <div className="md:max-w-[300px]">
@@ -277,10 +233,6 @@ export default function Home() {
                 Minimização de riscos de violações de dados que podem gerar
                 custos elevados.
               </p>
-
-              <div className="flex cursor-pointer flex-row items-center gap-1 pl-4 text-center text-xs">
-                Saiba mais <ArrowRight size={12.5} />
-              </div>
             </div>
           </div>
         </div>

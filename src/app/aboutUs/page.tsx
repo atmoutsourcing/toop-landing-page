@@ -10,6 +10,8 @@ import { Play } from 'lucide-react'
 import React from 'react'
 import manoel from '../../../public/Manoel.png'
 import recepcao from '../../../public/recepcaoATM.jpeg'
+import manoelAtm from '../../../public/ManoelATm.jpg'
+
 import valores from '../../../public/valores_atm.png'
 
 import Image from 'next/image'
@@ -24,13 +26,13 @@ export default function AboutUs() {
       <div className="group relative flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <h1
           style={{ zIndex: '100' }}
-          className="text-center text-3xl font-bold dark:text-zinc-200 md:text-6xl"
+          className="text-center text-3xl font-bold dark:text-zinc-200 md:text-5xl"
         >
           Conectando eficiência e segurança para{' '}
         </h1>
         <h1
           style={{ zIndex: '10' }}
-          className="text-center text-3xl font-bold md:text-6xl"
+          className="text-center text-3xl font-bold md:text-5xl"
         >
           <span className="text-yellow-400">transformar</span> sua gestão!
         </h1>
@@ -173,9 +175,9 @@ export default function AboutUs() {
           <div className="absolute inset-0 left-[75%] top-[35%] -z-10 h-[72%] w-[27%] rounded-xl bg-blue-500 dark:bg-blue-800" />
 
           <Image
-            src={recepcao}
+            src={manoelAtm}
             alt="imagem atm"
-            className="flex w-[50%] rounded-xl"
+            className="flex w-[350px] rounded-xl"
           />
         </div>
       </div>
@@ -202,7 +204,7 @@ export default function AboutUs() {
       <div className="flex flex-col pt-20 md:hidden">
         <div className="flex flex-col items-center justify-center">
           <Image
-            src={recepcao}
+            src={manoelAtm}
             alt="imagem atm"
             className="w-[350px] rounded-3xl"
           />
@@ -228,9 +230,9 @@ export default function AboutUs() {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-10 pb-20 md:min-h-[700px] md:flex-row">
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[600px] md:max-w-[400px] md:rounded-xl">
+        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
           <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[200px] md:w-[200px]"
+            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
             stroke="currentColor"
             fill="currentColor"
             strokeWidth="0"
@@ -247,9 +249,9 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[600px] md:max-w-[400px] md:rounded-xl">
+        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
           <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[200px] md:w-[200px]"
+            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
             stroke="currentColor"
             fill="none"
             strokeWidth="2"
@@ -275,8 +277,8 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-10 pb-20 md:h-screen md:flex-row">
-        <Image src={valores} alt="Valores" className="w-[80%] md:w-[40%]" />
+      <div className="flex items-center justify-center gap-10 pb-20 md:flex-row">
+        <Image src={valores} alt="Valores" className="w-[60%] md:w-[30%]" />
       </div>
     </div>
   )

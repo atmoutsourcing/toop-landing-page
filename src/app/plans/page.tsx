@@ -11,18 +11,18 @@ import { TablePlans } from './tablePlans'
 export default function Plans() {
   return (
     <div className="flex w-auto flex-col font-inter">
-      <div className="flex min-h-[600px] flex-col items-center justify-center">
+      <div className="flex min-h-screen flex-col items-center justify-center">
         <div
           className="absolute hidden h-[180%] w-[10%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[230px] md:flex"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
-        <div className="text-3xl font-bold dark:text-zinc-200 md:text-6xl">
+        <div className="text-3xl font-bold dark:text-zinc-200 md:text-5xl font-plusJakartaSans">
           Veja nossos planos e escolha a melhor
         </div>
-        <div className="text-3xl font-bold dark:text-zinc-200 md:text-6xl">
+        <div className="text-3xl font-bold dark:text-zinc-200 md:text-5xl font-plusJakartaSans">
           solução para você!
         </div>
-        <div className="flex flex-row items-center gap-1 pt-8">
+        <div className="flex flex-row items-center gap-1 pt-6">
           <div>
             Conheça também o plano{' '}
             <span className="font-bold underline">Enterprise</span>

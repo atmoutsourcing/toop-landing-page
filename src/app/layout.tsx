@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 // eslint-disable-next-line camelcase
-import { Inter } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+
 import './globals.css'
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
@@ -8,6 +9,11 @@ import { ThemeProvider } from '@/components/ui/theme-provider'
 
 const inter = Inter({
   variable: '--font-inter',
+  subsets: ['latin'],
+})
+
+const plus_Jakarta_Sans = Plus_Jakarta_Sans({
+  variable: '--font-plusJakartaSans',
   subsets: ['latin'],
 })
 
@@ -23,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} overflow-x-hidden antialiased`}>
+      <body
+        className={`${inter.variable} ${plus_Jakarta_Sans.variable} overflow-x-hidden antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
