@@ -6,10 +6,13 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import Autoplay from 'embla-carousel-autoplay'
-import { Play } from 'lucide-react'
 import React from 'react'
 import manoel from '../../../public/Manoel.png'
 import recepcao from '../../../public/recepcaoATM.jpeg'
+import manoelAtm from '../../../public/ManoelATm.jpg'
+import iconeWhite from '../../../public/icon-white.png'
+import iconeDark from '../../../public/icon-dark.png'
+
 import valores from '../../../public/valores_atm.png'
 
 import Image from 'next/image'
@@ -22,20 +25,34 @@ export default function AboutUs() {
   return (
     <div className="flex flex-col font-inter">
       <div className="group relative flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
+        <Image
+          src={iconeWhite}
+          alt="Toop icon"
+          className="hidden h-28 w-28 dark:block"
+        />
+
+        <Image
+          src={iconeDark}
+          alt="Toop icon"
+          className="block h-28 w-28 dark:hidden"
+        />
+
         <h1
           style={{ zIndex: '100' }}
-          className="text-center text-3xl font-bold dark:text-zinc-200 md:text-6xl"
+          className="text-center font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl"
         >
           Conectando eficiência e segurança para{' '}
         </h1>
         <h1
           style={{ zIndex: '10' }}
-          className="text-center text-3xl font-bold md:text-6xl"
+          className="text-center font-plusJakartaSans text-3xl font-bold md:text-5xl"
         >
           <span className="text-yellow-400">transformar</span> sua gestão!
         </h1>
-        <div className="absolute flex h-[140px] w-[213px] bg-blue-500 blur-[100px] before:rounded-full md:hidden" />
-
+        <div
+          className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[130px] md:hidden"
+          style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
+        />
         <div className="hidden before:absolute before:left-[25%] before:top-[40%] before:h-[204px] before:w-[213px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-500 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[350%] md:flex" />
         <div className="hidden before:absolute before:left-[68%] before:top-[55%] before:h-[168px] before:w-[151px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-600 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[-500%] md:flex" />
       </div>
@@ -104,28 +121,6 @@ export default function AboutUs() {
         </Carousel>
       </div>
 
-      <div className="flex flex-col items-center py-10 text-center dark:text-zinc-300">
-        <div className="flex flex-col pb-10 text-xl font-bold md:text-3xl">
-          <div>Toop</div>
-          <div>Inovação e Agilidade</div>
-        </div>
-
-        <div className="max-w-[80%] pb-16 text-xs md:max-w-[50%] md:text-sm">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-          itaque consequuntur perspiciatis et ut veniam facilis nemo libero
-          voluptatibus tempora, animi iusto nesciunt reprehenderit obcaecati
-          sapiente. Sunt natus iure atque. Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Earum voluptate perferendis eveniet
-          numquam consequatur eligendi fugiat pariatur quasi aut nostrum veniam,
-          magnam officiis aperiam similique iste ipsa, consectetur asperiores.
-          Nostrum!
-        </div>
-
-        <div className="flex h-[350px] w-[50%] items-center justify-center rounded-3xl bg-zinc-600 dark:bg-zinc-50">
-          <Play className="dark:text-zinc-950" />
-        </div>
-      </div>
-
       <div className="flex flex-col items-center pt-10">
         <Image src={manoel} alt="foto do Manoel" className="w-56" />
         <div className="text-2xl font-bold dark:text-zinc-200 md:text-3xl">
@@ -136,7 +131,17 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-8 px-[10%] py-20">
+      <div className="flex flex-col items-center py-10 text-center dark:text-zinc-300">
+        <iframe
+          className="h-[250px] w-[80%] rounded-3xl md:h-[450px] md:w-[40%] md:min-w-[750px]"
+          src="https://www.youtube.com/embed/YK_ZRNtf_U4"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+
+      <div className="flex flex-col items-center gap-8 px-[10%] py-10">
         <div className="h-[1px] w-full bg-gray-500" />
       </div>
 
@@ -173,9 +178,9 @@ export default function AboutUs() {
           <div className="absolute inset-0 left-[75%] top-[35%] -z-10 h-[72%] w-[27%] rounded-xl bg-blue-500 dark:bg-blue-800" />
 
           <Image
-            src={recepcao}
+            src={manoelAtm}
             alt="imagem atm"
-            className="flex w-[50%] rounded-xl"
+            className="flex w-[350px] rounded-xl"
           />
         </div>
       </div>
@@ -202,7 +207,7 @@ export default function AboutUs() {
       <div className="flex flex-col pt-20 md:hidden">
         <div className="flex flex-col items-center justify-center">
           <Image
-            src={recepcao}
+            src={manoelAtm}
             alt="imagem atm"
             className="w-[350px] rounded-3xl"
           />
@@ -228,9 +233,9 @@ export default function AboutUs() {
       </div>
 
       <div className="flex flex-col items-center justify-center gap-10 pb-20 md:min-h-[700px] md:flex-row">
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[600px] md:max-w-[400px] md:rounded-xl">
+        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
           <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[200px] md:w-[200px]"
+            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
             stroke="currentColor"
             fill="currentColor"
             strokeWidth="0"
@@ -247,9 +252,9 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[600px] md:max-w-[400px] md:rounded-xl">
+        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
           <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[200px] md:w-[200px]"
+            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
             stroke="currentColor"
             fill="none"
             strokeWidth="2"
@@ -275,8 +280,8 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-10 pb-20 md:h-screen md:flex-row">
-        <Image src={valores} alt="Valores" className="w-[80%] md:w-[40%]" />
+      <div className="flex items-center justify-center gap-10 pb-20 md:flex-row">
+        <Image src={valores} alt="Valores" className="w-[60%] md:w-[30%]" />
       </div>
     </div>
   )

@@ -17,6 +17,7 @@ export default {
       },
       fontFamily: {
         inter: ['var(--font-inter)'],
+        plusJakartaSans: ['var(--font-plusJakartaSans)'],
       },
       colors: {
         background: 'hsl(var(--background))',

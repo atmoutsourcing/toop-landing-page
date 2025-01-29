@@ -74,7 +74,7 @@ export function Header() {
           </div>
 
           <div className="hidden flex-row items-center gap-2 md:flex">
-            <Button>Teste 15 dias grátis</Button>
+            <Button>Teste gratuito até fim de 2025</Button>
           </div>
         </div>
 
