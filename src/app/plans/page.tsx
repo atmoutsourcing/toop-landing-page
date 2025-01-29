@@ -22,11 +22,23 @@ export default function Plans() {
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
 
+        <Image
+          src={iconWhite}
+          alt="Toop icon"
+          className="hidden h-28 w-28 dark:block"
+        />
+
+        <Image
+          src={iconDark}
+          alt="Toop icon"
+          className="block h-28 w-28 dark:hidden"
+        />
+
         <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
           Veja nossos planos e escolha a melhor
         </div>
         <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
-          solução para você!
+          <span className="text-yellow-400">solução</span> para você!
         </div>
         <div className="flex flex-col items-center gap-1 pt-6 md:flex-row">
           <div>

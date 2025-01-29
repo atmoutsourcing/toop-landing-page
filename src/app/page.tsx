@@ -6,7 +6,7 @@ import cellToop from '@/../public/cellToop.png'
 import Image from 'next/image'
 
 import React from 'react'
-import { ArrowRight, Check, Clock, Lock, SquarePen } from 'lucide-react'
+import { Check, Clock, SquarePen } from 'lucide-react'
 import { Button } from '@/components/button'
 import { WhatsappLogo } from 'phosphor-react'
 import {

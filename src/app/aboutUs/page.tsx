@@ -6,11 +6,12 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import Autoplay from 'embla-carousel-autoplay'
-import { Play } from 'lucide-react'
 import React from 'react'
 import manoel from '../../../public/Manoel.png'
 import recepcao from '../../../public/recepcaoATM.jpeg'
 import manoelAtm from '../../../public/ManoelATm.jpg'
+import iconeWhite from '../../../public/icon-white.png'
+import iconeDark from '../../../public/icon-dark.png'
 
 import valores from '../../../public/valores_atm.png'
 
@@ -24,15 +25,27 @@ export default function AboutUs() {
   return (
     <div className="flex flex-col font-inter">
       <div className="group relative flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
+        <Image
+          src={iconeWhite}
+          alt="Toop icon"
+          className="hidden h-28 w-28 dark:block"
+        />
+
+        <Image
+          src={iconeDark}
+          alt="Toop icon"
+          className="block h-28 w-28 dark:hidden"
+        />
+
         <h1
           style={{ zIndex: '100' }}
-          className="text-center text-3xl font-bold dark:text-zinc-200 md:text-5xl"
+          className="text-center font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl"
         >
           Conectando eficiência e segurança para{' '}
         </h1>
         <h1
           style={{ zIndex: '10' }}
-          className="text-center text-3xl font-bold md:text-5xl"
+          className="text-center font-plusJakartaSans text-3xl font-bold md:text-5xl"
         >
           <span className="text-yellow-400">transformar</span> sua gestão!
         </h1>
