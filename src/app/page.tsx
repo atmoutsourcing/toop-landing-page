@@ -49,7 +49,7 @@ export default function Home() {
                 dispositivos em uma experiência prática e eficiente
               </h1>
 
-              <span className="mt-2 font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase">
+              <span className="text-md mt-2 font-plusJakartaSans text-zinc-600 dark:text-textBase">
                 Gerenciamento dispositivos móveis de maneira segura inteligente.
               </span>
 
@@ -535,11 +535,7 @@ export default function Home() {
           <AccordionItem value="item-4">
             <AccordionTrigger>Como funciona nossos planos?</AccordionTrigger>
             <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
-              Os planos do TOOP representam uma abordagem inovadora e eficiente
-              para a gestão de dados e serviços públicos. Eles garantem
-              segurança, conformidade e uma experiência aprimorada para todos os
-              usuários. Se precisar de mais informações ou tiver outras
-              perguntas, estou aqui para ajudar!
+              Nosso plano está 100% gratuito até o fim de 2025!
             </AccordionContent>
           </AccordionItem>
         </Accordion>
