@@ -1,12 +1,14 @@
 'use client'
 import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
-import cellToop from '@/../public/cellToop.png'
+import logoDark from '@/../public/logo-white.png'
+import logoLight from '@/../public/logo-dark.png'
+import iaToop from '@/../public/iaToop (1).png'
 
 import Image from 'next/image'
 
 import React from 'react'
-import { Check, Clock, SquarePen } from 'lucide-react'
+import { BrainCircuit, Check, Clock, Plus, SquarePen } from 'lucide-react'
 import { Button } from '@/components/button'
 import { WhatsappLogo } from 'phosphor-react'
 import {
@@ -25,89 +27,157 @@ export default function Home() {
         className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]"
       />
 
-      <div className="relative flex min-h-screen flex-col">
-        <div className="min-h-full">
-          <div className="mt-28 items-center font-bold md:mt-52">
-            <div className="flex flex-col items-center gap-2 text-center md:text-start">
-              <Image
-                src={iconWhite}
-                alt="Toop icon"
-                className="hidden h-28 w-28 dark:block"
-              />
+      <div className="relative mt-28 flex min-h-screen flex-col items-center gap-2 font-bold md:mt-52 md:text-start">
+        <Image
+          src={iconWhite}
+          alt="Toop icon"
+          className="hidden h-28 w-28 dark:block"
+        />
 
-              <Image
-                src={iconDark}
-                alt="Toop icon"
-                className="block h-28 w-28 dark:hidden"
-              />
+        <Image
+          src={iconDark}
+          alt="Toop icon"
+          className="block h-28 w-28 dark:hidden"
+        />
 
-              <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
-                O sistema EMM que transforma a gestão de
-              </h1>
+        <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
+          O sistema EMM que transforma a gestão de
+        </h1>
 
-              <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
-                dispositivos em uma experiência prática e eficiente
-              </h1>
+        <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
+          dispositivos em uma experiência prática e eficiente
+        </h1>
 
-              <span className="mt-2 font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase">
-                Gerenciamento dispositivos móveis de maneira segura inteligente.
-              </span>
+        <span className="mt-2 font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase">
+          Gerenciamento dispositivos móveis de maneira segura inteligente.
+        </span>
 
-              <div className="mt-2">
-                <Link
-                  href={'/plans'}
-                  className="isolation-auto flex h-[45px] items-center justify-center gap-2 overflow-hidden rounded-full bg-zinc-50 px-6 py-3 text-[16px] font-bold text-shapePrimary shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-shapePrimary before:transition-all before:duration-700 hover:text-zinc-50 before:hover:left-0 before:hover:w-full dark:bg-shapePrimary dark:text-zinc-50 dark:before:bg-zinc-50 dark:hover:text-zinc-950"
-                  type="submit"
-                >
-                  Saiba mais
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className="mt-2">
+          <Link
+            href={'/plans'}
+            className="isolation-auto flex h-[45px] items-center justify-center gap-2 overflow-hidden rounded-full bg-zinc-50 px-6 py-3 text-[16px] font-bold text-shapePrimary shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-shapePrimary before:transition-all before:duration-700 hover:text-zinc-50 before:hover:left-0 before:hover:w-full dark:bg-shapePrimary dark:text-zinc-50 dark:before:bg-zinc-50 dark:hover:text-zinc-950"
+            type="submit"
+          >
+            Saiba mais
+          </Link>
         </div>
       </div>
 
       <div className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex" />
 
-      <div className="flex flex-col items-center justify-center gap-10 px-[4%] py-[4%] md:flex-row">
-        <Image src={cellToop} alt="Toop icon" className="h-[400px] w-[400px]" />
-        <div className="flex flex-col gap-4 rounded-xl p-6 shadow-md">
-          <h1 className="text-2xl font-bold">
-            Por que as empresas adoram o TOOP?
-          </h1>
-          <p>
-            Empresas escolhem o TOOP porque ele transforma a gestão de
-            dispositivos móveis em uma experiência simples, segura e eficiente.
-            Nossa plataforma EMM é projetada para atender às necessidades de
-            negócios modernos, oferecendo:
-          </p>
-          <ul className="list-inside list-disc">
-            <li className="pb-4">
-              <strong>Segurança de ponta a ponta:</strong> Protegemos dados
-              sensíveis com controles avançados e políticas robustas, garantindo
-              tranquilidade às empresas.
-            </li>
-            <li className="pb-4">
-              <strong>Gestão centralizada:</strong> Administradores podem
-              monitorar, configurar e gerenciar dispositivos em um único painel
-              intuitivo.
-            </li>
-            <li className="pb-4">
-              <strong>Produtividade maximizada:</strong> Com ferramentas fáceis
-              de usar, os colaboradores têm acesso rápido e seguro aos recursos
-              necessários para o trabalho.
-            </li>
-            <li className="pb-4">
-              <strong>Flexibilidade para crescer:</strong> O TOOP se adapta às
-              demandas de empresas de qualquer tamanho, com soluções escaláveis
-              que acompanham o crescimento do negócio.
-            </li>
-            <li className="pb-4">
-              <strong>Suporte confiável:</strong> Nossa equipe está sempre
-              pronta para oferecer assistência, ajudando as empresas a superar
-              desafios e alcançar seus objetivos.
-            </li>
-          </ul>
+      <div className="flex h-screen flex-col items-end justify-center px-[2%] pb-[4%] md:flex-row">
+        <Image
+          src={iaToop}
+          alt="IA Toop"
+          className="absolute flex scale-100 object-cover"
+        />
+        <div className="mb-[4%] flex w-[60%] flex-row gap-5 rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl backdrop-blur-lg">
+          <div className="flex flex-col">
+            <h1 className="pb-2 text-2xl md:text-3xl">Integração com IA</h1>
+            <div className="text-justify text-sm">
+              A integração da inteligência artificial ao Toop trará um salto
+              significativo em desempenho, automação e eficiência. Com essa
+              inovação, a plataforma se tornará mais inteligente, ágil e
+              intuitiva, proporcionando uma <strong>maior automação</strong> e{' '}
+              <strong>aumento da eficiência</strong>.
+            </div>
+            <div className="flex flex-row items-center gap-2 pt-4">
+              <Image
+                src={logoDark}
+                alt="Toop icon"
+                className="hidden w-[222px] dark:flex"
+              />
+              <Image
+                src={logoLight}
+                alt="Toop icon"
+                className="flex w-[222px] dark:hidden"
+              />
+
+              <Plus />
+              <BrainCircuit className="h-[100px] w-[70px]" />
+            </div>
+          </div>
+          <div className="flex min-w-[50%] flex-col">
+            <div className="flex flex-col pb-4 text-end text-2xl md:text-3xl">
+              <h2>A integração da IA ao Toop resultará:</h2>
+            </div>
+            <div className="relative flex flex-col items-end">
+              <div className="absolute w-full pr-[10%] text-end text-zinc-50">
+                Otimização de processos
+              </div>
+              <svg
+                className="flex"
+                width="250"
+                height="41"
+                viewBox="0 0 350 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M348.5 1L307 37.5L7 37.5"
+                  stroke="#505059"
+                  strokeWidth="1"
+                  className="stroke-zinc-500"
+                />
+                <circle
+                  cx="3.5"
+                  cy="37.5"
+                  r="3.5"
+                  className="fill-zinc-50 blur-[1px]"
+                />
+              </svg>
+            </div>
+            <div className="relative flex flex-col items-end">
+              <div className="absolute w-full pr-[10%] text-end">
+                Organização de dados
+              </div>
+              <svg
+                className="flex"
+                width="250"
+                height="41"
+                viewBox="0 0 350 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M348.5 1L307 37.5L7 37.5"
+                  strokeWidth="1"
+                  className="stroke-zinc-500"
+                />
+                <circle
+                  cx="3.5"
+                  cy="37.5"
+                  r="3.5"
+                  className="fill-zinc-50 blur-[1px]"
+                />
+              </svg>
+            </div>
+            <div className="relative flex flex-col items-end">
+              <div className="absolute w-full pr-[10%] text-end">
+                Otimização de buscas
+              </div>
+              <svg
+                className="flex"
+                width="250"
+                height="41"
+                viewBox="0 0 350 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M348.5 1L307 37.5L7 37.5"
+                  strokeWidth="1"
+                  className="stroke-zinc-500"
+                />
+                <circle
+                  cx="3.5"
+                  cy="37.5"
+                  r="3.5"
+                  className="fill-zinc-50 blur-[1px]"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
