@@ -55,17 +55,17 @@ export function Header() {
             <Link href="/plans">Planos</Link>
           </div>
 
-          <div
+          {/* <div
             className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/contacts' && 'text-blue-500'}`}
           >
             <Link href="/contacts">Contatos</Link>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             className={`flex cursor-pointer flex-row items-center gap-1 transition`}
           >
             <Link href="https://www.google.com.br/?hl=pt-BR">Blog</Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-row items-center space-x-4">
@@ -74,7 +74,9 @@ export function Header() {
           </div>
 
           <div className="hidden flex-row items-center gap-2 md:flex">
-            <Button>Teste grátis até fim de 2025</Button>
+            <Link href="https://wa.me/5518996187681">
+              <Button>Teste grátis até fim de 2025</Button>
+            </Link>
           </div>
         </div>
 
