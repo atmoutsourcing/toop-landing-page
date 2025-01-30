@@ -53,14 +53,12 @@ export default function Home() {
                 Gerenciamento dispositivos móveis de maneira segura inteligente.
               </span>
 
-              <div className="mt-2">
-                <Link
-                  href={'/plans'}
-                  className="isolation-auto flex h-[45px] items-center justify-center gap-2 overflow-hidden rounded-full bg-zinc-50 px-6 py-3 text-[16px] font-bold text-shapePrimary shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-shapePrimary before:transition-all before:duration-700 hover:text-zinc-50 before:hover:left-0 before:hover:w-full dark:bg-shapePrimary dark:text-zinc-50 dark:before:bg-zinc-50 dark:hover:text-zinc-950"
-                  type="submit"
-                >
-                  Saiba mais
-                </Link>
+              <div className="mt-4">
+                <Button>
+                  <Link href={'/plans'} type="submit">
+                    Saiba mais
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
