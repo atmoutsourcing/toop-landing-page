@@ -331,7 +331,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex">
+        <div className="mb-72 flex">
           <div
             className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
@@ -399,8 +399,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex h-screen flex-col items-center justify-center px-[2%] md:flex-row">
-        <div
+      <div className="mb-40 flex flex-col items-center justify-center px-[2%] md:flex-row">
+        {/* <div
           className="absolute hidden h-[150px] w-[100%] bg-gradient-radial from-[#527caf] to-[#223d88] blur-[180px] md:flex"
           style={{ transform: 'rotate(8deg)', zIndex: '-1' }}
         />
@@ -408,9 +408,9 @@ export default function Home() {
         <div
           className="absolute flex h-[500px] w-[50%] bg-gradient-radial from-[#527caf] to-[#223d88] blur-[180px] md:hidden"
           style={{ zIndex: '-10' }}
-        />
+        /> */}
 
-        <div className="flex w-[100%] flex-col gap-10 md:flex-row md:gap-20">
+        <div className="flex w-auto flex-col gap-10 md:flex-row md:gap-20">
           <div className="flex flex-col rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl">
             <h1 className="pb-2 text-2xl md:text-4xl">Integração com IA</h1>
             <div className="text-justify text-sm">
