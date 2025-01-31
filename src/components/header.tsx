@@ -36,7 +36,7 @@ export function Header() {
             />
           </Link>
         </div>
-        <div className="text-md hidden flex-1 flex-row items-center justify-center gap-4 md:flex">
+        <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
           <div
             className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-600'}`}
           >

@@ -235,7 +235,7 @@ export default function AboutUs() {
         <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-10 pb-20 md:min-h-[700px] md:flex-row">
+      {/* <div className="flex flex-col items-center justify-center gap-10 pb-20 md:min-h-[700px] md:flex-row">
         <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
           <svg
             className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
@@ -281,7 +281,7 @@ export default function AboutUs() {
             tecnologia.”
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="flex items-center justify-center gap-10 pb-20 md:flex-row">
         <Image src={valores} alt="Valores" className="w-[60%] md:w-[30%]" />

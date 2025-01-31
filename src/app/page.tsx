@@ -72,12 +72,12 @@ export default function Home() {
           />
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-6">
           <h1 className="font-plusJakartaSans text-3xl font-bold text-zinc-900 dark:text-zinc-100">
             TOOP – Tecnologia Inteligente para Gestão Empresarial
           </h1>
 
-          <div className="text-md flex flex-col">
+          <div className="text-md flex flex-col font-normal">
             <span>
               O TOOP, desenvolvido pela ATM Outsourcing, é a solução definitiva
               para otimizar e transformar a gestão do seu negócio. Com
