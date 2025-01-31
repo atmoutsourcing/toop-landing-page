@@ -5,8 +5,9 @@ import iconDark from '@/../public/icon-dark.png'
 import Image from 'next/image'
 import { ArrowRight, Check, Clock } from 'lucide-react'
 import { Button } from '@/components/button'
-import { WhatsappLogo } from 'phosphor-react'
-import { TablePlans } from './tablePlans'
+import Link from 'next/link'
+// import { WhatsappLogo } from 'phosphor-react'
+// import { TablePlans } from './tablePlans'
 
 export default function Plans() {
   return (
@@ -57,7 +58,7 @@ export default function Plans() {
         </div>
       </div>
 
-      <div className="flex h-full flex-col items-center justify-center gap-10 md:flex-row md:items-start md:p-8">
+      <div className="flex h-screen flex-col items-center justify-center gap-10 md:flex-row md:items-start md:p-8">
         <div className="mx-4 mt-4">
           <div
             className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
@@ -126,7 +127,7 @@ export default function Plans() {
           </div>
         </div>
 
-        <div className="mx-4 flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -141,7 +142,7 @@ export default function Plans() {
                 className="block h-8 w-8 dark:hidden"
               />
 
-              <p className="font-inter text-sm">Toop</p>
+              <p className="font-inter text-sm font-semibold">Toop</p>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -149,35 +150,28 @@ export default function Plans() {
                 FREE
               </h1>
 
-              <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                Oferece uma solução simples e completa de forma gratuita, nosso
-                plano Free permite que você faça controle dos dispositivos de
-                forma segura e fornecendo relatórios.
+              <p className="space-y-4 font-inter text-sm font-bold leading-tight dark:text-zinc-400">
+                100% Gratuito até o fim de 2025!!
               </p>
             </div>
           </div>
 
           <div className="py-2 font-inter text-xl font-bold">R$ 0,00/mês</div>
 
-          <Button variant="secondary">Contratar agora!</Button>
+          <Link href="https://wa.me/5518996187681">
+            <button className="w-full rounded-3xl bg-zinc-950 px-6 py-3 font-sans text-[14px] font-bold text-zinc-50 dark:bg-zinc-50 dark:text-zinc-950">
+              Contratar agora!
+            </button>
+          </Link>
 
-          <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
+          <div className="mt-4 h-[1px] w-full bg-gray-500" />
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Controle limitado de dispositivos móveis, como rastreamento e
-              bloqueio remoto.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Relatórios básicos com informações sobre dispositivos cadastrados.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Suporte gratuito através de fóruns e base de conhecimento.
+              <span className="text-sm">
+                🎉 Boas notícias! Todas as features do TOOP estão 100% liberadas
+                para você aproveitar ao máximo! 🚀💙
+              </span>
             </div>
           </div>
         </div>
@@ -251,31 +245,29 @@ export default function Plans() {
         </div>
       </div>
 
-      <div className="flex min-h-[400px] items-center justify-center px-[18%]">
+      {/* <div className="flex min-h-[400px] items-center justify-center px-[18%]">
         <TablePlans />
-      </div>
+      </div> */}
 
-      <div className="flex px-[10%] py-20">
+      {/* <div className="flex px-[10%] py-20">
         <div className="h-[1px] w-full bg-zinc-500" />
       </div>
 
       <div className="flex flex-col items-center justify-center gap-10 px-[5%] pb-20 md:flex-row md:px-[18%]">
         <div className="flex flex-col text-center md:max-w-[60%] md:text-start">
-          <div className="pb-10 text-2xl font-bold">
+          <div className="pb-4 text-2xl font-bold">
             Como funciona o plano{' '}
             <span className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
               Enterprise
             </span>{' '}
             ?
           </div>
-          <div className="pb-16">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            nisi placeat odio cupiditate ad, voluptatibus eligendi asperiores
-            vel repudiandae cum aperiam nobis exercitationem. Sint beatae
-            suscipit officia voluptate fuga accusamus!Lorem
+          <div className="pb-14 text-zinc-300">
+            O plano Enterprise permitirá que você ofereça o Toop para outras
+            empresas, possibilitando sua comercialização e expansão.
           </div>
           <div className="pb-2 text-xl font-bold">Ficou com alguma dúvida?</div>
-          <div className="flex flex-col items-center gap-3 md:flex-row">
+          <div className="flex flex-col items-center gap-3 text-zinc-300 md:flex-row">
             Clique aqui e entre em contato{' '}
             <button className="flex flex-row items-center gap-1 rounded-full bg-shapePrimary px-6 py-3 text-[14px] font-bold text-zinc-100 dark:bg-zinc-50 dark:text-shapePrimary">
               <WhatsappLogo className="h-5 w-5 text-green-500" />
@@ -285,7 +277,7 @@ export default function Plans() {
         </div>
 
         <div className="flex">
-          <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary">
+          <div className="flex max-w-[700px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 pb-5 dark:bg-shapePrimary">
             <div className="flex flex-col gap-4">
               <div className="flex flex-row items-center gap-1 pt-3">
                 <Image
@@ -308,41 +300,20 @@ export default function Plans() {
                 </h1>
 
                 <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Architecto ea dicta facere ipsam ab! Assumenda, excepturi?
-                  Debitis sed accusantium nemo? Explicabo obcaecati soluta, ut
-                  eligendi magni pariatur fugiat commodi sit?
+                  Nosso plano Enterprise foi desenvolvido para empresas que
+                  desejam levar o Toop a um novo nível. Com essa modalidade,
+                  você poderá oferecer a plataforma para outras organizações,
+                  possibilitando sua comercialização e ampliação do alcance.
                 </p>
               </div>
             </div>
 
             <div className="py-2 font-inter text-xl font-bold">R$ 0,00/mês</div>
 
-            <Button variant="secondary">Entre em contato</Button>
-
-            <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
-
-            <div className="flex flex-col gap-2 pt-4">
-              <div className="flex flex-row gap-2 font-inter text-xs">
-                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Controle limitado de dispositivos móveis, como rastreamento e
-                bloqueio remoto.
-              </div>
-
-              <div className="flex flex-row gap-2 font-inter text-xs">
-                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Relatórios básicos com informações sobre dispositivos
-                cadastrados.
-              </div>
-
-              <div className="flex flex-row gap-2 font-inter text-xs">
-                <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Suporte gratuito através de fóruns e base de conhecimento.h
-              </div>
-            </div>
+            <Button variant="secondary">Contratar agora!</Button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

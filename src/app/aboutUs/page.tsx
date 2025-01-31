@@ -57,7 +57,7 @@ export default function AboutUs() {
         <div className="hidden before:absolute before:left-[68%] before:top-[55%] before:h-[168px] before:w-[151px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-600 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[-500%] md:flex" />
       </div>
 
-      <div className="flex h-[205px] w-full flex-col items-center pl-10 md:p-0">
+      <div className="flex h-[205px] w-full flex-col items-center pl-10 md:px-[5%]">
         <Carousel
           opts={{ loop: true }}
           plugins={[plugin.current]}
@@ -192,7 +192,7 @@ export default function AboutUs() {
             alt="imagem atm"
             className="w-[350px] rounded-3xl"
           />
-          <div className="absolute inset-0 left-[2%] top-[240%] -z-10 h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800" />
+          <div className="absolute inset-0 left-[2%] top-[240%] -z-10 hidden h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800 md:flex" />
 
           <div className="flex px-10 pt-10 text-center text-sm font-bold dark:text-zinc-300">
             A ATM Outsourcing foi fundada em 2007, atualmente, somos líderes no
@@ -211,7 +211,7 @@ export default function AboutUs() {
             alt="imagem atm"
             className="w-[350px] rounded-3xl"
           />
-          <div className="absolute inset-0 left-[38%] top-[310%] -z-10 h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800" />
+          <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800 md:flex" />
 
           <div className="flex flex-col justify-center text-sm font-bold dark:text-zinc-300">
             <h1 className="pb-2 pt-10 text-center text-2xl">

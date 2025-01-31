@@ -476,7 +476,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <h1 className="pb-10 text-center text-2xl font-bold dark:text-zinc-300 md:py-20 md:text-4xl">
         Dúvidas frequentes
@@ -530,4 +530,3 @@ export default function Home() {
     </div>
   )
 }
- 
