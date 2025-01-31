@@ -18,33 +18,33 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <div>
-      <header className="mx-auto flex max-w-[1440px] flex-row items-center justify-between px-12 py-4">
-        <Link href="/" className="cursor-pointer" style={{ zIndex: '1' }}>
-          <Image
-            src={logoDark}
-            alt="Logo"
-            className="h-9 w-28 transition-all dark:hidden"
-            suppressHydrationWarning
-          />
+    <>
+      <header className="mx-auto flex max-w-[1440px] p-6">
+        <div className="flex-1">
+          <Link href="/" className="cur sor-pointer">
+            <Image
+              src={logoDark}
+              alt="Logo"
+              className="h-9 w-28 transition-all dark:hidden"
+              suppressHydrationWarning
+            />
 
-          <Image
-            src={logoLight}
-            alt="Logo"
-            className="hidden h-9 w-28 transition-all dark:block"
-            suppressHydrationWarning
-          />
-        </Link>
-
-        <div className="text-md hidden space-x-6 md:flex">
+            <Image
+              src={logoLight}
+              alt="Logo"
+              className="hidden h-9 w-28 transition-all dark:block"
+            />
+          </Link>
+        </div>
+        <div className="text-md hidden flex-1 flex-row items-center justify-center gap-4 md:flex">
           <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-500'}`}
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-600'}`}
           >
             <Link href="/">Home</Link>
           </div>
 
           <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-blue-500'}`}
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-blue-600'}`}
           >
             <Link href="/aboutUs">Sobre nós</Link>
           </div>
@@ -56,10 +56,10 @@ export function Header() {
           </div>
 
           {/* <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/contacts' && 'text-blue-500'}`}
-          >
-            <Link href="/contacts">Contatos</Link>
-          </div> */}
+           className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/contacts' && 'text-blue-500'}`}
+         >
+           <Link href="/contacts">Contatos</Link>
+         </div> */}
 
           {/* <div
             className={`flex cursor-pointer flex-row items-center gap-1 transition`}
@@ -67,17 +67,12 @@ export function Header() {
             <Link href="https://www.google.com.br/?hl=pt-BR">Blog</Link>
           </div> */}
         </div>
+        <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
+          <ToggleTheme />
 
-        <div className="flex flex-row items-center space-x-4">
-          <div>
-            <ToggleTheme />
-          </div>
-
-          <div className="hidden flex-row items-center gap-2 md:flex">
-            <Link href="https://wa.me/5518996187681">
-              <Button>Teste grátis até fim de 2025</Button>
-            </Link>
-          </div>
+          <Link href="https://wa.me/5518996187681">
+            <Button>Teste grátis até fim de 2025</Button>
+          </Link>
         </div>
 
         <div className="md:hidden">
@@ -111,21 +106,21 @@ export function Header() {
         >
           Planos
         </Link>
-        <Link
+        {/* <Link
           href="/contacts"
           onClick={() => setIsOpen(false)}
           className={`border-b-[1px] border-zinc-700 p-4`}
         >
           Contatos
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           href="/blog"
           onClick={() => setIsOpen(false)}
           className={`border-b-[1px] border-zinc-700 p-4`}
         >
           Blog
-        </Link>
+        </Link> */}
       </div>
-    </div>
+    </>
   )
 }

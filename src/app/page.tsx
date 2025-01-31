@@ -477,7 +477,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-8 px-[10%] pt-[20%] md:pt-[10%]">
+      {/* <div className="flex flex-col items-center gap-8 px-[10%] pt-[20%] md:pt-[10%]">
         <h1 className="text-2xl font-bold dark:text-zinc-300 md:text-4xl">
           Contato rápido
         </h1>
@@ -548,7 +548,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <h1 className="pb-10 text-center text-2xl font-bold dark:text-zinc-300 md:py-20 md:text-4xl">
         Dúvidas frequentes
