@@ -3,6 +3,7 @@ import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import logoDark from '@/../public/logo-white.png'
 import logoLight from '@/../public/logo-dark.png'
+import x50Mockup from '@/../public/assets/ATM Ultra para toop.png'
 
 import Image from 'next/image'
 
@@ -25,7 +26,7 @@ export default function Home() {
         className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]"
       />
 
-      <div className="relative mt-28 flex min-h-screen flex-col items-center gap-2 font-bold md:mt-52 md:text-start">
+      <div className="relative mb-80 flex flex-col items-center gap-2 font-bold md:mt-52 md:text-start">
         <Image
           src={iconWhite}
           alt="Toop icon"
@@ -65,6 +66,44 @@ export default function Home() {
         style={{ zIndex: '-1' }}
         className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex"
       />
+
+      <div className="flex items-center justify-between">
+        <div>
+          <Image
+            src={x50Mockup}
+            alt="X50-mockup"
+            className="flex h-auto min-w-[700px] rounded-s-3xl"
+          />
+        </div>
+
+        <div className="flex flex-col">
+          <h1 className="font-plusJakartaSans text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+            TOOP – Tecnologia Inteligente para Gestão Empresarial
+          </h1>
+
+          <div className="text-md flex flex-col">
+            <span>
+              O TOOP, desenvolvido pela ATM Outsourcing, é a solução definitiva
+              para otimizar e transformar a gestão do seu negócio. Com
+              integração de Inteligência Artificial,
+            </span>
+
+            <span>
+              analisa dados em tempo real e proporciona insights estratégicos
+              para uma tomada de decisão mais ágil e assertiva. Seja para
+              otimizar fluxos operacionais, integrar equipes ou potencializar
+              resultados, o TOOP combina automação e IA para
+            </span>
+
+            <span>
+              o TOOP automatiza processos, oferecer eficiência e inovação na
+              gestão empresarial. 💡 Gestão inteligente, automatizada e
+              conectada ao futuro. Fale conosco e descubra como o TOOP pode
+              revolucionar a sua empresa!
+            </span>
+          </div>
+        </div>
+      </div>
 
       <div className="flex flex-col items-center justify-center gap-[20%] px-4 py-10 md:h-screen">
         <div
@@ -249,7 +288,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-1 flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -280,7 +319,9 @@ export default function Home() {
 
           <div className="py-2 font-inter text-xl font-bold">R$ 0,00/mês</div>
 
-          <Button variant="secondary">Contratar agora!</Button>
+          <Link href="https://wa.me/5518996187681" className="w-full">
+            <Button variant="secondary">Contratar agora!</Button>
+          </Link>
 
           <div className="mt-4 h-[1px] w-full bg-gray-500" />
 
