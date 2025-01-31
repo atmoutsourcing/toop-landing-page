@@ -276,9 +276,13 @@ export default function Home() {
 
           <div className="py-2 font-inter text-xl font-bold">R$ 0,00/mês</div>
 
-          <Button variant="secondary">Contratar agora!</Button>
+          <Link href="https://wa.me/5518996187681">
+            <button className="w-full rounded-full bg-zinc-950 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200">
+              Contratar agora!
+            </button>
+          </Link>
 
-          <div className="mt-4 h-[1px] w-full bg-gray-500" />
+          <div className="mt-2 h-[1px] w-full bg-gray-500" />
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
