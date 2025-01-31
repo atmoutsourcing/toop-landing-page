@@ -295,7 +295,7 @@ export default function Home() {
       </div>
 
       <div className="flex h-full flex-col items-center justify-center gap-10 md:flex-row md:items-start md:p-8">
-        <div>
+        <div className="flex">
           <div
             className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
@@ -364,7 +364,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -379,7 +379,7 @@ export default function Home() {
                 className="block h-8 w-8 dark:hidden"
               />
 
-              <p className="font-inter text-sm">Toop</p>
+              <p className="font-inter text-sm font-semibold">Toop</p>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -387,10 +387,8 @@ export default function Home() {
                 FREE
               </h1>
 
-              <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                Oferece uma solução simples e completa de forma gratuita, nosso
-                plano Free permite que você faça controle dos dispositivos de
-                forma segura e fornecendo relatórios.
+              <p className="space-y-4 font-inter text-sm font-bold leading-tight dark:text-zinc-400">
+                100% Gratuito até o fim de 2025!!
               </p>
             </div>
           </div>
@@ -403,19 +401,10 @@ export default function Home() {
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Controle limitado de dispositivos móveis, como rastreamento e
-              bloqueio remoto.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Relatórios básicos com informações sobre dispositivos cadastrados.
-            </div>
-
-            <div className="flex flex-row gap-2 font-inter text-xs">
-              <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-              Suporte gratuito através de fóruns e base de conhecimento.
+              <span className="text-sm">
+                🎉 Boas notícias! Todas as features do TOOP estão 100% liberadas
+                para você aproveitar ao máximo! 🚀💙
+              </span>
             </div>
           </div>
         </div>
