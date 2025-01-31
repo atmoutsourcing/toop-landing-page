@@ -9,7 +9,8 @@ import Autoplay from 'embla-carousel-autoplay'
 import React from 'react'
 import manoel from '../../../public/Manoel.png'
 import recepcao from '../../../public/recepcaoATM.jpeg'
-import manoelAtm from '../../../public/ManoelATm.jpg'
+import pessoalAtm from '../../../public/pessoalAtm.png'
+
 import iconeWhite from '../../../public/icon-white.png'
 import iconeDark from '../../../public/icon-dark.png'
 
@@ -177,12 +178,12 @@ export default function AboutUs() {
             <p className="text-right text-xl">em telefonia móvel corporativa</p>
           </div>
 
-          <div className="absolute inset-0 left-[75%] top-[35%] -z-10 h-[72%] w-[27%] rounded-xl bg-blue-500 dark:bg-blue-800" />
+          <div className="absolute inset-0 left-[81.5%] top-[35%] -z-10 h-[72%] w-[20%] rounded-xl bg-blue-500 dark:bg-blue-800" />
 
           <Image
-            src={manoelAtm}
+            src={pessoalAtm}
             alt="imagem atm"
-            className="flex w-[350px] rounded-xl"
+            className="flex w-[300px] rounded-xl"
           />
         </div>
       </div>
@@ -209,9 +210,9 @@ export default function AboutUs() {
       <div className="flex flex-col pt-20 md:hidden">
         <div className="flex flex-col items-center justify-center">
           <Image
-            src={manoelAtm}
+            src={pessoalAtm}
             alt="imagem atm"
-            className="w-[350px] rounded-3xl"
+            className="w-[300pxpx] rounded-3xl"
           />
           <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800 md:flex" />
 

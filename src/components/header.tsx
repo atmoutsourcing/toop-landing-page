@@ -50,7 +50,7 @@ export function Header() {
           </div>
 
           <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-500'}`}
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-600'}`}
           >
             <Link href="/plans">Planos</Link>
           </div>
