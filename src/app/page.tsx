@@ -3,7 +3,7 @@ import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import logoDark from '@/../public/logo-white.png'
 import logoLight from '@/../public/logo-dark.png'
-import iaToop from '@/../public/iaToop (1).png'
+import iaToop from '@/../public/iaToop.png'
 
 import Image from 'next/image'
 
@@ -69,7 +69,7 @@ export default function Home() {
         <Image
           src={iaToop}
           alt="IA Toop"
-          className="absolute flex scale-100 object-cover"
+          className="absolute flex object-cover"
         />
         <div className="mb-[4%] flex w-[60%] flex-row gap-5 rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl backdrop-blur-lg">
           <div className="flex flex-col">
@@ -605,11 +605,7 @@ export default function Home() {
           <AccordionItem value="item-4">
             <AccordionTrigger>Como funciona nossos planos?</AccordionTrigger>
             <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
-              Os planos do TOOP representam uma abordagem inovadora e eficiente
-              para a gestão de dados e serviços públicos. Eles garantem
-              segurança, conformidade e uma experiência aprimorada para todos os
-              usuários. Se precisar de mais informações ou tiver outras
-              perguntas, estou aqui para ajudar!
+              Nosso plano está 100% gratuito até o fim de 2025!
             </AccordionContent>
           </AccordionItem>
         </Accordion>

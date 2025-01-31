@@ -2,14 +2,14 @@
 
 import Image from 'next/image'
 import Ellipse from '../../../public/Ellipse.svg'
-import EllipseDark from '../../../public/EllipseDark.svg'
 import { Checkbox } from '@/components/ui/checkbox'
 import { EnvelopeSimple, MapPin, Phone } from 'phosphor-react'
+import { Input } from '@/components/input'
 
 export default function Contacts() {
   return (
     <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] flex-col items-center gap-36 p-4 md:flex-row">
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-1">
         <span className="text-3xl font-bold tracking-tight">
           Será um prazer atendê-lo
         </span>
@@ -17,18 +17,10 @@ export default function Contacts() {
         <hr className="my-4 border-t border-zinc-300 dark:border-zinc-700" />
 
         <div className="flex flex-col gap-4">
-          <p className="text-sm font-medium">
-            No Grupo ATM, estamos comprometidos em oferecer soluções que atendam
-            às necessidades específicas do seu negócio. O TOOP foi desenvolvido
-            para ser uma plataforma prática e eficiente, permitindo que você
-            configure sua integração de forma simples e rápida. Se a sua empresa
-            precisa de uma abordagem mais avançada, nossa equipe de
-            especialistas está aqui para ajudar. Com o nosso suporte, você
-            encontrará a solução ideal para integrar o TOOP ao seu fluxo de
-            trabalho, garantindo eficiência e resultados alinhados aos seus
-            objetivos. Entre em contato conosco, será um prazer entender suas
-            necessidades e ajudá-lo a a encontrar o melhor caminho para
-            aproveitar tudo o que o TOOP tem a oferecer.
+          <p className="text-md font-medium">
+            No Grupo ATM, o TOOP facilita sua integração de forma rápida e
+            eficiente. Precisa de suporte? Nossa equipe está pronta para ajudar.
+            Entre em contato!
           </p>
 
           <div className="flex flex-col gap-2">
@@ -58,11 +50,11 @@ export default function Contacts() {
       </div>
 
       <div className="relative flex items-center">
-        <Image
+        {/* <Image
           src={EllipseDark}
           alt="ellipse"
           className="absolute hidden scale-125 dark:block"
-        />
+        /> */}
 
         <Image
           src={Ellipse}
@@ -78,28 +70,13 @@ export default function Contacts() {
 
             <form className="mt-6 flex flex-col gap-4">
               <div className="flex flex-row gap-2">
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Nome"
-                  className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
-                />
+                <Input name="name" placeholder="Nome" />
 
-                <input
-                  id="email"
-                  type="text"
-                  placeholder="Sobrenome"
-                  className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
-                />
+                <Input name="name" placeholder="Sobrenome" />
               </div>
 
               <div className="flex flex-row gap-2">
-                <input
-                  id="email"
-                  type="text"
-                  placeholder="E-mail"
-                  className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
-                />
+                <Input name="name" placeholder="E-mail" />
 
                 <input
                   id="email"
