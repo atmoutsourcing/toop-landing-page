@@ -7,9 +7,8 @@ import logoLight from '@/../public/logo-dark.png'
 import Image from 'next/image'
 
 import React from 'react'
-import { BrainCircuit, Check, Clock, Plus, SquarePen } from 'lucide-react'
+import { BrainCircuit, Check, Clock, Plus } from 'lucide-react'
 import { Button } from '@/components/button'
-import { WhatsappLogo } from 'phosphor-react'
 import {
   Accordion,
   AccordionContent,
@@ -62,7 +61,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex" />
+      <div
+        style={{ zIndex: '-1' }}
+        className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex"
+      />
 
       <div className="flex flex-col items-center justify-center gap-[20%] px-4 py-10 md:h-screen">
         <div

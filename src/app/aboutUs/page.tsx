@@ -24,7 +24,7 @@ export default function AboutUs() {
 
   return (
     <div className="flex flex-col font-inter">
-      <div className="group relative flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
+      <div className="group flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <Image
           src={iconeWhite}
           alt="Toop icon"
@@ -53,8 +53,10 @@ export default function AboutUs() {
           className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[130px] md:hidden"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
-        <div className="hidden before:absolute before:left-[25%] before:top-[40%] before:h-[204px] before:w-[213px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-500 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[350%] md:flex" />
-        <div className="hidden before:absolute before:left-[68%] before:top-[55%] before:h-[168px] before:w-[151px] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-blue-600 before:blur-[120px] before:duration-1000 group-hover:before:translate-x-[-500%] md:flex" />
+        <div className="absolute flex h-auto w-[100%] items-center justify-center gap-[35%] px-[10%]">
+          <div className="mb-10 hidden h-[204px] w-[213px] rounded-full bg-blue-500 blur-[120px] md:flex" />
+          <div className="mt-36 hidden h-[204px] w-[213px] rounded-full bg-blue-500 blur-[120px] md:flex" />
+        </div>
       </div>
 
       <div className="flex h-[205px] w-full flex-col items-center pl-10 md:px-[5%]">
