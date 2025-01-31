@@ -75,7 +75,11 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="md:hidden">
+        <div className="pr-5 md:hidden">
+          <ToggleTheme />
+        </div>
+
+        <div className="mt-1 md:hidden">
           <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
         </div>
       </header>

@@ -46,7 +46,7 @@ export default function Home() {
           dispositivos em uma experiência prática e eficiente
         </h1>
 
-        <span className="mt-2 text-center font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase md:text-start">
+        <span className="mt-2 px-5 text-center font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase md:text-start">
           Gerenciamento dispositivos móveis de maneira segura inteligente.
         </span>
 
