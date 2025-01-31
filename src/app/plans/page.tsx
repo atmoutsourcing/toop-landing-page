@@ -141,7 +141,9 @@ export default function Plans() {
             </div>
           </div>
 
-          <div className="py-2 font-inter text-xl font-bold">R$ 0,00/mês</div>
+          <div className="py-2 font-inter text-xl font-bold dark:text-zinc-300">
+            R$ 0,00/mês
+          </div>
 
           <Link href="https://wa.me/5518996187681">
             <button className="w-full rounded-full bg-zinc-950 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200">
@@ -153,7 +155,7 @@ export default function Plans() {
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
-              <span className="text-sm">
+              <span className="text-sm dark:text-zinc-300">
                 🎉 Boas notícias! Todas as features do TOOP estão 100% liberadas
                 para você aproveitar ao máximo! 🚀💙
               </span>
