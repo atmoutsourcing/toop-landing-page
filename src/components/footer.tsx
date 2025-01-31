@@ -132,11 +132,19 @@ export function Footer() {
 
       <hr className="my-4 border-t border-zinc-300 dark:border-zinc-700" />
 
-      <div className="flex justify-between">
+      <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
         <div>
           <Image
             className="h-auto w-36"
             src={seloSilverPartner}
+            alt="seloSilverPartner"
+          />
+        </div>
+
+        <div className="flex md:hidden">
+          <Image
+            className="h-auto w-52"
+            src={atmGroup}
             alt="seloSilverPartner"
           />
         </div>
@@ -183,7 +191,7 @@ export function Footer() {
           </span>
         </div>
 
-        <div>
+        <div className="hidden md:flex">
           <Image
             className="h-auto w-52"
             src={atmGroup}

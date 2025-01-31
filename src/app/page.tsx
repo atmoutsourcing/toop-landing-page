@@ -3,7 +3,6 @@ import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import logoDark from '@/../public/logo-white.png'
 import logoLight from '@/../public/logo-dark.png'
-import iaToop from '@/../public/iaToop.png'
 
 import Image from 'next/image'
 
@@ -40,15 +39,15 @@ export default function Home() {
           className="block h-28 w-28 dark:hidden"
         />
 
-        <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
+        <h1 className="flex justify-center text-center font-plusJakartaSans text-3xl md:text-start md:text-4xl">
           O sistema EMM que transforma a gestão de
         </h1>
 
-        <h1 className="flex justify-center font-plusJakartaSans text-3xl md:text-4xl">
+        <h1 className="flex justify-center text-center font-plusJakartaSans text-3xl md:text-start md:text-4xl">
           dispositivos em uma experiência prática e eficiente
         </h1>
 
-        <span className="mt-2 font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase">
+        <span className="mt-2 text-center font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase md:text-start">
           Gerenciamento dispositivos móveis de maneira segura inteligente.
         </span>
 
@@ -65,123 +64,7 @@ export default function Home() {
 
       <div className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex" />
 
-      <div className="flex h-screen flex-col items-end justify-center px-[2%] pb-[4%] md:flex-row">
-        <Image
-          src={iaToop}
-          alt="IA Toop"
-          className="absolute flex object-cover"
-        />
-        <div className="mb-[4%] flex w-[60%] flex-row gap-5 rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl backdrop-blur-lg">
-          <div className="flex flex-col">
-            <h1 className="pb-2 text-2xl md:text-3xl">Integração com IA</h1>
-            <div className="text-justify text-sm">
-              A integração da inteligência artificial ao Toop trará um salto
-              significativo em desempenho, automação e eficiência. Com essa
-              inovação, a plataforma se tornará mais inteligente, ágil e
-              intuitiva, proporcionando uma <strong>maior automação</strong> e{' '}
-              <strong>aumento da eficiência</strong>.
-            </div>
-            <div className="flex flex-row items-center gap-2 pt-4">
-              <Image
-                src={logoDark}
-                alt="Toop icon"
-                className="hidden w-[222px] dark:flex"
-              />
-              <Image
-                src={logoLight}
-                alt="Toop icon"
-                className="flex w-[222px] dark:hidden"
-              />
-
-              <Plus />
-              <BrainCircuit className="h-[100px] w-[70px]" />
-            </div>
-          </div>
-          <div className="flex min-w-[50%] flex-col">
-            <div className="flex flex-col pb-4 text-end text-2xl md:text-3xl">
-              <h2>A integração da IA ao Toop resultará:</h2>
-            </div>
-            <div className="relative flex flex-col items-end">
-              <div className="absolute w-full pr-[10%] text-end text-zinc-50">
-                Otimização de processos
-              </div>
-              <svg
-                className="flex"
-                width="250"
-                height="41"
-                viewBox="0 0 350 41"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M348.5 1L307 37.5L7 37.5"
-                  stroke="#505059"
-                  strokeWidth="1"
-                  className="stroke-zinc-500"
-                />
-                <circle
-                  cx="3.5"
-                  cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
-                />
-              </svg>
-            </div>
-            <div className="relative flex flex-col items-end">
-              <div className="absolute w-full pr-[10%] text-end">
-                Organização de dados
-              </div>
-              <svg
-                className="flex"
-                width="250"
-                height="41"
-                viewBox="0 0 350 41"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M348.5 1L307 37.5L7 37.5"
-                  strokeWidth="1"
-                  className="stroke-zinc-500"
-                />
-                <circle
-                  cx="3.5"
-                  cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
-                />
-              </svg>
-            </div>
-            <div className="relative flex flex-col items-end">
-              <div className="absolute w-full pr-[10%] text-end">
-                Otimização de buscas
-              </div>
-              <svg
-                className="flex"
-                width="250"
-                height="41"
-                viewBox="0 0 350 41"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M348.5 1L307 37.5L7 37.5"
-                  strokeWidth="1"
-                  className="stroke-zinc-500"
-                />
-                <circle
-                  cx="3.5"
-                  cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center justify-center gap-[20%] py-10 md:h-screen">
+      <div className="flex flex-col items-center justify-center gap-[20%] px-4 py-10 md:h-screen">
         <div
           className="absolute hidden h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[180px] md:flex"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
@@ -397,7 +280,7 @@ export default function Home() {
 
           <Button variant="secondary">Contratar agora!</Button>
 
-          <div className="mt-4 hidden h-[1px] w-full bg-gray-500 md:block" />
+          <div className="mt-4 h-[1px] w-full bg-gray-500" />
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
@@ -477,75 +360,120 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-8 px-[10%] pt-[20%] md:pt-[10%]">
-        <h1 className="text-2xl font-bold dark:text-zinc-300 md:text-4xl">
-          Contato rápido
-        </h1>
-        <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
-      </div>
+      <div className="flex h-screen flex-col items-center justify-center px-[2%] md:flex-row">
+        <div
+          className="absolute hidden h-[150px] w-[100%] bg-gradient-radial from-[#527caf] to-[#223d88] blur-[180px] md:flex"
+          style={{ transform: 'rotate(8deg)', zIndex: '-1' }}
+        />
 
-      <div className="flex flex-col items-center justify-center gap-10 py-14 md:flex-row md:items-start">
-        <div className="flex h-[528px] w-[350px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:w-[450px]">
-          <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
-            <SquarePen className="h-[32.72px] w-[35px]" />
-            <p className="text-xl font-bold md:text-2xl">
-              Nos solicite uma proposta
-            </p>
-            <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
+        <div
+          className="absolute flex h-[500px] w-[50%] bg-gradient-radial from-[#527caf] to-[#223d88] blur-[180px] md:hidden"
+          style={{ zIndex: '-10' }}
+        />
+
+        <div className="flex w-[100%] flex-col gap-10 md:flex-row md:gap-20">
+          <div className="flex flex-col rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl">
+            <h1 className="pb-2 text-2xl md:text-4xl">Integração com IA</h1>
+            <div className="text-justify text-sm">
+              A integração da inteligência artificial ao Toop trará um salto
+              significativo em desempenho, automação e eficiência. Com essa
+              inovação, a plataforma se tornará mais inteligente, ágil e
+              intuitiva, proporcionando uma <strong>maior automação</strong> e{' '}
+              <strong>aumento da eficiência</strong>.
+            </div>
+            <div className="flex flex-row items-center gap-2 pt-4">
+              <Image
+                src={logoDark}
+                alt="Toop icon"
+                className="hidden w-[222px] dark:flex"
+              />
+              <Image
+                src={logoLight}
+                alt="Toop icon"
+                className="flex w-[222px] dark:hidden"
+              />
+
+              <Plus />
+              <BrainCircuit className="h-[100px] w-[70px]" />
+            </div>
           </div>
-
-          <div className="flex flex-col gap-3 px-4">
-            <input
-              id="name"
-              type="text"
-              placeholder="Nome"
-              className="h-[42px] w-full rounded-xl p-4 text-base font-bold shadow-sm dark:bg-zinc-700 placeholder:dark:text-zinc-500"
-            />
-
-            <input
-              id="email"
-              type="text"
-              placeholder="E-mail"
-              className="h-[42px] w-full rounded-xl p-4 text-base font-bold shadow-sm dark:bg-zinc-700 placeholder:dark:text-zinc-500"
-            />
-
-            <textarea
-              id="message"
-              placeholder="Mensagem"
-              className="min-h-[108px] w-full rounded-xl p-3 text-base font-bold text-zinc-950 shadow-sm dark:bg-zinc-700 placeholder:dark:text-zinc-500"
-            />
-          </div>
-
-          <div className="flex h-full items-end justify-center pb-8">
-            <Button style={{ width: '90%' }} variant="secondary">
-              Solicitar proposta
-            </Button>
-          </div>
-        </div>
-
-        <div className="flex h-[528px] w-[350px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 dark:bg-shapePrimary md:w-[450px]">
-          <div className="flex flex-col items-center gap-5 py-6 dark:text-zinc-300">
-            <WhatsappLogo className="h-[32.72px] w-[35px] text-green-600" />
-
-            <p className="text-xl font-bold md:text-2xl">Atendimento rápido</p>
-            <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
-          </div>
-
-          <div className="flex flex-col gap-2 px-4 text-center font-bold dark:text-zinc-400">
-            <p>
-              Estamos comprometidos com a agilidade e excelência no atendimento.
-            </p>
-            <p>
-              Resolvemos 95% dos chamados em até 10 minutos e alcançamos 100% de
-              solução em até 8 horas, porque a sua satisfação é nossa
-              prioridade.
-            </p>
-          </div>
-
-          <div className="flex h-full items-end justify-center pb-8">
-            <Button style={{ width: '90%' }} variant="secondary">
-              Chamar no WhatsApp
-            </Button>
+          <div className="flex min-w-[50%] flex-col rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl">
+            <div className="flex flex-col pb-4 text-end text-2xl md:text-4xl">
+              <h2>A integração da IA ao Toop resultará:</h2>
+            </div>
+            <div className="relative flex flex-col items-end">
+              <div className="absolute w-full pr-[10%] text-end">
+                Otimização de processos
+              </div>
+              <svg
+                className="flex w-[250px] md:w-[350px]"
+                height="41"
+                viewBox="0 0 350 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M348.5 1L307 37.5L7 37.5"
+                  stroke="#505059"
+                  strokeWidth="1"
+                  className="stroke-zinc-500"
+                />
+                <circle
+                  cx="3.5"
+                  cy="37.5"
+                  r="3.5"
+                  className="fill-zinc-50 blur-[1px]"
+                />
+              </svg>
+            </div>
+            <div className="relative flex flex-col items-end">
+              <div className="absolute w-full pr-[10%] text-end">
+                Organização de dados
+              </div>
+              <svg
+                className="flex w-[250px] md:w-[350px]"
+                height="41"
+                viewBox="0 0 350 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M348.5 1L307 37.5L7 37.5"
+                  strokeWidth="1"
+                  className="stroke-zinc-500"
+                />
+                <circle
+                  cx="3.5"
+                  cy="37.5"
+                  r="3.5"
+                  className="fill-zinc-50 blur-[1px]"
+                />
+              </svg>
+            </div>
+            <div className="relative flex flex-col items-end">
+              <div className="absolute w-full pr-[10%] text-end">
+                Otimização de buscas
+              </div>
+              <svg
+                className="flex w-[250px] md:w-[350px]"
+                height="41"
+                viewBox="0 0 350 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M348.5 1L307 37.5L7 37.5"
+                  strokeWidth="1"
+                  className="stroke-zinc-500"
+                />
+                <circle
+                  cx="3.5"
+                  cy="37.5"
+                  r="3.5"
+                  className="fill-zinc-50 blur-[1px]"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
