@@ -38,7 +38,7 @@ export default function Plans() {
         <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
           Veja nossos planos e escolha a melhor
         </div>
-        <div className="mb-[150px] font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
+        <div className="mb-[12.5%] font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
           <span className="text-yellow-400">solução</span> para você!
         </div>
       </div>

@@ -183,7 +183,7 @@ export default function AboutUs() {
           <Image
             src={pessoalAtm}
             alt="imagem atm"
-            className="flex w-[300px] rounded-xl"
+            className="flex w-[350px] rounded-xl"
           />
         </div>
       </div>
@@ -212,7 +212,7 @@ export default function AboutUs() {
           <Image
             src={pessoalAtm}
             alt="imagem atm"
-            className="w-[300pxpx] rounded-3xl"
+            className="w-[350px] rounded-3xl"
           />
           <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800 md:flex" />
 
