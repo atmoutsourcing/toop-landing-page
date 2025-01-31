@@ -50,7 +50,7 @@ export function Header() {
           </div>
 
           <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-500'}`}
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-600'}`}
           >
             <Link href="/plans">Planos</Link>
           </div>
@@ -75,14 +75,18 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="md:hidden">
+        <div className="pr-5 md:hidden">
+          <ToggleTheme />
+        </div>
+
+        <div className="mt-1 md:hidden">
           <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
         </div>
       </header>
 
       <div
         className={`flex transform cursor-pointer flex-col gap-2 overflow-hidden transition-all duration-700 ease-in-out ${
-          isOpen ? 'h-[320px]' : 'h-[0px]'
+          isOpen ? 'h-[258px]' : 'h-[0px]'
         } `}
       >
         <Link
@@ -105,6 +109,13 @@ export function Header() {
           className={`border-b-[1px] border-zinc-700 p-4`}
         >
           Planos
+        </Link>
+        <Link
+          href="https://wa.me/5518996187681"
+          onClick={() => setIsOpen(false)}
+          className={`border-b-[1px] border-zinc-700 p-4`}
+        >
+          Teste grátis até fim de 2025
         </Link>
         {/* <Link
           href="/contacts"

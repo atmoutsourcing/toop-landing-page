@@ -3,7 +3,7 @@
 import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import Image from 'next/image'
-import { ArrowRight, Check, Clock } from 'lucide-react'
+import { Check, Clock } from 'lucide-react'
 import { Button } from '@/components/button'
 import Link from 'next/link'
 // import { WhatsappLogo } from 'phosphor-react'
@@ -11,11 +11,11 @@ import Link from 'next/link'
 
 export default function Plans() {
   return (
-    <div className="flex w-auto flex-col font-inter">
+    <div className="flex h-auto w-full flex-col font-inter">
       <div className="flex min-h-screen flex-col items-center justify-center text-center">
         <div
-          className="absolute hidden h-[180%] w-[10%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[230px] md:flex"
-          style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
+          className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[150px] md:flex"
+          style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
         />
 
         <div
@@ -38,27 +38,12 @@ export default function Plans() {
         <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
           Veja nossos planos e escolha a melhor
         </div>
-        <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
+        <div className="mb-[12.5%] font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
           <span className="text-yellow-400">solução</span> para você!
-        </div>
-        <div className="flex flex-col items-center gap-1 pt-6 md:flex-row">
-          <div>
-            Conheça também o plano{' '}
-            <span className="font-bold underline">Enterprise</span>
-          </div>
-
-          <ArrowRight className="hidden w-[20px] md:flex" />
-
-          <button
-            className="isolation-auto flex h-[45px] items-center justify-center gap-2 overflow-hidden rounded-full bg-zinc-50 px-6 py-3 text-[16px] font-bold text-shapePrimary shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-shapePrimary before:transition-all before:duration-700 hover:text-zinc-50 before:hover:left-0 before:hover:w-full dark:bg-shapePrimary dark:text-zinc-50 dark:before:bg-zinc-50 dark:hover:text-zinc-950"
-            type="submit"
-          >
-            Saiba mais
-          </button>
         </div>
       </div>
 
-      <div className="flex h-screen flex-col items-center justify-center gap-10 md:flex-row md:items-start md:p-8">
+      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:flex-row md:items-start">
         <div className="mx-4 mt-4">
           <div
             className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
@@ -156,10 +141,12 @@ export default function Plans() {
             </div>
           </div>
 
-          <div className="py-2 font-inter text-xl font-bold">R$ 0,00/mês</div>
+          <div className="py-2 font-inter text-xl font-bold dark:text-zinc-300">
+            R$ 0,00/mês
+          </div>
 
           <Link href="https://wa.me/5518996187681">
-            <button className="w-full rounded-3xl bg-zinc-950 px-6 py-3 font-sans text-[14px] font-bold text-zinc-50 dark:bg-zinc-50 dark:text-zinc-950">
+            <button className="w-full rounded-full bg-zinc-950 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200">
               Contratar agora!
             </button>
           </Link>
@@ -168,7 +155,7 @@ export default function Plans() {
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
-              <span className="text-sm">
+              <span className="text-sm dark:text-zinc-300">
                 🎉 Boas notícias! Todas as features do TOOP estão 100% liberadas
                 para você aproveitar ao máximo! 🚀💙
               </span>

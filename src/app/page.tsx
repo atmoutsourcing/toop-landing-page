@@ -47,17 +47,13 @@ export default function Home() {
           dispositivos em uma experiência prática e eficiente
         </h1>
 
-        <span className="mt-2 text-center font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase md:text-start">
+        <span className="mt-2 px-5 text-center font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase md:text-start">
           Gerenciamento dispositivos móveis de maneira segura inteligente.
         </span>
 
         <div className="mt-2">
-          <Link
-            href={'/plans'}
-            className="isolation-auto flex h-[45px] items-center justify-center gap-2 overflow-hidden rounded-full bg-zinc-50 px-6 py-3 text-[16px] font-bold text-shapePrimary shadow-xl backdrop-blur-md before:absolute before:-left-full before:-z-10 before:aspect-square before:w-full before:rounded-full before:bg-shapePrimary before:transition-all before:duration-700 hover:text-zinc-50 before:hover:left-0 before:hover:w-full dark:bg-shapePrimary dark:text-zinc-50 dark:before:bg-zinc-50 dark:hover:text-zinc-950"
-            type="submit"
-          >
-            Saiba mais
+          <Link href={'/plans'} type="submit">
+            <Button>Saiba mais</Button>
           </Link>
         </div>
       </div>
@@ -323,7 +319,7 @@ export default function Home() {
             <Button variant="secondary">Contratar agora!</Button>
           </Link>
 
-          <div className="mt-4 h-[1px] w-full bg-gray-500" />
+          <div className="mt-2 h-[1px] w-full bg-gray-500" />
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
