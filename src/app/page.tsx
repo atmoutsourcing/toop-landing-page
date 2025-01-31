@@ -73,7 +73,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <h1 className="font-plusJakartaSans text-3xl font-bold text-zinc-900 dark:text-zinc-100">
+          <h1 className="font-plusJakartaSans text-xl font-bold text-zinc-900 dark:text-zinc-100">
             TOOP – Tecnologia Inteligente para Gestão Empresarial
           </h1>
 
