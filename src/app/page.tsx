@@ -63,39 +63,37 @@ export default function Home() {
         className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex"
       />
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col items-center justify-between md:flex-row">
         <div>
           <Image
             src={x50Mockup}
             alt="X50-mockup"
-            className="flex h-auto min-w-[700px] rounded-s-3xl"
+            className="flex h-auto rounded-s-3xl md:min-w-[700px]"
           />
         </div>
 
-        <div className="flex flex-col gap-6">
-          <h1 className="font-plusJakartaSans text-xl font-bold text-zinc-900 dark:text-zinc-100">
+        <div className="flex flex-col gap-6 pb-10">
+          <h1 className="text-center font-plusJakartaSans text-xl font-bold text-zinc-900 dark:text-zinc-100">
             TOOP – Tecnologia Inteligente para Gestão Empresarial
           </h1>
 
-          <div className="text-md flex flex-col font-normal">
+          <div className="flex flex-col gap-3 px-0 text-center text-sm font-normal md:text-justify">
             <span>
               O TOOP, desenvolvido pela ATM Outsourcing, é a solução definitiva
               para otimizar e transformar a gestão do seu negócio. Com
-              integração de Inteligência Artificial,
+              integração de Inteligência Artificial, analisa dados em tempo real
+              e proporciona insights estratégicos para uma tomada de decisão
+              mais ágil e assertiva.
             </span>
-
             <span>
-              analisa dados em tempo real e proporciona insights estratégicos
-              para uma tomada de decisão mais ágil e assertiva. Seja para
-              otimizar fluxos operacionais, integrar equipes ou potencializar
-              resultados, o TOOP combina automação e IA para
+              Seja para otimizar fluxos operacionais, integrar equipes ou
+              potencializar resultados, o TOOP combina automação e IA para. O
+              TOOP automatiza processos, oferecer eficiência e inovação na
+              gestão empresarial.
             </span>
-
             <span>
-              o TOOP automatiza processos, oferecer eficiência e inovação na
-              gestão empresarial. 💡 Gestão inteligente, automatizada e
-              conectada ao futuro. Fale conosco e descubra como o TOOP pode
-              revolucionar a sua empresa!
+              Gestão inteligente, automatizada e conectada ao futuro. Fale
+              conosco e descubra como o TOOP pode revolucionar a sua empresa💡
             </span>
           </div>
         </div>
