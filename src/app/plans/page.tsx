@@ -6,12 +6,10 @@ import Image from 'next/image'
 import { Check, Clock } from 'lucide-react'
 import { Button } from '@/components/button'
 import Link from 'next/link'
-// import { WhatsappLogo } from 'phosphor-react'
-// import { TablePlans } from './tablePlans'
 
 export default function Plans() {
   return (
-    <div className="flex h-auto w-full flex-col font-inter">
+    <div className="mx-auto flex h-auto w-full max-w-[1440px] flex-col font-inter">
       <div className="flex min-h-screen flex-col items-center justify-center text-center">
         <div
           className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[150px] md:flex"
@@ -19,7 +17,7 @@ export default function Plans() {
         />
 
         <div
-          className="absolute flex h-[400px] w-[200px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[230px] md:hidden"
+          className="absolute flex h-[400px] w-[100px] overflow-hidden rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[100px] md:hidden"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
 

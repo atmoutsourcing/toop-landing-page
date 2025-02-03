@@ -26,7 +26,7 @@ export default function Home() {
         className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]"
       />
 
-      <div className="relative mb-80 flex flex-col items-center gap-2 font-bold md:mt-52 md:text-start">
+      <div className="relative mb-80 mt-52 flex flex-col items-center gap-2 font-bold md:text-start">
         <Image
           src={iconWhite}
           alt="Toop icon"

@@ -24,7 +24,7 @@ export default function AboutUs() {
   )
 
   return (
-    <div className="flex flex-col font-inter">
+    <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
       <div className="group flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <Image
           src={iconeWhite}
