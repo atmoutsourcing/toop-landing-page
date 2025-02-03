@@ -27,27 +27,29 @@ export default function Home() {
       />
 
       <div className="relative mb-80 mt-52 flex flex-col items-center gap-2 font-bold md:text-start">
-        <Image
-          src={iconWhite}
-          alt="Toop icon"
-          className="hidden h-28 w-28 dark:block"
-        />
+        <div className="flex flex-col items-center gap-3">
+          <Image
+            src={iconWhite}
+            alt="Toop icon"
+            className="hidden h-24 w-24 dark:block md:h-28 md:w-28"
+          />
 
-        <Image
-          src={iconDark}
-          alt="Toop icon"
-          className="block h-28 w-28 dark:hidden"
-        />
+          <Image
+            src={iconDark}
+            alt="Toop icon"
+            className="block h-28 w-28 dark:hidden"
+          />
 
-        <h1 className="flex justify-center text-center font-plusJakartaSans text-3xl md:text-start md:text-4xl">
-          O sistema EMM que transforma a gestão de
-        </h1>
+          <h1 className="flex justify-center text-center font-plusJakartaSans text-2xl md:text-start md:text-4xl">
+            O sistema EMM que transforma a gestão de
+          </h1>
+        </div>
 
-        <h1 className="flex justify-center text-center font-plusJakartaSans text-3xl md:text-start md:text-4xl">
+        <h1 className="flex justify-center text-center font-plusJakartaSans text-2xl md:text-start md:text-4xl">
           dispositivos em uma experiência prática e eficiente
         </h1>
 
-        <span className="mt-2 px-5 text-center font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase md:text-start">
+        <span className="md:text-md mt-2 px-5 text-center font-plusJakartaSans text-sm text-zinc-700 dark:text-textBase md:text-start">
           Gerenciamento dispositivos móveis de maneira segura inteligente.
         </span>
 

@@ -26,29 +26,32 @@ export default function AboutUs() {
   return (
     <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
       <div className="group flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
-        <Image
-          src={iconeWhite}
-          alt="Toop icon"
-          className="hidden h-28 w-28 dark:block"
-        />
+        <div className="flex flex-col items-center gap-3">
+          <Image
+            src={iconeWhite}
+            alt="Toop icon"
+            className="hidden h-28 w-28 dark:block"
+          />
 
-        <Image
-          src={iconeDark}
-          alt="Toop icon"
-          className="block h-28 w-28 dark:hidden"
-        />
+          <Image
+            src={iconeDark}
+            alt="Toop icon"
+            className="block h-28 w-28 dark:hidden"
+          />
 
-        <h1
-          style={{ zIndex: '100' }}
-          className="text-center font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl"
-        >
-          Conectando eficiência e segurança para{' '}
-        </h1>
+          <h1
+            style={{ zIndex: '100' }}
+            className="flex text-center font-plusJakartaSans text-3xl font-bold md:text-start md:text-4xl"
+          >
+            Conectando eficiência e segurança para{' '}
+          </h1>
+        </div>
+
         <h1
           style={{ zIndex: '10' }}
-          className="text-center font-plusJakartaSans text-3xl font-bold md:text-5xl"
+          className="flex justify-center gap-2 text-center font-plusJakartaSans text-3xl font-bold md:text-start md:text-4xl"
         >
-          <span className="text-yellow-400">transformar</span> sua gestão!
+          transformar sua gestão impulsionar resultados.
         </h1>
         <div
           className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[130px] md:hidden"

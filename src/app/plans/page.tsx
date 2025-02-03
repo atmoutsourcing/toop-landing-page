@@ -9,8 +9,8 @@ import Link from 'next/link'
 
 export default function Plans() {
   return (
-    <div className="flex h-auto w-full flex-col font-inter">
-      <div className="mt-32 flex flex-col items-center justify-center text-center">
+    <div className="mx-auto flex w-full flex-col font-inter">
+      <div className="mt-40 flex flex-col items-center justify-center text-center">
         <div
           className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[150px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
@@ -21,24 +21,26 @@ export default function Plans() {
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
 
-        <Image
-          src={iconWhite}
-          alt="Toop icon"
-          className="hidden h-28 w-28 dark:block"
-        />
+        <div className="flex flex-col items-center gap-3">
+          <Image
+            src={iconWhite}
+            alt="Toop icon"
+            className="hidden h-28 w-28 dark:block"
+          />
 
-        <Image
-          src={iconDark}
-          alt="Toop icon"
-          className="block h-28 w-28 dark:hidden"
-        />
+          <Image
+            src={iconDark}
+            alt="Toop icon"
+            className="block h-28 w-28 dark:hidden"
+          />
 
-        <div className="flex flex-col gap-1">
-          <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
-            Veja nossos planos e escolha a melhor
+          <div className="flex flex-col gap-1">
+            <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
+              Confira nossos planos e escolha a solução ideal
+            </div>
           </div>
-          <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
-            <span className="text-yellow-400">solução</span> para você!
+          <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
+            para atender às suas necessidades
           </div>
         </div>
       </div>
@@ -112,7 +114,7 @@ export default function Plans() {
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-700 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
