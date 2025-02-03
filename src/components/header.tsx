@@ -85,7 +85,7 @@ export function Header() {
       </header>
 
       <div
-        className={`flex transform cursor-pointer flex-col gap-2 overflow-hidden transition-all duration-700 ease-in-out ${
+        className={`flex transform cursor-pointer flex-col gap-2 overflow-hidden font-inter text-sm transition-all duration-700 ease-in-out ${
           isOpen ? 'h-[258px]' : 'h-[0px]'
         } `}
       >
