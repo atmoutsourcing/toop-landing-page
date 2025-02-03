@@ -427,11 +427,13 @@ export default function Home() {
               <Image
                 src={logoLight}
                 alt="Toop icon"
-                className="flex w-[222px] dark:hidden"
+                className="flex w-[92px] dark:hidden md:w-[146px]"
               />
 
-              <Plus />
-              <BrainCircuit className="h-[100px] w-[70px]" />
+              <div className="flex items-center gap-2">
+                <Plus />
+                <BrainCircuit className="h-[36px] w-[36px] font-light md:h-[100] md:w-[62]" />
+              </div>
             </div>
           </div>
           <div className="flex min-w-[50%] flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
