@@ -422,7 +422,7 @@ export default function Home() {
               <Image
                 src={logoDark}
                 alt="Toop icon"
-                className="hidden w-[222px] dark:flex"
+                className="hidden w-[92px] dark:flex md:w-[146px]"
               />
               <Image
                 src={logoLight}
