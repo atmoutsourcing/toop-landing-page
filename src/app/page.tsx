@@ -411,7 +411,7 @@ export default function Home() {
         /> */}
 
         <div className="flex w-auto flex-col gap-10 md:flex-row md:gap-20">
-          <div className="flex flex-col rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl">
+          <div className="flex flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
             <h1 className="pb-2 text-2xl md:text-4xl">Integração com IA</h1>
             <div className="text-justify text-sm">
               A integração da inteligência artificial ao Toop trará um salto
@@ -436,7 +436,7 @@ export default function Home() {
               <BrainCircuit className="h-[100px] w-[70px]" />
             </div>
           </div>
-          <div className="flex min-w-[50%] flex-col rounded-xl border border-white/30 bg-gradient-to-r p-5 shadow-xl">
+          <div className="flex min-w-[50%] flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
             <div className="flex flex-col pb-4 text-end text-2xl md:text-4xl">
               <h2>A integração da IA ao Toop resultará:</h2>
             </div>
@@ -525,7 +525,7 @@ export default function Home() {
         <Accordion type="single" collapsible className="w-[80%] md:w-[50%]">
           <AccordionItem value="item-1">
             <AccordionTrigger>O que é MDM?</AccordionTrigger>
-            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+            <AccordionContent className="text-justify font-inter text-xs font-medium dark:text-zinc-400">
               Significa Mobile Device Management (Gerenciamento de Dispositivos
               Móveis). É uma solução de software que permite às organizações
               gerenciar, controlar e proteger dispositivos móveis, como
@@ -537,7 +537,7 @@ export default function Home() {
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>O que é EMM?</AccordionTrigger>
-            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+            <AccordionContent className="text-justify font-inter text-xs font-medium dark:text-zinc-400">
               Significa Enterprise Mobility Management (Gerenciamento de
               Mobilidade Empresarial). Trata-se de um conjunto abrangente de
               serviços e tecnologias que gerenciam dispositivos móveis,
@@ -550,7 +550,7 @@ export default function Home() {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>O que é o TOOP?</AccordionTrigger>
-            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+            <AccordionContent className="text-justify font-inter text-xs font-medium dark:text-zinc-400">
               O TOOP é uma ferramenta poderosa que otimiza a gestão de dados,
               simplifica processos e garante a segurança e conformidade. Ele
               representa um avanço significativo na forma como interagimos com
@@ -560,7 +560,7 @@ export default function Home() {
           </AccordionItem>
           <AccordionItem value="item-4">
             <AccordionTrigger>Como funciona nossos planos?</AccordionTrigger>
-            <AccordionContent className="text-justify font-inter text-xs font-bold dark:text-zinc-400">
+            <AccordionContent className="text-justify font-inter text-xs font-medium dark:text-zinc-400">
               Nosso plano está 100% gratuito até o fim de 2025!
             </AccordionContent>
           </AccordionItem>
