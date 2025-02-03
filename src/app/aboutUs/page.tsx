@@ -238,54 +238,6 @@ export default function AboutUs() {
         <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
       </div>
 
-      {/* <div className="flex flex-col items-center justify-center gap-10 pb-20 md:min-h-[700px] md:flex-row">
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
-          <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 576 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M275.3 250.5c7 7.4 18.4 7.4 25.5 0l108.9-114.2c31.6-33.2 29.8-88.2-5.6-118.8-30.8-26.7-76.7-21.9-104.9 7.7L288 36.9l-11.1-11.6C248.7-4.4 202.8-9.2 172 17.5c-35.3 30.6-37.2 85.6-5.6 118.8l108.9 114.2zm290 77.6c-11.8-10.7-30.2-10-42.6 0L430.3 402c-11.3 9.1-25.4 14-40 14H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h78.3c15.9 0 30.7-10.9 33.3-26.6 3.3-20-12.1-37.4-31.6-37.4H192c-27 0-53.1 9.3-74.1 26.3L71.4 384H16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h356.8c14.5 0 28.6-4.9 40-14L564 377c15.2-12.1 16.4-35.3 1.3-48.9z"></path>
-          </svg>
-          <p className="pb-2 text-2xl font-bold text-blue-500 dark:text-blue-800 md:pb-10 md:text-4xl">
-            Propósito
-          </p>
-          <p className="w-[200px] text-center md:w-auto">
-            “Ajudar e inspirar com exemplo para dar sentido a vida em Deus.”
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
-          <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
-            stroke="currentColor"
-            fill="none"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-            <path d="M12 7a5 5 0 1 0 5 5"></path>
-            <path d="M13 3.055a9 9 0 1 0 7.941 7.945"></path>
-            <path d="M15 6v3h3l3 -3h-3v-3z"></path>
-            <path d="M15 9l-3 3"></path>
-          </svg>
-          <p className="pb-2 text-2xl font-bold text-blue-500 dark:text-blue-800 md:pb-10 md:text-4xl">
-            Missão
-          </p>
-          <p className="w-[300px] pb-10 text-center md:w-auto">
-            “A nossa missão é ajudar os clientes e colaboradores a garantirem
-            uma qualidade de vida e realização no seu trabalho com suporte da
-            tecnologia.”
-          </p>
-        </div>
-      </div> */}
-
       <div className="flex items-center justify-center gap-10 pb-20 md:flex-row">
         <Image src={valores} alt="Valores" className="w-[60%] md:w-[30%]" />
       </div>

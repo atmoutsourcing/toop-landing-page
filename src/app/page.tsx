@@ -428,7 +428,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex min-w-[50%] flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
+          <div className="flex min-w-[45%] flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
             <div className="flex flex-col pb-4 text-end text-2xl md:text-4xl">
               <h2>A integração da IA ao Toop resultará:</h2>
             </div>
@@ -450,10 +450,10 @@ export default function Home() {
                   className="stroke-zinc-500"
                 />
                 <circle
-                  cx="3.5"
+                  cx="4.5"
                   cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
+                  r="2.5"
+                  className="fill-zinc-800 dark:fill-zinc-50"
                 />
               </svg>
             </div>
@@ -474,10 +474,10 @@ export default function Home() {
                   className="stroke-zinc-500"
                 />
                 <circle
-                  cx="3.5"
+                  cx="4.5"
                   cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
+                  r="2.5"
+                  className="fill-zinc-800 dark:fill-zinc-50"
                 />
               </svg>
             </div>
@@ -498,10 +498,10 @@ export default function Home() {
                   className="stroke-zinc-500"
                 />
                 <circle
-                  cx="3.5"
+                  cx="4.5"
                   cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
+                  r="2.5"
+                  className="fill-zinc-800 dark:fill-zinc-50"
                 />
               </svg>
             </div>

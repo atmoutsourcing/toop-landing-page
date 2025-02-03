@@ -9,8 +9,8 @@ import Link from 'next/link'
 
 export default function Plans() {
   return (
-    <div className="mx-auto flex w-full flex-col font-inter">
-      <div className="mt-40 flex flex-col items-center justify-center text-center">
+    <div className="flex h-auto w-full flex-col font-inter">
+      <div className="mt-44 flex flex-col items-center justify-center gap-24 text-center">
         <div
           className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[150px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
@@ -34,13 +34,14 @@ export default function Plans() {
             className="block h-28 w-28 dark:hidden"
           />
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-2">
             <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
               Confira nossos planos e escolha a solução ideal
             </div>
-          </div>
-          <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
-            para atender às suas necessidades
+
+            <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
+              para atender às suas necessidades
+            </div>
           </div>
         </div>
       </div>
