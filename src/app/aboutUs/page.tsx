@@ -24,7 +24,7 @@ export default function AboutUs() {
   )
 
   return (
-    <div className="flex flex-col font-inter">
+    <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
       <div className="group flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <Image
           src={iconeWhite}
@@ -134,9 +134,9 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center py-10 text-center dark:text-zinc-300">
+      <div className="flex flex-col items-center pt-5 text-center dark:text-zinc-300 md:py-10">
         <iframe
-          className="h-[250px] w-[80%] rounded-3xl md:h-[450px] md:w-[40%] md:min-w-[750px]"
+          className="h-[200px] w-[80%] rounded-3xl md:h-[450px] md:w-[40%] md:min-w-[750px]"
           src="https://www.youtube.com/embed/YK_ZRNtf_U4"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -144,7 +144,7 @@ export default function AboutUs() {
         />
       </div>
 
-      <div className="flex flex-col items-center gap-8 px-[10%] py-10">
+      <div className="flex flex-col items-center gap-8 px-[10%] py-20">
         <div className="h-[1px] w-full bg-gray-500" />
       </div>
 
