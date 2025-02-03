@@ -12,7 +12,7 @@ import atmGroup from '../../public/grupo_atm.png'
 
 export function Footer() {
   return (
-    <footer className="flex w-full flex-col items-center border-t-2 bg-zinc-100 p-12 dark:bg-shapePrimary">
+    <footer className="flex w-full flex-col items-center border-t-2 bg-zinc-100 p-12 font-inter dark:bg-shapePrimary">
       <div className="flex max-w-[1440px] flex-col gap-5">
         <div className="flex flex-col justify-center font-sans md:flex-row">
           <div className="flex items-center justify-center md:mr-24 md:flex-shrink-0 md:items-start">
