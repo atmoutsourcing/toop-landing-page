@@ -398,16 +398,6 @@ export default function Home() {
       </div>
 
       <div className="mb-40 flex flex-col items-center justify-center px-[2%] md:flex-row">
-        {/* <div
-          className="absolute hidden h-[150px] w-[100%] bg-gradient-radial from-[#527caf] to-[#223d88] blur-[180px] md:flex"
-          style={{ transform: 'rotate(8deg)', zIndex: '-1' }}
-        />
-
-        <div
-          className="absolute flex h-[500px] w-[50%] bg-gradient-radial from-[#527caf] to-[#223d88] blur-[180px] md:hidden"
-          style={{ zIndex: '-10' }}
-        /> */}
-
         <div className="flex w-auto flex-col gap-10 md:flex-row md:gap-20">
           <div className="flex flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
             <h1 className="pb-2 text-2xl md:text-4xl">Integração com IA</h1>
