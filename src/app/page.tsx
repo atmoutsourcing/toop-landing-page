@@ -50,7 +50,7 @@ export default function Home() {
         </h1>
 
         <span className="md:text-md mt-2 px-5 text-center font-plusJakartaSans text-sm text-zinc-700 dark:text-textBase md:text-start">
-          Gerenciamento dispositivos móveis de maneira segura inteligente.
+          Gerenciamento dispositivos móveis de maneira segura e inteligente.
         </span>
 
         <div className="mt-2">
