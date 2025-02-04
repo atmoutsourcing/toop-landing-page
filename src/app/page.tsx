@@ -304,7 +304,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-1 flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-1 flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-800 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -319,7 +319,7 @@ export default function Home() {
                 className="block h-8 w-8 dark:hidden"
               />
 
-              <p className="font-inter text-sm font-semibold">Toop</p>
+              <p className="text-md font-inter font-semibold">Toop</p>
             </div>
 
             <div className="flex flex-col gap-2">
