@@ -51,7 +51,7 @@ export default function AboutUs() {
           style={{ zIndex: '1' }}
           className="flex flex-col justify-center text-center font-plusJakartaSans text-3xl font-bold md:flex-row md:gap-2 md:text-start md:text-4xl"
         >
-          <span className="text-yellow-400 dark:text-yellow-500">
+          <span className="text-yellow-500 dark:text-yellow-400">
             transformar
           </span>{' '}
           sua gestão impulsionar resultados

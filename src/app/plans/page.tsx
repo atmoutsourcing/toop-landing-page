@@ -37,7 +37,7 @@ export default function Plans() {
           <div className="flex flex-col gap-2">
             <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
               Confira nossos planos e escolha a{' '}
-              <span className="text-yellow-400 dark:text-yellow-500">
+              <span className="text-yellow-500 dark:text-yellow-400">
                 solução
               </span>{' '}
               ideal
