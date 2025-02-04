@@ -16,6 +16,11 @@ export default function Plans() {
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
         />
 
+        <div
+          className="absolute mb-36 flex h-[150px] w-[150px] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:blur-[100px] md:hidden"
+          style={{ transform: 'rotate(45deg)', zIndex: '-1' }}
+        />
+
         <div className="flex flex-col items-center gap-3">
           <Image
             src={iconWhite}
@@ -46,9 +51,9 @@ export default function Plans() {
       </div>
 
       <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:flex-row md:items-start">
-        <div className="mx-4 mt-4">
+        <div className="mt-4 md:mx-4">
           <div
-            className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
+            className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
           >
             <Clock className="h-[40px] w-[40px]" />
@@ -73,11 +78,13 @@ export default function Plans() {
 
               <div className="flex flex-col gap-2">
                 <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                  Indisponível
+                  PRO
                 </h1>
 
                 <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                  Implantação e gerenciamento para versões futuras.
+                  Solução robusta para empresas que buscam gerenciar aplicativos
+                  e dispositivos de forma integrada, com análises avançadas e
+                  suporte especializado.
                 </p>
               </div>
             </div>
@@ -93,26 +100,26 @@ export default function Plans() {
             <div className="flex flex-col gap-2 pt-4">
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Será proporcionado novas funcionalidades além das
-                funcionalidades que possui o plano free.
+                Configuração de políticas de segurança e restrições de uso para
+                dispositivos.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Será proporcionado novas funcionalidades além das
-                funcionalidades que possui o plano free.
+                Relatórios básicos com informações sobre dispositivos
+                cadastrados.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Será proporcionado novas funcionalidades além das
-                funcionalidades que possui o plano free.
+                Atendimento por e-mail com prioridade para resolução de
+                problemas
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-700 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -163,9 +170,9 @@ export default function Plans() {
           </div>
         </div>
 
-        <div className="mx-4 mt-4">
+        <div className="mt-4 md:mx-4">
           <div
-            className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
+            className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
           >
             <Clock className="h-[40px] w-[40px]" />
@@ -195,7 +202,7 @@ export default function Plans() {
                 </h1>
 
                 <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                  Implantação e gerenciamento para versões futuras.
+                  Implantação e gerenciamento oara
                 </p>
               </div>
             </div>
@@ -211,20 +218,20 @@ export default function Plans() {
             <div className="flex flex-col gap-2 pt-4">
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Será proporcionado novas funcionalidades além das
-                funcionalidades que possui o plano free.
+                Relatórios preditivos sobre vulnerabilidades e riscos de
+                segurança.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Será proporcionado novas funcionalidades além das
-                funcionalidades que possui o plano free.
+                Relatórios básicos com informações sobre dispositivos
+                cadastrados.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Será proporcionado novas funcionalidades além das
-                funcionalidades que possui o plano free.
+                Sessões exclusivas para capacitação da equipe de TI no uso da
+                plataforma.h
               </div>
             </div>
           </div>

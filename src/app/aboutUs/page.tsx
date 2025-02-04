@@ -40,7 +40,7 @@ export default function AboutUs() {
           />
 
           <h1
-            style={{ zIndex: '100' }}
+            style={{ zIndex: '1' }}
             className="flex text-center font-plusJakartaSans text-3xl font-bold md:text-start md:text-4xl"
           >
             Conectando eficiência e segurança para{' '}
@@ -48,8 +48,8 @@ export default function AboutUs() {
         </div>
 
         <h1
-          style={{ zIndex: '10' }}
-          className="flex justify-center gap-2 text-center font-plusJakartaSans text-3xl font-bold md:text-start md:text-4xl"
+          style={{ zIndex: '1' }}
+          className="flex flex-col justify-center text-center font-plusJakartaSans text-3xl font-bold md:flex-row md:gap-2 md:text-start md:text-4xl"
         >
           <span className="text-yellow-400 dark:text-yellow-500">
             transformar

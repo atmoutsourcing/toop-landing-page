@@ -6,7 +6,7 @@ import logoLight from '../../public/logo-white.png'
 import Image from 'next/image'
 import { Button } from './button'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AlignJustify } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 
@@ -14,79 +14,155 @@ import { ToggleTheme } from './toggleTheme'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0)
 
   const pathname = usePathname()
 
+  const [windowHeightPosition, setWindowHeightPosition] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY
+      const windowHeight = window.innerHeight
+
+      setScrollPosition(position)
+      setWindowHeightPosition(windowHeight)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <>
-      <header className="mx-auto flex max-w-[1440px] p-6">
-        <div className="flex-1">
-          <Link href="/" className="cur sor-pointer">
-            <Image
-              src={logoDark}
-              alt="Logo"
-              className="h-9 w-28 transition-all dark:hidden"
-              suppressHydrationWarning
-            />
+      <div
+        style={{ zIndex: '10' }}
+        className={`absolute w-screen transform overflow-hidden border-b-[1px] bg-zinc-50 transition-all duration-200 dark:bg-zinc-950 md:fixed ${scrollPosition > windowHeightPosition ? 'h-[70px] opacity-100' : 'fixed h-0 opacity-0'}`}
+      >
+        <header className={`mx-auto flex max-w-[1440px] pt-3`}>
+          <div className="flex-1">
+            <Link href="/" className="cur sor-pointer">
+              <Image
+                src={logoDark}
+                alt="Logo"
+                className="h-9 w-28 transition-all dark:hidden"
+                suppressHydrationWarning
+              />
 
-            <Image
-              src={logoLight}
-              alt="Logo"
-              className="hidden h-9 w-28 transition-all dark:block"
-            />
-          </Link>
-        </div>
-        <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
-          <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-600'}`}
-          >
-            <Link href="/">Home</Link>
+              <Image
+                src={logoLight}
+                alt="Logo"
+                className="hidden h-9 w-28 transition-all dark:block"
+              />
+            </Link>
+          </div>
+          <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
+            <div
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-600'}`}
+            >
+              <Link href="/">Home</Link>
+            </div>
+
+            <div
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-blue-600'}`}
+            >
+              <Link href="/aboutUs">Sobre nós</Link>
+            </div>
+
+            <div
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-600'}`}
+            >
+              <Link href="/plans">Planos</Link>
+            </div>
+          </div>
+          <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
+            <ToggleTheme />
+
+            <Link href="https://wa.me/5518996187681">
+              <Button>Teste grátis até fim de 2025</Button>
+            </Link>
           </div>
 
-          <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-blue-600'}`}
-          >
-            <Link href="/aboutUs">Sobre nós</Link>
+          <div className="pr-5 md:hidden">
+            <ToggleTheme />
           </div>
 
-          <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-600'}`}
-          >
-            <Link href="/plans">Planos</Link>
+          <div className="mt-1 md:hidden">
+            <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
           </div>
+        </header>
+      </div>
 
-          {/* <div
+      <div className={'w-full'}>
+        <header className="mx-auto flex max-w-[1440px] p-6">
+          <div className="flex-1">
+            <Link href="/" className="cur sor-pointer">
+              <Image
+                src={logoDark}
+                alt="Logo"
+                className="h-9 w-28 transition-all dark:hidden"
+                suppressHydrationWarning
+              />
+
+              <Image
+                src={logoLight}
+                alt="Logo"
+                className="hidden h-9 w-28 transition-all dark:block"
+              />
+            </Link>
+          </div>
+          <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
+            <div
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-600'}`}
+            >
+              <Link href="/">Home</Link>
+            </div>
+
+            <div
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-blue-600'}`}
+            >
+              <Link href="/aboutUs">Sobre nós</Link>
+            </div>
+
+            <div
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-600'}`}
+            >
+              <Link href="/plans">Planos</Link>
+            </div>
+
+            {/* <div
            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/contacts' && 'text-blue-500'}`}
          >
            <Link href="/contacts">Contatos</Link>
          </div> */}
 
-          {/* <div
+            {/* <div
             className={`flex cursor-pointer flex-row items-center gap-1 transition`}
           >
             <Link href="https://www.google.com.br/?hl=pt-BR">Blog</Link>
           </div> */}
-        </div>
-        <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
-          <ToggleTheme />
+          </div>
+          <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
+            <ToggleTheme />
 
-          <Link href="https://wa.me/5518996187681">
-            <Button>Teste grátis até fim de 2025</Button>
-          </Link>
-        </div>
+            <Link href="https://wa.me/5518996187681">
+              <Button>Teste grátis até fim de 2025</Button>
+            </Link>
+          </div>
 
-        <div className="pr-5 md:hidden">
-          <ToggleTheme />
-        </div>
+          <div className="pr-5 md:hidden">
+            <ToggleTheme />
+          </div>
 
-        <div className="mt-1 md:hidden">
-          <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
-        </div>
-      </header>
+          <div className="mt-1 md:hidden">
+            <AlignJustify size={24} onClick={() => setIsOpen(!isOpen)} />
+          </div>
+        </header>
+      </div>
 
       <div
         className={`flex transform cursor-pointer flex-col gap-2 overflow-hidden font-inter text-sm transition-all duration-700 ease-in-out ${
-          isOpen ? 'h-[258px]' : 'h-[0px]'
+          isOpen ? 'h-[358px]' : 'h-[0px]'
         } `}
       >
         <Link
