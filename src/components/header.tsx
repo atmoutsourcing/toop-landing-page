@@ -37,7 +37,7 @@ export function Header() {
     <>
       <div
         style={{ zIndex: '10' }}
-        className={`absolute w-screen transform overflow-hidden border-b-[1px] bg-zinc-50 transition-all duration-200 dark:bg-zinc-950 md:fixed ${scrollPosition > windowHeightPosition ? 'h-[70px] opacity-100' : 'fixed h-0 opacity-0'}`}
+        className={`absolute w-screen transform overflow-hidden border-b-[1px] bg-zinc-50 font-inter transition-all duration-200 dark:bg-zinc-950 md:fixed ${scrollPosition > windowHeightPosition ? 'h-[70px] opacity-100' : 'fixed h-0 opacity-0'}`}
       >
         <header className={`mx-auto flex max-w-[1440px] pt-3`}>
           <div className="flex-1">
@@ -93,7 +93,7 @@ export function Header() {
         </header>
       </div>
 
-      <div className={'w-full'}>
+      <div className={'w-full font-inter'}>
         <header className="mx-auto flex max-w-[1440px] p-6">
           <div className="flex-1">
             <Link href="/" className="cur sor-pointer">

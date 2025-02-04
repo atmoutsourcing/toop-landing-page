@@ -234,10 +234,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex h-full flex-col items-center justify-center gap-10 md:flex-row md:items-start md:p-8">
-        <div className="flex">
+      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[20%] md:flex-row md:items-start">
+        <div className="mt-4 md:mx-4">
           <div
-            className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
+            className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
           >
             <Clock className="h-[40px] w-[40px]" />
@@ -263,13 +263,11 @@ export default function Home() {
 
               <div className="flex flex-col gap-2">
                 <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                  PRO
+                  Indisponível
                 </h1>
 
                 <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                  Solução robusta para empresas que buscam gerenciar aplicativos
-                  e dispositivos de forma integrada, com análises avançadas e
-                  suporte especializado.
+                  Implantação e gerenciamento oara
                 </p>
               </div>
             </div>
@@ -285,8 +283,8 @@ export default function Home() {
             <div className="flex flex-col gap-2 pt-4">
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Configuração de políticas de segurança e restrições de uso para
-                dispositivos.
+                Relatórios preditivos sobre vulnerabilidades e riscos de
+                segurança.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
@@ -297,14 +295,14 @@ export default function Home() {
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Atendimento por e-mail com prioridade para resolução de
-                problemas
+                Sessões exclusivas para capacitação da equipe de TI no uso da
+                plataforma.h
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-1 flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-700 dark:bg-shapePrimary md:scale-110">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -333,17 +331,21 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="py-2 font-inter text-xl font-bold">R$ 0,00/mês</div>
+          <div className="py-2 font-inter text-xl font-bold dark:text-zinc-300">
+            R$ 0,00/mês
+          </div>
 
-          <Link href="https://wa.me/5518996187681" className="w-full">
-            <Button variant="secondary">Contratar agora!</Button>
+          <Link href="https://wa.me/5518996187681">
+            <button className="w-full rounded-full bg-zinc-950 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200">
+              Contratar agora!
+            </button>
           </Link>
 
-          <div className="mt-2 h-[1px] w-full bg-gray-500" />
+          <div className="mt-4 h-[1px] w-full bg-gray-500" />
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
-              <span className="text-sm">
+              <span className="text-sm dark:text-zinc-300">
                 🎉 Boas notícias! Todas as features do TOOP estão 100% liberadas
                 para você aproveitar ao máximo! 🚀💙
               </span>
@@ -351,15 +353,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mb-72 flex">
+        <div className="mt-4 md:mx-4">
           <div
-            className="absolute flex min-h-[450px] w-[95%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
+            className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
           >
             <Clock className="h-[40px] w-[40px]" />
             Disponível em breve
           </div>
-          <div className="opacity- flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 opacity-[.25] blur-[5px] dark:bg-shapePrimary">
+
+          <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 px-5 opacity-[.25] blur-[5px] dark:bg-shapePrimary">
             <div className="flex flex-col gap-4">
               <div className="flex flex-row items-center gap-1 pt-3">
                 <Image
@@ -378,12 +381,11 @@ export default function Home() {
 
               <div className="flex flex-col gap-2">
                 <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                  ULTRA
+                  Indisponível
                 </h1>
 
                 <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                  Implantação e gerenciamento de aplicativos corporativos
-                  remotamente.
+                  Implantação e gerenciamento oara
                 </p>
               </div>
             </div>
