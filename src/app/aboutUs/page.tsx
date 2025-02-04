@@ -25,7 +25,7 @@ export default function AboutUs() {
 
   return (
     <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
-      <div className="group flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
+      <div className="group mb-80 mt-52 flex cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <div className="flex flex-col items-center gap-3">
           <Image
             src={iconeWhite}
@@ -151,7 +151,7 @@ export default function AboutUs() {
         <div className="h-[1px] w-full bg-gray-500" />
       </div>
 
-      <div className="hidden flex-col gap-[100px] px-[20%] md:flex">
+      <div className="hidden flex-col gap-[100px] px-[15%] md:flex">
         <div className="relative flex flex-row">
           <div className="absolute inset-0 left-[-20px] top-[80px] -z-10 h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800" />
 
@@ -169,7 +169,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="relative flex flex-row justify-end pl-[20%]">
+        <div className="relative flex flex-row justify-end pl-[10%]">
           <div className="flex flex-col justify-center pr-10 text-sm font-bold dark:text-zinc-300">
             <h1 className="pb-4 text-right text-2xl">
               Somos a{' '}
@@ -181,7 +181,7 @@ export default function AboutUs() {
             <p className="text-right text-xl">em telefonia móvel corporativa</p>
           </div>
 
-          <div className="absolute inset-0 left-[81.5%] top-[35%] -z-10 h-[72%] w-[20%] rounded-xl bg-blue-500 dark:bg-blue-800" />
+          <div className="absolute inset-0 left-[77.4%] top-[35%] -z-10 h-[72%] w-[25%] rounded-xl bg-blue-500 dark:bg-blue-800" />
 
           <Image
             src={pessoalAtm}
