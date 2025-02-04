@@ -51,15 +51,18 @@ export default function AboutUs() {
           style={{ zIndex: '10' }}
           className="flex justify-center gap-2 text-center font-plusJakartaSans text-3xl font-bold md:text-start md:text-4xl"
         >
-          transformar sua gestão impulsionar resultados.
+          <span className="text-yellow-400 dark:text-yellow-500">
+            transformar
+          </span>{' '}
+          sua gestão impulsionar resultados
         </h1>
         <div
-          className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[130px] md:hidden"
+          className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[130px] md:hidden"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
         <div className="absolute flex h-auto w-[100%] items-center justify-center gap-[35%] px-[10%]">
-          <div className="mb-10 hidden h-[204px] w-[213px] rounded-full bg-blue-500 blur-[120px] md:flex" />
-          <div className="mt-36 hidden h-[204px] w-[213px] rounded-full bg-blue-500 blur-[120px] md:flex" />
+          <div className="mb-10 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] md:flex" />
+          <div className="mt-36 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] md:flex" />
         </div>
       </div>
 
