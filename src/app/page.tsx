@@ -23,7 +23,7 @@ export default function Home() {
     <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
       <div
         style={{ zIndex: '-1' }}
-        className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-200 to-blue-500 blur-[250px]"
+        className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-200 to-blue-500 blur-[250px] dark:from-blue-600 dark:to-blue-950 dark:blur-[300px]"
       />
 
       <div className="relative mb-80 mt-52 flex flex-col items-center gap-2 font-bold md:text-start">
@@ -62,7 +62,7 @@ export default function Home() {
 
       <div
         style={{ zIndex: '-1' }}
-        className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-200 to-blue-500 blur-[250px] md:flex"
+        className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-200 to-blue-500 blur-[250px] dark:from-blue-600 dark:to-blue-950 dark:blur-[300px] md:flex"
       />
 
       <div className="flex flex-col items-center justify-between md:flex-row">
@@ -103,10 +103,10 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center gap-[20%] px-4 py-10 md:h-screen">
         <div
-          className="absolute hidden h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[180px] md:flex"
+          className="absolute hidden h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[180px] dark:from-blue-500 dark:to-blue-950 dark:blur-[150px] md:flex"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
-        <h1 className="pb-[5%] text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
+        <h1 className="pb-16 text-center text-2xl font-medium dark:text-zinc-300 md:text-start md:text-4xl">
           Quais são os beneficios de usar o TOOP?
         </h1>
 

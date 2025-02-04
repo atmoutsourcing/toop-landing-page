@@ -61,8 +61,8 @@ export default function AboutUs() {
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
         <div className="absolute flex h-auto w-[100%] items-center justify-center gap-[35%] px-[10%]">
-          <div className="mb-10 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] md:flex" />
-          <div className="mt-36 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] md:flex" />
+          <div className="mb-10 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] dark:bg-blue-700 dark:blur-[150px] md:flex" />
+          <div className="mt-36 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] dark:bg-blue-700 dark:blur-[150px] md:flex" />
         </div>
       </div>
 
