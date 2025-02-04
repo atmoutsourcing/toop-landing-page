@@ -23,31 +23,33 @@ export default function Home() {
     <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
       <div
         style={{ zIndex: '-1' }}
-        className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px]"
+        className="absolute left-[-380px] top-[-153.81px] h-[649.99px] w-[575.79px] rotate-[-0.02deg] bg-gradient-radial from-blue-200 to-blue-500 blur-[250px] dark:from-blue-600 dark:to-blue-950 dark:blur-[300px]"
       />
 
       <div className="relative mb-80 mt-52 flex flex-col items-center gap-2 font-bold md:text-start">
-        <Image
-          src={iconWhite}
-          alt="Toop icon"
-          className="hidden h-28 w-28 dark:block"
-        />
+        <div className="flex flex-col items-center gap-3">
+          <Image
+            src={iconWhite}
+            alt="Toop icon"
+            className="hidden h-24 w-24 dark:block md:h-28 md:w-28"
+          />
 
-        <Image
-          src={iconDark}
-          alt="Toop icon"
-          className="block h-28 w-28 dark:hidden"
-        />
+          <Image
+            src={iconDark}
+            alt="Toop icon"
+            className="block h-28 w-28 dark:hidden"
+          />
 
-        <h1 className="flex justify-center text-center font-plusJakartaSans text-3xl md:text-start md:text-4xl">
-          O sistema EMM que transforma a gestão de
-        </h1>
+          <h1 className="flex justify-center text-center font-plusJakartaSans text-2xl md:text-start md:text-4xl">
+            O sistema EMM que transforma a gestão de
+          </h1>
+        </div>
 
-        <h1 className="flex justify-center text-center font-plusJakartaSans text-3xl md:text-start md:text-4xl">
+        <h1 className="flex justify-center text-center font-plusJakartaSans text-2xl md:text-start md:text-4xl">
           dispositivos em uma experiência prática e eficiente
         </h1>
 
-        <span className="mt-2 px-5 text-center font-plusJakartaSans text-lg text-zinc-600 dark:text-textBase md:text-start">
+        <span className="md:text-md mt-2 px-5 text-center font-plusJakartaSans text-sm text-zinc-700 dark:text-textBase md:text-start">
           Gerenciamento dispositivos móveis de maneira segura inteligente.
         </span>
 
@@ -60,7 +62,7 @@ export default function Home() {
 
       <div
         style={{ zIndex: '-1' }}
-        className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-500 to-blue-800 blur-[250px] md:flex"
+        className="absolute left-[1256px] top-[291px] hidden h-[438px] w-[1056px] max-w-[1440px] bg-gradient-radial from-blue-200 to-blue-500 blur-[250px] dark:from-blue-600 dark:to-blue-950 dark:blur-[300px] md:flex"
       />
 
       <div className="flex flex-col items-center justify-between md:flex-row">
@@ -101,17 +103,20 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center gap-[20%] px-4 py-10 md:h-screen">
         <div
-          className="absolute hidden h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[180px] md:flex"
+          className="absolute hidden h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[180px] dark:from-blue-500 dark:to-blue-950 dark:blur-[150px] md:flex"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
-        <h1 className="pb-[5%] text-center text-2xl dark:text-zinc-300 md:text-start md:text-4xl">
+        <h1 className="pb-16 text-center text-2xl font-medium dark:text-zinc-300 md:text-start md:text-4xl">
           Quais são os beneficios de usar o TOOP?
         </h1>
 
-        <div className="flex w-full flex-col gap-16 md:pl-[10%]">
+        <div className="flex w-full flex-col gap-16 font-inter md:pl-[10%]">
           <div className="grid grid-cols-1 justify-between gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
             <div className="md:max-w-[300px]">
-              <h2 className="pb-5 font-sans text-xl text-blue-500">
+              <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+                <span className="font-light text-zinc-950 dark:text-zinc-100">
+                  |
+                </span>{' '}
                 Controle e Segurança
               </h2>
               <p className="pb-1 text-sm">
@@ -129,7 +134,10 @@ export default function Home() {
             </div>
 
             <div className="md:max-w-[300px]">
-              <h2 className="pb-5 font-sans text-xl text-blue-500">
+              <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+                <span className="font-light text-zinc-950 dark:text-zinc-100">
+                  |
+                </span>{' '}
                 Gestão Centralizada
               </h2>
               <p className="pb-1 text-sm">
@@ -147,7 +155,10 @@ export default function Home() {
             </div>
 
             <div className="md:max-w-[300px]">
-              <h2 className="pb-5 font-sans text-xl text-blue-500">
+              <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+                <span className="font-light text-zinc-950 dark:text-zinc-100">
+                  |
+                </span>{' '}
                 Aumento da Produtividade
               </h2>
               <p className="pb-1 text-sm">
@@ -167,7 +178,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
             <div className="md:max-w-[300px]">
-              <h2 className="pb-5 font-sans text-xl text-blue-500">
+              <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+                <span className="font-light text-zinc-950 dark:text-zinc-100">
+                  |
+                </span>{' '}
                 Flexibilidade e Escalabilidade
               </h2>
               <p className="pb-1 text-sm">
@@ -182,7 +196,10 @@ export default function Home() {
             </div>
 
             <div className="md:max-w-[300px]">
-              <h2 className="pb-5 font-sans text-xl text-blue-500">
+              <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+                <span className="font-light text-zinc-950 dark:text-zinc-100">
+                  |
+                </span>{' '}
                 Conformidade e Auditoria
               </h2>
               <p className="pb-1 text-sm">
@@ -196,8 +213,13 @@ export default function Home() {
             </div>
 
             <div className="md:max-w-[300px]">
-              <h2 className="pb-5 font-sans text-xl text-blue-500">
-                Redução de Custos Operacionais
+              <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+                <div className="flex items-center gap-2">
+                  <span className="font-light text-zinc-950 dark:text-zinc-100">
+                    |
+                  </span>
+                  Redução de Custos Operacionais
+                </div>
               </h2>
               <p className="pb-1 text-sm">
                 Automação de tarefas de gerenciamento reduz a necessidade de
@@ -426,7 +448,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex min-w-[50%] flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
+          <div className="flex min-w-[45%] flex-col rounded-xl border border-zinc-200 bg-gradient-to-r p-5 shadow-xl dark:border-white/30">
             <div className="flex flex-col pb-4 text-end text-2xl md:text-4xl">
               <h2>A integração da IA ao Toop resultará:</h2>
             </div>
@@ -448,10 +470,10 @@ export default function Home() {
                   className="stroke-zinc-500"
                 />
                 <circle
-                  cx="3.5"
+                  cx="4.5"
                   cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
+                  r="2.5"
+                  className="fill-zinc-800 dark:fill-zinc-50"
                 />
               </svg>
             </div>
@@ -472,10 +494,10 @@ export default function Home() {
                   className="stroke-zinc-500"
                 />
                 <circle
-                  cx="3.5"
+                  cx="4.5"
                   cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
+                  r="2.5"
+                  className="fill-zinc-800 dark:fill-zinc-50"
                 />
               </svg>
             </div>
@@ -496,10 +518,10 @@ export default function Home() {
                   className="stroke-zinc-500"
                 />
                 <circle
-                  cx="3.5"
+                  cx="4.5"
                   cy="37.5"
-                  r="3.5"
-                  className="fill-zinc-50 blur-[1px]"
+                  r="2.5"
+                  className="fill-zinc-800 dark:fill-zinc-50"
                 />
               </svg>
             </div>

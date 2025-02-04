@@ -25,38 +25,44 @@ export default function AboutUs() {
 
   return (
     <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
-      <div className="group flex min-h-[600px] cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
-        <Image
-          src={iconeWhite}
-          alt="Toop icon"
-          className="hidden h-28 w-28 dark:block"
-        />
+      <div className="group mb-80 mt-52 flex cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
+        <div className="flex flex-col items-center gap-3">
+          <Image
+            src={iconeWhite}
+            alt="Toop icon"
+            className="hidden h-28 w-28 dark:block"
+          />
 
-        <Image
-          src={iconeDark}
-          alt="Toop icon"
-          className="block h-28 w-28 dark:hidden"
-        />
+          <Image
+            src={iconeDark}
+            alt="Toop icon"
+            className="block h-28 w-28 dark:hidden"
+          />
 
-        <h1
-          style={{ zIndex: '100' }}
-          className="text-center font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl"
-        >
-          Conectando eficiência e segurança para{' '}
-        </h1>
+          <h1
+            style={{ zIndex: '100' }}
+            className="flex text-center font-plusJakartaSans text-3xl font-bold md:text-start md:text-4xl"
+          >
+            Conectando eficiência e segurança para{' '}
+          </h1>
+        </div>
+
         <h1
           style={{ zIndex: '10' }}
-          className="text-center font-plusJakartaSans text-3xl font-bold md:text-5xl"
+          className="flex justify-center gap-2 text-center font-plusJakartaSans text-3xl font-bold md:text-start md:text-4xl"
         >
-          <span className="text-yellow-400">transformar</span> sua gestão!
+          <span className="text-yellow-400 dark:text-yellow-500">
+            transformar
+          </span>{' '}
+          sua gestão impulsionar resultados
         </h1>
         <div
-          className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[130px] md:hidden"
+          className="absolute flex h-[200px] w-[200px] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[130px] md:hidden"
           style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
         />
         <div className="absolute flex h-auto w-[100%] items-center justify-center gap-[35%] px-[10%]">
-          <div className="mb-10 hidden h-[204px] w-[213px] rounded-full bg-blue-500 blur-[120px] md:flex" />
-          <div className="mt-36 hidden h-[204px] w-[213px] rounded-full bg-blue-500 blur-[120px] md:flex" />
+          <div className="mb-10 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] dark:bg-blue-700 dark:blur-[150px] md:flex" />
+          <div className="mt-36 hidden h-[204px] w-[213px] rounded-full bg-blue-300 blur-[120px] dark:bg-blue-700 dark:blur-[150px] md:flex" />
         </div>
       </div>
 
@@ -148,7 +154,7 @@ export default function AboutUs() {
         <div className="h-[1px] w-full bg-gray-500" />
       </div>
 
-      <div className="hidden flex-col gap-[100px] px-[20%] md:flex">
+      <div className="hidden flex-col gap-[100px] px-[15%] md:flex">
         <div className="relative flex flex-row">
           <div className="absolute inset-0 left-[-20px] top-[80px] -z-10 h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800" />
 
@@ -166,7 +172,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        <div className="relative flex flex-row justify-end pl-[20%]">
+        <div className="relative flex flex-row justify-end pl-[10%]">
           <div className="flex flex-col justify-center pr-10 text-sm font-bold dark:text-zinc-300">
             <h1 className="pb-4 text-right text-2xl">
               Somos a{' '}
@@ -178,7 +184,7 @@ export default function AboutUs() {
             <p className="text-right text-xl">em telefonia móvel corporativa</p>
           </div>
 
-          <div className="absolute inset-0 left-[81.5%] top-[35%] -z-10 h-[72%] w-[20%] rounded-xl bg-blue-500 dark:bg-blue-800" />
+          <div className="absolute inset-0 left-[77.4%] top-[35%] -z-10 h-[72%] w-[25%] rounded-xl bg-blue-500 dark:bg-blue-800" />
 
           <Image
             src={pessoalAtm}
@@ -234,54 +240,6 @@ export default function AboutUs() {
       <div className="flex flex-col items-center gap-8 px-[10%] py-20">
         <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
       </div>
-
-      {/* <div className="flex flex-col items-center justify-center gap-10 pb-20 md:min-h-[700px] md:flex-row">
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
-          <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
-            stroke="currentColor"
-            fill="currentColor"
-            strokeWidth="0"
-            viewBox="0 0 576 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M275.3 250.5c7 7.4 18.4 7.4 25.5 0l108.9-114.2c31.6-33.2 29.8-88.2-5.6-118.8-30.8-26.7-76.7-21.9-104.9 7.7L288 36.9l-11.1-11.6C248.7-4.4 202.8-9.2 172 17.5c-35.3 30.6-37.2 85.6-5.6 118.8l108.9 114.2zm290 77.6c-11.8-10.7-30.2-10-42.6 0L430.3 402c-11.3 9.1-25.4 14-40 14H272c-8.8 0-16-7.2-16-16s7.2-16 16-16h78.3c15.9 0 30.7-10.9 33.3-26.6 3.3-20-12.1-37.4-31.6-37.4H192c-27 0-53.1 9.3-74.1 26.3L71.4 384H16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h356.8c14.5 0 28.6-4.9 40-14L564 377c15.2-12.1 16.4-35.3 1.3-48.9z"></path>
-          </svg>
-          <p className="pb-2 text-2xl font-bold text-blue-500 dark:text-blue-800 md:pb-10 md:text-4xl">
-            Propósito
-          </p>
-          <p className="w-[200px] text-center md:w-auto">
-            “Ajudar e inspirar com exemplo para dar sentido a vida em Deus.”
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center rounded-full border p-10 shadow-[0_0_15px_5px_rgba(59,130,246,0.5)] md:h-[550px] md:max-w-[360px] md:rounded-xl">
-          <svg
-            className="h-[100px] w-[100px] text-blue-500 dark:text-blue-800 md:h-[150px] md:w-[150px]"
-            stroke="currentColor"
-            fill="none"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-            <path d="M12 7a5 5 0 1 0 5 5"></path>
-            <path d="M13 3.055a9 9 0 1 0 7.941 7.945"></path>
-            <path d="M15 6v3h3l3 -3h-3v-3z"></path>
-            <path d="M15 9l-3 3"></path>
-          </svg>
-          <p className="pb-2 text-2xl font-bold text-blue-500 dark:text-blue-800 md:pb-10 md:text-4xl">
-            Missão
-          </p>
-          <p className="w-[300px] pb-10 text-center md:w-auto">
-            “A nossa missão é ajudar os clientes e colaboradores a garantirem
-            uma qualidade de vida e realização no seu trabalho com suporte da
-            tecnologia.”
-          </p>
-        </div>
-      </div> */}
 
       <div className="flex items-center justify-center gap-10 pb-20 md:flex-row">
         <Image src={valores} alt="Valores" className="w-[60%] md:w-[30%]" />

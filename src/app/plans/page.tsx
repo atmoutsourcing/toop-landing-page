@@ -10,35 +10,37 @@ import Link from 'next/link'
 export default function Plans() {
   return (
     <div className="flex h-auto w-full flex-col font-inter">
-      <div className="mt-32 flex flex-col items-center justify-center text-center">
+      <div className="mb-80 mt-52 flex flex-col items-center justify-center gap-24 text-center">
         <div
-          className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[150px] md:flex"
+          className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:from-blue-500 dark:to-blue-600 dark:blur-[250px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
         />
 
-        <div
-          className="absolute flex h-[400px] w-[100px] overflow-hidden rounded-[8px] bg-gradient-radial from-[#5aa2fa] to-[#223d88] blur-[100px] md:hidden"
-          style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
-        />
+        <div className="flex flex-col items-center gap-3">
+          <Image
+            src={iconWhite}
+            alt="Toop icon"
+            className="hidden h-28 w-28 dark:block"
+          />
 
-        <Image
-          src={iconWhite}
-          alt="Toop icon"
-          className="hidden h-28 w-28 dark:block"
-        />
+          <Image
+            src={iconDark}
+            alt="Toop icon"
+            className="block h-28 w-28 dark:hidden"
+          />
 
-        <Image
-          src={iconDark}
-          alt="Toop icon"
-          className="block h-28 w-28 dark:hidden"
-        />
+          <div className="flex flex-col gap-2">
+            <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
+              Confira nossos planos e escolha a{' '}
+              <span className="text-yellow-400 dark:text-yellow-500">
+                solução
+              </span>{' '}
+              ideal
+            </div>
 
-        <div className="flex flex-col gap-1">
-          <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
-            Veja nossos planos e escolha a melhor
-          </div>
-          <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-5xl">
-            <span className="text-yellow-400">solução</span> para você!
+            <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
+              para atender às suas necessidades
+            </div>
           </div>
         </div>
       </div>
@@ -71,13 +73,11 @@ export default function Plans() {
 
               <div className="flex flex-col gap-2">
                 <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                  PRO
+                  Indisponível
                 </h1>
 
                 <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                  Solução robusta para empresas que buscam gerenciar aplicativos
-                  e dispositivos de forma integrada, com análises avançadas e
-                  suporte especializado.
+                  Implantação e gerenciamento para versões futuras.
                 </p>
               </div>
             </div>
@@ -93,26 +93,26 @@ export default function Plans() {
             <div className="flex flex-col gap-2 pt-4">
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Configuração de políticas de segurança e restrições de uso para
-                dispositivos.
+                Será proporcionado novas funcionalidades além das
+                funcionalidades que possui o plano free.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Relatórios básicos com informações sobre dispositivos
-                cadastrados.
+                Será proporcionado novas funcionalidades além das
+                funcionalidades que possui o plano free.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Atendimento por e-mail com prioridade para resolução de
-                problemas
+                Será proporcionado novas funcionalidades além das
+                funcionalidades que possui o plano free.
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl bg-zinc-100 p-4 px-5 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -191,12 +191,11 @@ export default function Plans() {
 
               <div className="flex flex-col gap-2">
                 <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
-                  ULTRA
+                  Indisponível
                 </h1>
 
                 <p className="space-y-4 font-inter text-xs font-bold leading-tight dark:text-zinc-400">
-                  Implantação e gerenciamento de aplicativos corporativos
-                  remotamente.
+                  Implantação e gerenciamento para versões futuras.
                 </p>
               </div>
             </div>
@@ -212,20 +211,20 @@ export default function Plans() {
             <div className="flex flex-col gap-2 pt-4">
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Relatórios preditivos sobre vulnerabilidades e riscos de
-                segurança.
+                Será proporcionado novas funcionalidades além das
+                funcionalidades que possui o plano free.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Relatórios básicos com informações sobre dispositivos
-                cadastrados.
+                Será proporcionado novas funcionalidades além das
+                funcionalidades que possui o plano free.
               </div>
 
               <div className="flex flex-row gap-2 font-inter text-xs">
                 <Check className="h-5 w-5 flex-shrink-0 text-green-500" />
-                Sessões exclusivas para capacitação da equipe de TI no uso da
-                plataforma.h
+                Será proporcionado novas funcionalidades além das
+                funcionalidades que possui o plano free.
               </div>
             </div>
           </div>
