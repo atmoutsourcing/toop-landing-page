@@ -12,7 +12,7 @@ export function Questions() {
         Dúvidas frequentes
       </h1>
 
-      <div className="flex justify-center pb-20">
+      <div className="flex justify-center pb-10">
         <Accordion type="single" collapsible className="w-[80%] md:w-[50%]">
           <AccordionItem value="item-1">
             <AccordionTrigger>O que é MDM?</AccordionTrigger>
