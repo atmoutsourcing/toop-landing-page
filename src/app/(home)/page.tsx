@@ -8,11 +8,11 @@ import React from 'react'
 import { Button } from '@/components/button'
 
 import Link from 'next/link'
-import { Ai } from './components/Ai'
-import { Summary } from './components/Summary'
-import { Benefits } from './components/Benefits'
-import { ProposalCards } from './components/ProposalCards'
-import { Questions } from './components/Questions'
+import { Ai } from './sessions/ai'
+import { Summary } from './sessions/summary'
+import { Benefits } from './sessions/benefits'
+import { ProposalCards } from './sessions/proposal-cards'
+import { Questions } from './sessions/questions'
 
 export default function Home() {
   return (
