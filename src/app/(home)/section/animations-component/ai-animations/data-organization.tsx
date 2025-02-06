@@ -21,7 +21,7 @@ export function DataOrganization() {
                 }
               : {}
           }
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
           className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 md:text-xl"
         >
           Organização de dados
