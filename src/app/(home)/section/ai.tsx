@@ -11,7 +11,7 @@ export function Ai() {
   })
 
   return (
-    <div className="mb-32 flex w-auto items-center overflow-hidden rounded-xl border border-zinc-300 bg-white bg-clip-content dark:border-zinc-700 dark:bg-zinc-950 md:max-h-[700] md:max-w-[1440px]">
+    <div className="mb-32 flex w-auto items-center overflow-hidden rounded-xl border border-zinc-300 bg-zinc-50 bg-clip-content dark:border-zinc-700 dark:bg-zinc-950 md:max-h-[700] md:max-w-[1440px]">
       <div className="flex flex-col md:flex-row">
         <div className="ml-20 flex h-auto max-w-[250px] flex-col gap-6 py-20 md:min-w-[500px] md:max-w-[600px] md:gap-10">
           <motion.div

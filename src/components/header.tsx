@@ -129,18 +129,6 @@ export function Header() {
             >
               <Link href="/plans">Planos</Link>
             </div>
-
-            {/* <div
-           className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/contacts' && 'text-blue-500'}`}
-         >
-           <Link href="/contacts">Contatos</Link>
-         </div> */}
-
-            {/* <div
-            className={`flex cursor-pointer flex-row items-center gap-1 transition`}
-          >
-            <Link href="https://www.google.com.br/?hl=pt-BR">Blog</Link>
-          </div> */}
           </div>
           <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
             <ToggleTheme />
@@ -193,20 +181,6 @@ export function Header() {
         >
           Teste grátis até fim de 2025
         </Link>
-        {/* <Link
-          href="/contacts"
-          onClick={() => setIsOpen(false)}
-          className={`border-b-[1px] border-zinc-700 p-4`}
-        >
-          Contatos
-        </Link> */}
-        {/* <Link
-          href="/blog"
-          onClick={() => setIsOpen(false)}
-          className={`border-b-[1px] border-zinc-700 p-4`}
-        >
-          Blog
-        </Link> */}
       </div>
     </>
   )

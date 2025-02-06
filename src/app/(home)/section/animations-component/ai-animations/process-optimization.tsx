@@ -42,7 +42,7 @@ export function ProcessOptimization() {
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
         className="font-normal text-zinc-800 dark:text-zinc-200"
       >
-        Com IA integrada, o TOOP automatiza e otimiza <br /> processos,
+        A inteligência artificial do TOOP automatiza e otimiza <br /> processos,
         reduzindo tempo e aumentando a <br />
         eficiência operacional com inteligência avançada.
       </motion.span>

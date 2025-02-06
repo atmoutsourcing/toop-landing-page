@@ -42,8 +42,9 @@ export function DataOrganization() {
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
         className="font-normal text-zinc-800 dark:text-zinc-200"
       >
-        A integração com IA do TOOP organiza dados de <br /> forma inteligente,
-        facilitando o acesso e a análise <br /> para uma gestão mais eficiente.
+        A IA do TOOP organiza dados de forma inteligente, <br /> facilitando o
+        acesso e a análise para uma gestão mais <br />
+        eficiente.
       </motion.span>
     </div>
   )
