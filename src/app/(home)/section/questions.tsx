@@ -7,7 +7,7 @@ import {
 
 export function Questions() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="mb-20 flex flex-col gap-8">
       <h1 className="text-center text-2xl font-bold dark:text-zinc-300 md:text-4xl">
         Dúvidas frequentes
       </h1>
