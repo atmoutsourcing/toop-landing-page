@@ -12,7 +12,7 @@ export function Benefits() {
       <div className="flex w-full flex-col gap-16 font-inter md:pl-[10%]">
         <div className="grid grid-cols-1 justify-between gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
           <div className="md:max-w-[300px]">
-            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -32,7 +32,7 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[300px]">
-            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -53,7 +53,7 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[300px]">
-            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -76,7 +76,7 @@ export function Benefits() {
 
         <div className="grid grid-cols-1 gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
           <div className="md:max-w-[300px]">
-            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -94,7 +94,7 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[300px]">
-            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -111,12 +111,14 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[300px]">
-            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-400">
+            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
               <div className="flex items-center gap-2">
                 <span className="font-light text-zinc-950 dark:text-zinc-100">
                   |
                 </span>
-                Redução de Custos Operacionais
+                <p className="flex flex-shrink-0">
+                  Redução de Custos Operacionais
+                </p>
               </div>
             </h2>
             <p className="pb-1 text-sm">

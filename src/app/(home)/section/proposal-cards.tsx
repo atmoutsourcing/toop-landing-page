@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export function ProposalCards() {
   return (
-    <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[20%] md:flex-row md:items-start">
+    <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-44 md:flex-row md:items-start">
       <div className="mt-4 md:mx-4">
         <div
           className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"

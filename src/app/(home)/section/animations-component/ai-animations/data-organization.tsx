@@ -21,7 +21,7 @@ export function DataOrganization() {
                 }
               : {}
           }
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
           className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 md:text-xl"
         >
           Organização de dados
@@ -39,7 +39,7 @@ export function DataOrganization() {
               }
             : {}
         }
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.6 }}
+        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
         className="font-normal text-zinc-800 dark:text-zinc-200"
       >
         A integração com IA do TOOP organiza dados de <br /> forma inteligente,

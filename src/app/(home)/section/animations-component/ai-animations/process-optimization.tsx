@@ -21,7 +21,7 @@ export function ProcessOptimization() {
                 }
               : {}
           }
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
           className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 md:text-xl"
         >
           Otimização de processos
@@ -39,7 +39,7 @@ export function ProcessOptimization() {
               }
             : {}
         }
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
         className="font-normal text-zinc-800 dark:text-zinc-200"
       >
         Com IA integrada, o TOOP automatiza e otimiza <br /> processos,

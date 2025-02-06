@@ -58,19 +58,19 @@ export function Header() {
           </div>
           <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
             <div
-              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'dark:text-blue-400'}`}
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-sky-500 dark:text-sky-400'}`}
             >
               <Link href="/">Home</Link>
             </div>
 
             <div
-              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'dark:text-blue-400'}`}
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-sky-500 dark:text-sky-400'}`}
             >
               <Link href="/aboutUs">Sobre nós</Link>
             </div>
 
             <div
-              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'dark:text-blue-400'}`}
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-sky-500 dark:text-sky-400'}`}
             >
               <Link href="/plans">Planos</Link>
             </div>
@@ -113,19 +113,19 @@ export function Header() {
           </div>
           <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
             <div
-              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-blue-600'}`}
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-sky-500 dark:text-sky-400'}`}
             >
               <Link href="/">Home</Link>
             </div>
 
             <div
-              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-blue-600'}`}
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/aboutUs' && 'text-sky-500 dark:text-sky-400'}`}
             >
               <Link href="/aboutUs">Sobre nós</Link>
             </div>
 
             <div
-              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-blue-600'}`}
+              className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/plans' && 'text-sky-500 dark:text-sky-400'}`}
             >
               <Link href="/plans">Planos</Link>
             </div>

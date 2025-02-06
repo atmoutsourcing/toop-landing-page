@@ -10,7 +10,7 @@ import Link from 'next/link'
 export default function Plans() {
   return (
     <div className="flex h-auto w-full flex-col font-inter">
-      <div className="mb-80 mt-52 flex flex-col items-center justify-center gap-24 text-center">
+      <div className="mb-16 mt-52 flex flex-col items-center justify-center gap-24 text-center">
         <div
           className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:from-blue-500 dark:to-blue-600 dark:blur-[250px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
