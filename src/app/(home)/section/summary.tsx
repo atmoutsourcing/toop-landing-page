@@ -1,21 +1,40 @@
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 import x50Mockup from '@/../public/assets/ATM Ultra para toop.png'
 
 export function Summary() {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  })
+
   return (
     <div className="flex max-w-[1440px] flex-col items-center justify-between space-y-10 md:flex-row md:space-y-0">
-      <div>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, x: -150 }}
+        animate={
+          inView
+            ? {
+                opacity: 1,
+                transform: 'translateX(0px)',
+              }
+            : {}
+        }
+        transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+      >
         <Image
           src={x50Mockup}
           alt="X50-mockup"
           className="flex h-auto scale-125 rounded-s-3xl md:min-w-[700px]"
         />
-      </div>
+      </motion.div>
 
       <div className="flex flex-col gap-6 pb-10">
-        <h1 className="text-center font-plusJakartaSans text-lg font-bold text-zinc-900 dark:text-zinc-300 md:text-2xl">
-          Tecnologia Inteligente para Gestão Empresarial
+        <h1 className="text-center font-plusJakartaSans text-lg font-bold tracking-tighter text-zinc-900 dark:text-zinc-300 md:text-2xl">
+          Tecnologia Inteligente para <br /> Gestão Empresarial
         </h1>
 
         <div className="flex flex-col gap-3 px-0 text-center text-sm font-normal dark:text-zinc-300 md:text-justify md:text-base">

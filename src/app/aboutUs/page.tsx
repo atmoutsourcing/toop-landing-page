@@ -6,6 +6,8 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import Autoplay from 'embla-carousel-autoplay'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 import React from 'react'
 import manoel from '../../../public/Manoel.png'
 import recepcao from '../../../public/recepcaoATM.jpeg'
@@ -23,8 +25,12 @@ export default function AboutUs() {
     Autoplay({ delay: 2500, stopOnInteraction: false }),
   )
 
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+  })
+
   return (
-    <div className="mx-auto flex max-w-[1440px] flex-col font-inter">
+    <div className="mx-auto flex max-w-[1440px] flex-col overflow-hidden font-inter">
       <div className="group mb-80 mt-52 flex cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <div className="flex flex-col items-center gap-3">
           <Image
@@ -75,7 +81,7 @@ export default function AboutUs() {
           <CarouselContent>
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-blue-500 dark:text-blue-800">
+                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
                   +72.544
                 </h1>
                 <p className="text-[16px]">Smarthphones gerenciados</p>
@@ -84,7 +90,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-blue-500 dark:text-blue-800">
+                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
                   +38.025
                 </h1>
                 <p className="text-[16px]">Manutenções feitas</p>
@@ -93,7 +99,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-blue-500 dark:text-blue-800">
+                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
                   +6.633
                 </h1>
                 <p className="text-[16px]">Logísticas reversas</p>
@@ -102,7 +108,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-blue-500 dark:text-blue-800">
+                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
                   +1.977
                 </h1>
                 <p className="text-[16px]">Reposições por roubo</p>
@@ -111,7 +117,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-blue-500 dark:text-blue-800">
+                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
                   +28.070
                 </h1>
                 <p className="text-[16px]">Pedidos enviados</p>
@@ -120,7 +126,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-blue-500 dark:text-blue-800">
+                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
                   +9.463
                 </h1>
                 <p className="text-[16px]">Telas substituídas</p>
@@ -128,16 +134,6 @@ export default function AboutUs() {
             </CarouselItem>
           </CarouselContent>
         </Carousel>
-      </div>
-
-      <div className="flex flex-col items-center pt-10">
-        <Image src={manoel} alt="foto do Manoel" className="w-56" />
-        <div className="text-2xl font-bold dark:text-zinc-200 md:text-3xl">
-          Manoel de Cesare Filho
-        </div>
-        <div className="text-base dark:text-zinc-200 md:text-lg">
-          CEO ATM Outsourcing
-        </div>
       </div>
 
       <div className="flex flex-col items-center pt-5 text-center dark:text-zinc-300 md:py-10">
@@ -150,25 +146,58 @@ export default function AboutUs() {
         />
       </div>
 
-      <div className="flex flex-col items-center gap-8 px-[10%] py-20">
-        <div className="h-[1px] w-full bg-gray-500" />
+      <div className="flex flex-col items-center pt-10">
+        <Image src={manoel} alt="foto do Manoel" className="w-56" />
+        <div className="text-2xl font-bold dark:text-zinc-200 md:text-3xl">
+          Manoel de Cesare Filho
+        </div>
+        <div className="text-base dark:text-zinc-200 md:text-lg">
+          Fundador Grupo ATM
+        </div>
       </div>
 
-      <div className="hidden flex-col gap-[100px] px-[15%] md:flex">
-        <div className="relative flex flex-row">
-          <div className="absolute inset-0 left-[-20px] top-[80px] -z-10 h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800" />
+      <div className="flex flex-col items-center gap-8 px-[10%] py-20">
+        <div className="h-[1px] w-full bg-zinc-400 dark:bg-gray-700" />
+      </div>
 
-          <Image
-            src={recepcao}
-            alt="imagem atm"
-            className="w-[350px] rounded-xl"
-          />
-          <div className="flex items-center justify-center pl-10 text-left text-sm font-bold dark:text-zinc-300">
-            A ATM Outsourcing foi fundada em 2007, atualmente, somos líderes no
-            segmento de Outsourcing de mobilidade no Brasil. Fabricante de
-            Smartphones corporativos homologados pela ANATEL e desenvolvedora de
-            sistemas de MDM, a ATM Outsourcing é referência em soluções de
-            mobilidade corporativa.
+      <div className="hidden flex-col gap-[100px] px-28 md:flex">
+        <div className="relative flex flex-row">
+          <div className="absolute inset-0 left-[-20px] top-[80px] -z-10 h-[250px] w-[300px] rounded-xl" />
+
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, x: -150 }}
+            animate={
+              inView
+                ? {
+                    opacity: 1,
+                    transform: 'translateX(0px)',
+                  }
+                : {}
+            }
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+          >
+            <Image
+              src={recepcao}
+              alt="imagem atm"
+              className="w-[1650px] rounded-xl"
+            />
+          </motion.div>
+
+          <div className="flex flex-col justify-center text-sm font-bold dark:text-zinc-300">
+            <h1 className="pb-4 pl-10 text-left text-2xl">
+              A{' '}
+              <span className="text-sky-500 dark:text-sky-400">
+                ATM Outsourcing
+              </span>
+            </h1>
+            <div className="flex items-center justify-center pl-10 text-left text-lg font-normal dark:text-zinc-300">
+              foi fundada em 2007, atualmente, somos líderes no segmento de
+              Outsourcing de mobilidade no Brasil. Fabricante de Smartphones
+              corporativos homologados pela ANATEL e desenvolvedora de sistemas
+              de MDM, a ATM Outsourcing é referência em soluções de mobilidade
+              corporativa.
+            </div>
           </div>
         </div>
 
@@ -176,39 +205,63 @@ export default function AboutUs() {
           <div className="flex flex-col justify-center pr-10 text-sm font-bold dark:text-zinc-300">
             <h1 className="pb-4 text-right text-2xl">
               Somos a{' '}
-              <span className="text-blue-500 dark:text-blue-800">
+              <span className="text-sky-500 dark:text-sky-400">
                 ATM Outsourcing
               </span>
             </h1>
-            <p className="text-right text-xl">a solução mais completa</p>
-            <p className="text-right text-xl">em telefonia móvel corporativa</p>
+            <p className="text-right text-xl font-normal">
+              a solução mais completa
+            </p>
+            <p className="text-right text-xl font-normal">
+              em telefonia móvel corporativa
+            </p>
           </div>
 
-          <div className="absolute inset-0 left-[77.4%] top-[35%] -z-10 h-[72%] w-[25%] rounded-xl bg-blue-500 dark:bg-blue-800" />
-
-          <Image
-            src={pessoalAtm}
-            alt="imagem atm"
-            className="flex w-[350px] rounded-xl"
-          />
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, x: 150 }}
+            animate={
+              inView
+                ? {
+                    opacity: 1,
+                    transform: 'translateX(0px)',
+                  }
+                : {}
+            }
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+          >
+            <Image
+              src={pessoalAtm}
+              alt="imagem atm"
+              className="w-[500px] rounded-xl"
+            />
+          </motion.div>
         </div>
       </div>
 
-      <div className="flex flex-col md:hidden">
+      <div className="flex flex-col pt-20 md:hidden">
         <div className="flex flex-col items-center justify-center">
           <Image
-            src={recepcao}
+            src={pessoalAtm}
             alt="imagem atm"
             className="w-[350px] rounded-3xl"
           />
-          <div className="absolute inset-0 left-[2%] top-[240%] -z-10 hidden h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800 md:flex" />
+          <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl text-sky-500 dark:text-sky-400 md:flex" />
 
-          <div className="flex px-10 pt-10 text-center text-sm font-bold dark:text-zinc-300">
-            A ATM Outsourcing foi fundada em 2007, atualmente, somos líderes no
-            segmento de Outsourcing de mobilidade no Brasil. Fabricante de
-            Smartphones corporativos homologados pela ANATEL e desenvolvedora de
-            sistemas de MDM, a ATM Outsourcing é referência em soluções de
-            mobilidade corporativa.
+          <div className="flex flex-col justify-center text-sm dark:text-zinc-300">
+            <h1 className="pb-2 pt-10 text-center text-xl font-bold">
+              A{' '}
+              <span className="text-sky-500 dark:text-sky-400">
+                ATM Outsourcing
+              </span>
+            </h1>
+            <p className="flex flex-wrap text-center text-base font-normal">
+              A ATM Outsourcing foi fundada em 2007, atualmente, somos líderes
+              no segmento de Outsourcing de mobilidade no Brasil. <br />
+              Fabricante de Smartphones corporativos homologados pela ANATEL e
+              desenvolvedora de sistemas de MDM, a ATM Outsourcing <br />é
+              referência em soluções de mobilidade corporativa.
+            </p>
           </div>
         </div>
       </div>
@@ -220,17 +273,17 @@ export default function AboutUs() {
             alt="imagem atm"
             className="w-[350px] rounded-3xl"
           />
-          <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl bg-blue-500 dark:bg-blue-800 md:flex" />
+          <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl text-sky-500 dark:text-sky-400 md:flex" />
 
-          <div className="flex flex-col justify-center text-sm font-bold dark:text-zinc-300">
-            <h1 className="pb-2 pt-10 text-center text-2xl">
+          <div className="flex flex-col justify-center text-sm font-normal dark:text-zinc-300">
+            <h1 className="pb-2 pt-10 text-center text-xl font-bold">
               Somos a{' '}
-              <span className="text-blue-500 dark:text-blue-800">
+              <span className="text-sky-500 dark:text-sky-400">
                 ATM Outsourcing
               </span>
             </h1>
-            <p className="text-center text-xl">a solução mais completa</p>
-            <p className="text-center text-xl">
+            <p className="text-center text-base">a solução mais completa</p>
+            <p className="text-center text-base">
               em telefonia móvel corporativa
             </p>
           </div>
@@ -238,11 +291,11 @@ export default function AboutUs() {
       </div>
 
       <div className="flex flex-col items-center gap-8 px-[10%] py-20">
-        <div className="hidden h-[1px] w-full bg-gray-500 md:block" />
+        <div className="hidden h-[1px] w-full bg-zinc-400 dark:bg-gray-700 md:block" />
       </div>
 
       <div className="flex items-center justify-center gap-10 pb-20 md:flex-row">
-        <Image src={valores} alt="Valores" className="w-[60%] md:w-[30%]" />
+        <Image src={valores} alt="Valores" className="w-auto md:w-[500px]" />
       </div>
     </div>
   )

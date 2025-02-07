@@ -1,6 +1,5 @@
 import { Check, Clock } from 'lucide-react'
 import Image from 'next/image'
-
 import iconWhite from '@/../public/icon-white.png'
 import iconDark from '@/../public/icon-dark.png'
 import { Button } from '@/components/button'
@@ -73,7 +72,7 @@ export function ProposalCards() {
         </div>
       </div>
 
-      <div className="flex min-h-[450px] max-w-[380px] flex-1 flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-800 dark:bg-shapePrimary md:scale-110">
+      <div className="flex min-h-[450px] max-w-[380px] flex-1 flex-col gap-3 rounded-3xl border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-800 dark:bg-shapePrimary md:scale-105">
         <div className="flex flex-col gap-4">
           <div className="flex flex-row items-center gap-1 pt-3">
             <Image
@@ -112,12 +111,12 @@ export function ProposalCards() {
           </button>
         </Link>
 
-        <div className="mt-4 h-[1px] w-full bg-gray-500" />
+        <div className="mt-4 h-[1px] w-full bg-gray-600" />
 
         <div className="flex flex-col gap-2 pt-4">
           <div className="flex flex-row gap-2 font-inter text-xs">
             <span className="text-sm dark:text-zinc-300">
-              🎉 Boas notícias! Todas as features do TOOP estão 100% liberadas
+              🎉 Boas notícias! Todas os recursos do TOOP estão 100% liberadas
               para você aproveitar ao máximo! 🚀💙
             </span>
           </div>

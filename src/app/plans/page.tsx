@@ -118,7 +118,7 @@ export default function Plans() {
           </div>
         </div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-100 p-4 px-5 dark:border-zinc-700 dark:bg-shapePrimary md:scale-110">
+        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -133,7 +133,7 @@ export default function Plans() {
                 className="block h-8 w-8 dark:hidden"
               />
 
-              <p className="font-inter text-sm font-semibold">Toop</p>
+              <p className="font-inter text-base font-semibold">Toop</p>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -162,7 +162,7 @@ export default function Plans() {
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
               <span className="text-sm dark:text-zinc-300">
-                🎉 Boas notícias! Todas as features do TOOP estão 100% liberadas
+                🎉 Boas notícias! Todas os recursos do TOOP estão 100% liberadas
                 para você aproveitar ao máximo! 🚀💙
               </span>
             </div>
