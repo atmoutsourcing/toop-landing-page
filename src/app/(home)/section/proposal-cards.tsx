@@ -9,7 +9,7 @@ export function ProposalCards() {
   return (
     <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-44 md:flex-row md:items-start">
       <div className="flex flex-col gap-16">
-        <h1 className="flex items-center justify-center text-xl font-bold tracking-tighter text-zinc-50 md:text-3xl">
+        <h1 className="flex items-center justify-center text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-100 md:text-3xl">
           Conheça nossos planos!
         </h1>
         <div className="flex flex-col md:flex-row">
