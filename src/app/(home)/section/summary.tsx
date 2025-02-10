@@ -34,7 +34,7 @@ export function Summary() {
 
       <div className="flex flex-col gap-6 pb-10">
         <h1 className="text-center font-plusJakartaSans text-lg font-bold tracking-tighter text-zinc-900 dark:text-zinc-300 md:text-2xl">
-          Tecnologia Inteligente para <br /> Gestão Empresarial
+          Tecnologia Inteligente para Gestão Empresarial
         </h1>
 
         <div className="flex flex-col gap-3 px-0 text-center text-sm font-normal dark:text-zinc-300 md:text-justify md:text-base">
