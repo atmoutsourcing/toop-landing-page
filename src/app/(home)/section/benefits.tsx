@@ -2,7 +2,7 @@ export function Benefits() {
   return (
     <div className="flex flex-col items-center justify-center gap-[40] px-4 py-10 md:h-screen">
       <div
-        className="absolute hidden h-[100%] w-[5%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[180px] dark:from-blue-500 dark:to-blue-950 dark:blur-[150px] md:flex"
+        className="absolute hidden h-[1000px] w-[5%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[180px] dark:from-blue-500 dark:to-blue-950 dark:blur-[150px] md:flex"
         style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
       />
       <h1 className="pb-12 text-center text-2xl font-bold tracking-tighter dark:text-zinc-300 md:text-start md:text-3xl">
