@@ -29,6 +29,8 @@ export function Header() {
       setWindowHeightPosition(windowHeight)
     }
 
+    handleScroll()
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -37,9 +39,9 @@ export function Header() {
     <>
       <div
         style={{ zIndex: '10' }}
-        className={`absolute w-screen transform overflow-hidden border-b-[1px] bg-zinc-50 font-inter transition-all duration-200 dark:bg-zinc-950 md:fixed ${scrollPosition > windowHeightPosition ? 'h-[70px] opacity-100' : 'fixed h-0 opacity-0'}`}
+        className={`absolute w-full transform overflow-hidden border-b-[1px] bg-zinc-50 font-inter transition-all duration-200 dark:bg-zinc-950 md:fixed ${scrollPosition > windowHeightPosition ? 'h-[70px] opacity-100' : 'fixed h-0 opacity-0'}`}
       >
-        <header className={`mx-auto flex max-w-[1440px] pt-3`}>
+        <header className={`mx-auto flex max-w-[1440px] px-6 py-3`}>
           <div className="flex-1">
             <Link href="/" className="cur sor-pointer">
               <Image
@@ -56,6 +58,7 @@ export function Header() {
               />
             </Link>
           </div>
+
           <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
             <div
               className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-sky-500 dark:text-sky-400'}`}
@@ -75,6 +78,7 @@ export function Header() {
               <Link href="/plans">Planos</Link>
             </div>
           </div>
+
           <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
             <ToggleTheme />
 
@@ -111,6 +115,7 @@ export function Header() {
               />
             </Link>
           </div>
+
           <div className="text-md hidden flex-1 flex-row items-center justify-center gap-5 md:flex">
             <div
               className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/' && 'text-sky-500 dark:text-sky-400'}`}
@@ -130,6 +135,7 @@ export function Header() {
               <Link href="/plans">Planos</Link>
             </div>
           </div>
+
           <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
             <ToggleTheme />
 
