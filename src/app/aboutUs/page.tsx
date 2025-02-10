@@ -152,7 +152,7 @@ export default function AboutUs() {
           Manoel de Cesare Filho
         </div>
         <div className="text-base dark:text-zinc-200 md:text-lg">
-          Fundador Grupo ATM
+          Fundador e CEO Grupo ATM
         </div>
       </div>
 
