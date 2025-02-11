@@ -6,8 +6,15 @@ import Image from 'next/image'
 import { Check, Clock } from 'lucide-react'
 import { Button } from '@/components/button'
 import Link from 'next/link'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 export default function Plans() {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  })
+
   return (
     <div className="flex h-auto w-full flex-col font-inter">
       <div className="mb-16 mt-52 flex flex-col items-center justify-center gap-24 text-center">
@@ -50,8 +57,11 @@ export default function Plans() {
         </div>
       </div>
 
-      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:flex-row md:items-start">
-        <div className="mt-4 md:mx-4">
+      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:mt-[10%] md:flex-row md:items-start">
+        <motion.div
+          ref={ref}
+          className={`mt-4 duration-500 ${inView ? 'opacity-100' : 'opacity-0'} md:mx-4`}
+        >
           <div
             className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
@@ -116,9 +126,11 @@ export default function Plans() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105">
+        <motion.div
+          className={`flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl duration-1000 ${inView ? 'opacity-100' : 'opacity-0'} border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105`}
+        >
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -167,9 +179,12 @@ export default function Plans() {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-4 md:mx-4">
+        <motion.div
+          style={{ transitionDuration: '0.7s' }}
+          className={`mt-4 md:mx-4 ${inView ? 'opacity-100' : 'opacity-0'}`}
+        >
           <div
             className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
@@ -234,7 +249,7 @@ export default function Plans() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
