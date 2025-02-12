@@ -73,6 +73,12 @@ export function HeaderScroll() {
           >
             <Link href="/plans">Planos</Link>
           </div>
+
+          <div
+            className={`flex cursor-pointer flex-row items-center gap-1 transition ${pathname === '/contacts' && 'text-sky-500 dark:text-sky-400'}`}
+          >
+            <Link href="/contacts">Contato</Link>
+          </div>
         </div>
 
         <div className="hidden flex-1 flex-row items-center justify-end gap-4 md:flex">
