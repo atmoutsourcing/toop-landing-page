@@ -11,6 +11,13 @@ import { motion } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { useEffect } from 'react'
 
+type Confetti = {
+  spread?: number
+  startVelocity?: number
+  decay?: number
+  scalar?: number
+}
+
 export default function Plans() {
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -22,7 +29,7 @@ export default function Plans() {
       origin: { y: 0.8 },
     }
 
-    function fire(particleRatio: number, opts: {}) {
+    function fire(particleRatio: number, opts: Confetti) {
       confetti({
         ...defaults,
         ...opts,
@@ -54,18 +61,14 @@ export default function Plans() {
     })
   }
 
-  function handleSubmit() {
-    shootRealisticConfetti()
-  }
-
   useEffect(() => {
     const position = window.scrollY
     const windowHeight = window.innerHeight
 
     if (position < windowHeight / 6) {
-      handleSubmit()
+      shootRealisticConfetti()
     }
-  }, [handleSubmit])
+  }, [])
 
   return (
     <div className="flex h-auto w-full flex-col font-inter">
@@ -109,7 +112,7 @@ export default function Plans() {
         </div>
       </div>
 
-      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%]  md:flex-row md:items-start">
+      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:flex-row md:items-start">
         <motion.div
           style={{ transitionDuration: '1.0s', transitionDelay: '0.2s' }}
           ref={ref}
@@ -184,7 +187,7 @@ export default function Plans() {
         <motion.div
           style={{ transitionDuration: '1.2s', transitionDelay: '0.8s' }}
           ref={ref}
-          className={`flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl duration-1000 ${inView ? 'opacity-100' : 'opacity-0'} border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out  dark:border-zinc-700 dark:bg-shapePrimary md:scale-110`}
+          className={`flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl duration-1000 ${inView ? 'opacity-100' : 'opacity-0'} border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out dark:border-zinc-700 dark:bg-shapePrimary md:scale-110`}
         >
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
