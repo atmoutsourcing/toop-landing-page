@@ -2,11 +2,48 @@
 
 import Image from 'next/image'
 import Ellipse from '../../../public/Ellipse.svg'
-import { Checkbox } from '@/components/ui/checkbox'
 import { EnvelopeSimple, MapPin, Phone } from 'phosphor-react'
 import { Input } from '@/components/input'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+
+const formEmailSchema = z.object({
+  business: z.string(),
+  email: z.string().email(),
+  name: z.string(),
+  phone: z.string(),
+  message: z.string(),
+})
+
+type FormEmailSchema = z.infer<typeof formEmailSchema>
 
 export default function Contacts() {
+  const { register, handleSubmit } = useForm<FormEmailSchema>({
+    resolver: zodResolver(formEmailSchema),
+  })
+
+  async function handleSendEmail(data: FormEmailSchema) {
+    const response = await fetch('http://localhost:3000/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      },
+      body: JSON.stringify({
+        name: data.name,
+        business: data.business,
+        email: data.email,
+        message: data.message,
+        phone: data.phone,
+      }),
+    })
+    if (response.ok) {
+      const data = await response.json()
+      return Response.json(data)
+    }
+  }
+
   return (
     <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] flex-col items-center gap-36 p-4 md:flex-row">
       <div className="flex flex-col gap-1">
@@ -50,12 +87,6 @@ export default function Contacts() {
       </div>
 
       <div className="relative flex items-center">
-        {/* <Image
-          src={EllipseDark}
-          alt="ellipse"
-          className="absolute hidden scale-125 dark:block"
-        /> */}
-
         <Image
           src={Ellipse}
           alt="ellipse"
@@ -65,59 +96,44 @@ export default function Contacts() {
         <div className="inset-0 z-10 flex items-center justify-center">
           <div className="bg-b-zinc-200 min-w-399 min-h-550 h-auto max-h-[550px] w-auto max-w-[652px] flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[550px] md:w-[612px]">
             <h1 className="flex justify-center text-2xl font-bold">
-              Mande mensagem
+              Envie sua mensagem
             </h1>
 
-            <form className="mt-6 flex flex-col gap-4">
+            <form
+              onSubmit={handleSubmit(handleSendEmail)}
+              className="mt-6 flex flex-col gap-4"
+            >
               <div className="flex flex-row gap-2">
-                <Input name="name" placeholder="Nome" />
+                <Input placeholder="Nome" {...register('name')} />
 
-                <Input name="name" placeholder="Sobrenome" />
+                <Input placeholder="E-mail" {...register('email')} />
               </div>
 
               <div className="flex flex-row gap-2">
-                <Input name="name" placeholder="E-mail" />
-
                 <input
-                  id="email"
-                  type="text"
                   placeholder="WhatsApp"
+                  {...register('phone')}
                   className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
                 />
-              </div>
 
-              <div className="flex flex-row gap-2">
                 <input
-                  id="email"
                   type="text"
                   placeholder="Empresa"
-                  className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
-                />
-
-                <input
-                  id="email"
-                  type="text"
-                  placeholder="Qtd. de dispositivos"
+                  {...register('business')}
                   className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
                 />
               </div>
 
               <textarea
-                id="remarks"
                 placeholder="Mensagem"
-                className="h-32 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
+                {...register('message')}
+                className="h-40 w-full resize-none rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
               />
 
-              <div className="flex items-center gap-2">
-                <Checkbox id="terms1" />
-
-                <span className="text-sm">
-                  Declaro que li e concordo com a Política de Privacidade e os
-                  Termos de Uso.
-                </span>
-              </div>
-
-              <button className="bg-b-zinc-400 left-1/2 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200 md:mt-10">
+              <button
+                type="submit"
+                className="bg-b-zinc-400 left-1/2 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200 md:mt-10"
+              >
                 Enviar
               </button>
             </form>
