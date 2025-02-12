@@ -96,7 +96,7 @@ export default function Contacts() {
         <div className="inset-0 z-10 flex items-center justify-center">
           <div className="bg-b-zinc-200 min-w-399 min-h-550 h-auto max-h-[550px] w-auto max-w-[652px] flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[550px] md:w-[612px]">
             <h1 className="flex justify-center text-2xl font-bold">
-              Mande mensagem
+              Envie sua mensagem
             </h1>
 
             <form
