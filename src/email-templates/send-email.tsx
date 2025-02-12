@@ -35,6 +35,7 @@ export const SendEmail = ({
           <Text style={title}>Mensagem enviado(a) por: {name}</Text>
           <Hr style={hr} />
           <Text style={subTitle}>Contatos do cliente</Text>
+          <Text style={paragraph}>Nome: {name}</Text>
           <Text style={paragraph}>Email: {email}</Text>
           <Text style={paragraph}>WhatsApp: {phone}</Text>
           <Text style={paragraph}>Empresa: {business}</Text>
