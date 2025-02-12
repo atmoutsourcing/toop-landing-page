@@ -18,7 +18,7 @@ export default function Plans() {
   })
 
   const shootRealisticConfetti = () => {
-    const count = 200;
+    const count = 200
     const defaults = {
       origin: { y: 0.8 }
     };
@@ -27,52 +27,50 @@ export default function Plans() {
       confetti({
         ...defaults,
         ...opts,
-        particleCount: Math.floor(count * particleRatio)
-      });
+        particleCount: Math.floor(count * particleRatio),
+      })
     }
-    
+
     fire(0.25, {
       spread: 26,
       startVelocity: 55,
-    });
+    })
     fire(0.2, {
       spread: 60,
-    });
+    })
     fire(0.35, {
       spread: 100,
       decay: 0.91,
-      scalar: 0.8
-    });
+      scalar: 0.8,
+    })
     fire(0.1, {
       spread: 120,
       startVelocity: 25,
       decay: 0.92,
-      scalar: 1.2
-    });
+      scalar: 1.2,
+    })
     fire(0.1, {
       spread: 120,
       startVelocity: 45,
-    });
+    })
   }
 
   function handleSubmit() {
     shootRealisticConfetti()
   }
 
-
   useEffect(() => {
     const position = window.scrollY
     const windowHeight = window.innerHeight
-    
-    if(position < (windowHeight/6)){
-      handleSubmit();
-    }
-  }, []);
 
+    if (position < windowHeight / 6) {
+      handleSubmit()
+    }
+  }, [])
 
   return (
     <div className="flex h-auto w-full flex-col font-inter">
-      <div  className="mb-16 mt-52 flex flex-col items-center justify-center gap-24 text-center">
+      <div className="mb-16 mt-52 flex flex-col items-center justify-center gap-24 text-center">
         <div
           className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:from-blue-500 dark:to-blue-600 dark:blur-[250px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
@@ -98,7 +96,6 @@ export default function Plans() {
 
           <div className="flex flex-col gap-2">
             <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
-             
               Nosso plano está totalmente de{'  '}
               <span className="text-yellow-500 dark:text-yellow-400">
                 GRÁTIS
