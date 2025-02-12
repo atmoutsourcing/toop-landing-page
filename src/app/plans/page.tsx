@@ -6,11 +6,74 @@ import Image from 'next/image'
 import { Check, Clock } from 'lucide-react'
 import { Button } from '@/components/button'
 import Link from 'next/link'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+import confetti from 'canvas-confetti'
+import { useEffect } from 'react'
 
 export default function Plans() {
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.2,
+  })
+  const shootRealisticConfetti = () => {
+    const count = 200;
+    const defaults = {
+      origin: { y: 0.8 }
+    };
+    
+    function fire(particleRatio: number, opts: {}) {
+      confetti({
+        ...defaults,
+        ...opts,
+        particleCount: Math.floor(count * particleRatio)
+      });
+    }
+    
+    fire(0.25, {
+      spread: 26,
+      startVelocity: 55,
+    });
+    fire(0.2, {
+      spread: 60,
+    });
+    fire(0.35, {
+      spread: 100,
+      decay: 0.91,
+      scalar: 0.8
+    });
+    fire(0.1, {
+      spread: 120,
+      startVelocity: 25,
+      decay: 0.92,
+      scalar: 1.2
+    });
+    fire(0.1, {
+      spread: 120,
+      startVelocity: 45,
+    });
+  }
+
+  function handleSubmit() {
+    shootRealisticConfetti()
+  }
+
+
+  useEffect(() => {
+    const position = window.scrollY
+    const windowHeight = window.innerHeight
+    
+    console.log(position, windowHeight)
+
+    if(position < (windowHeight/6)){
+      handleSubmit();
+    }
+  }, []);
+
+
   return (
     <div className="flex h-auto w-full flex-col font-inter">
-      <div className="mb-16 mt-52 flex flex-col items-center justify-center gap-24 text-center">
+      <div  className="mb-16 mt-52 flex flex-col items-center justify-center gap-24 text-center">
         <div
           className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:from-blue-500 dark:to-blue-600 dark:blur-[250px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
@@ -36,22 +99,27 @@ export default function Plans() {
 
           <div className="flex flex-col gap-2">
             <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
-              Confira nossos planos e escolha a{' '}
+             
+              Nosso plano está totalmente de{'  '}
               <span className="text-yellow-500 dark:text-yellow-400">
-                solução
+                GRÁTIS
               </span>{' '}
-              ideal
+              durante 2025
             </div>
 
             <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
-              para atender às suas necessidades
+              Aproveite e contrate agora!
             </div>
           </div>
         </div>
       </div>
 
-      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:flex-row md:items-start">
-        <div className="mt-4 md:mx-4">
+      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:mt-[10%] md:flex-row md:items-start">
+        <motion.div
+          style={{ transitionDuration: '1.0s', transitionDelay: '0.2s' }}
+          ref={ref}
+          className={`mt-4 duration-500 ${inView ? 'opacity-100' : 'opacity-0'} md:mx-4`}
+        >
           <div
             className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
@@ -116,9 +184,13 @@ export default function Plans() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105">
+        <motion.div
+          style={{ transitionDuration: '1.2s', transitionDelay: '0.8s' }}
+          ref={ref}
+          className={`flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl duration-1000 ${inView ? 'opacity-100' : 'opacity-0'} border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105`}
+        >
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
               <Image
@@ -167,9 +239,13 @@ export default function Plans() {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-4 md:mx-4">
+        <motion.div
+          style={{ transitionDuration: '1.2s', transitionDelay: '0.4s' }}
+          ref={ref}
+          className={`mt-4 md:mx-4 ${inView ? 'opacity-100' : 'opacity-0'}`}
+        >
           <div
             className="absolute flex min-h-[450px] w-[94%] flex-col items-center justify-center gap-2 p-10 text-xl font-semibold dark:text-zinc-300 md:w-[380px]"
             style={{ zIndex: '1' }}
@@ -234,7 +310,7 @@ export default function Plans() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
