@@ -16,14 +16,13 @@ export default function Plans() {
     triggerOnce: false,
     threshold: 0.2,
   })
-
   const shootRealisticConfetti = () => {
     const count = 200
     const defaults = {
-      origin: { y: 0.8 }
-    };
-    
-    function fire(particleRatio: number, opts: {spread: number, startVelocity?: number, decay?: number, scalar?: number}) {
+      origin: { y: 0.8 },
+    }
+
+    function fire(particleRatio: number, opts: {}) {
       confetti({
         ...defaults,
         ...opts,
@@ -110,7 +109,7 @@ export default function Plans() {
         </div>
       </div>
 
-      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%] md:mt-[10%] md:flex-row md:items-start">
+      <div className="relative flex h-full flex-col items-center justify-center gap-10 pb-[5%]  md:flex-row md:items-start">
         <motion.div
           style={{ transitionDuration: '1.0s', transitionDelay: '0.2s' }}
           ref={ref}
