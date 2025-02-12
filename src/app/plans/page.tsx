@@ -16,13 +16,14 @@ export default function Plans() {
     triggerOnce: false,
     threshold: 0.2,
   })
+
   const shootRealisticConfetti = () => {
     const count = 200;
     const defaults = {
       origin: { y: 0.8 }
     };
     
-    function fire(particleRatio: number, opts: {}) {
+    function fire(particleRatio: number, opts: {spread: number, startVelocity?: number, decay?: number, scalar?: number}) {
       confetti({
         ...defaults,
         ...opts,
