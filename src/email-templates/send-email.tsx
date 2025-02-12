@@ -1,15 +1,5 @@
-import {
-  Body,
-  Container,
-  Head,
-  Hr,
-  Html,
-  Section,
-  Text,
-} from '@react-email/components'
+import { Body, Container, Head, Hr, Html, Text } from '@react-email/components'
 import * as React from 'react'
-
-// import logoDark from '@/../../public/icon-dark.png'
 
 interface SendEmailProps {
   name: string
@@ -30,20 +20,31 @@ export const SendEmail = ({
     <Head />
     <Body style={main}>
       <Container style={container}>
-        <Section style={box}>
-          <Text style={title}>Mensagem enviada por: {name}</Text>
-          <Hr style={hr} />
-          <Text style={subTitle}>Contatos do cliente</Text>
-          <Text style={paragraph}>Nome: {name}</Text>
-          <Text style={paragraph}>Email: {email}</Text>
-          <Text style={paragraph}>WhatsApp: {phone}</Text>
-          <Text style={paragraph}>Empresa: {business}</Text>
+        <Text
+          style={{
+            color: '#09090b',
+            fontSize: '24px',
+            lineHeight: '36px',
+            fontWeight: '700',
+            marginBottom: '35px',
+          }}
+        >
+          Toop
+        </Text>
 
-          <Hr style={hr} />
-          <Text style={paragraph}>
-            <Text style={subTitle}>Mensagem:</Text> {message}
-          </Text>
-        </Section>
+        <Text style={title}>Enviado por: {name}</Text>
+
+        <Hr style={hr} />
+
+        <Text style={subTitle}>Contatos do cliente</Text>
+        <Text style={paragraph}>Nome: {name}</Text>
+        <Text style={paragraph}>Email: {email}</Text>
+        <Text style={paragraph}>WhatsApp: {phone}</Text>
+        <Text style={paragraph}>Empresa: {business}</Text>
+
+        <Hr style={hr} />
+        <Text style={subTitle}>Mensagem:</Text>
+        <Text style={paragraph}>{message}</Text>
       </Container>
     </Body>
   </Html>
@@ -52,20 +53,18 @@ export const SendEmail = ({
 export default SendEmail
 
 const main = {
-  backgroundColor: '#f6f9fc',
   fontFamily:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
 }
 
 const container = {
-  backgroundColor: '#ffffff',
   margin: '0 auto',
-  padding: '20px 0 48px',
+  fontFamily: 'sans-serif',
+  fontSize: '16px',
+  width: '100%',
+  maxWidth: '640px',
+  padding: '64px 0',
   marginBottom: '64px',
-}
-
-const box = {
-  padding: '0 48px',
 }
 
 const hr = {
@@ -74,20 +73,24 @@ const hr = {
 }
 const title = {
   color: '#09090b',
-  fontSize: '18px',
-  lineHeight: '16px',
-  textAlign: 'center' as const,
+  fontSize: '24px',
+  lineHeight: '36px',
+  fontWeight: '700',
+  marginBottom: '25px',
+  textAlign: 'left' as const,
 }
 
 const subTitle = {
   color: '#09090b',
-  fontSize: '16px',
-  lineHeight: '24px',
+  fontSize: '20px',
+  lineHeight: '30px',
+  fontWeight: '600',
+  marginBottom: '15px',
   textAlign: 'left' as const,
 }
 
 const paragraph = {
-  color: '#525f7f',
+  color: '#18181b',
 
   fontSize: '16px',
   lineHeight: '24px',
