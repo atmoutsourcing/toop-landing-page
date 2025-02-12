@@ -76,7 +76,7 @@ const title = {
   fontSize: '24px',
   lineHeight: '36px',
   fontWeight: '700',
-  marginBottom: '25px',
+  marginBottom: '20px',
   textAlign: 'left' as const,
 }
 
