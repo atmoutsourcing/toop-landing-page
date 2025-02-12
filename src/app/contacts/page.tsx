@@ -24,7 +24,7 @@ export default function Contacts() {
   })
 
   async function handleSendEmail(data: FormEmailSchema) {
-    const response = await fetch('https://www.toop.mobi/api/send-email', {
+    const response = await fetch('http://localhost:3000/api/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
