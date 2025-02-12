@@ -184,7 +184,7 @@ export default function Plans() {
         <motion.div
           style={{ transitionDuration: '1.2s', transitionDelay: '0.8s' }}
           ref={ref}
-          className={`flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl duration-1000 ${inView ? 'opacity-100' : 'opacity-0'} border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-700 dark:bg-shapePrimary md:scale-105`}
+          className={`flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl duration-1000 ${inView ? 'opacity-100' : 'opacity-0'} border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out  dark:border-zinc-700 dark:bg-shapePrimary md:scale-110`}
         >
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
