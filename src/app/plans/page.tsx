@@ -63,8 +63,6 @@ export default function Plans() {
     const position = window.scrollY
     const windowHeight = window.innerHeight
     
-    console.log(position, windowHeight)
-
     if(position < (windowHeight/6)){
       handleSubmit();
     }
