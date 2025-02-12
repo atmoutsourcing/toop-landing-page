@@ -65,7 +65,7 @@ export default function Plans() {
     if (position < windowHeight / 6) {
       handleSubmit()
     }
-  }, [])
+  }, [handleSubmit])
 
   return (
     <div className="flex h-auto w-full flex-col font-inter">
