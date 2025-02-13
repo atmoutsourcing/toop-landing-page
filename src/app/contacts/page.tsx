@@ -113,7 +113,7 @@ export default function Contacts() {
                   <input
                     placeholder="Nome"
                     {...register('name')}
-                    className={`h-10 w-full rounded-xl border-[2px] ${formState.errors.name && 'border-red-400 bg-red-100 dark:border-red-500 dark:bg-red-950'} border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                    className={`h-10 w-full rounded-xl border-[2px] ${formState.errors.name ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                   />
                   {formState.errors.name && (
                     <div className="absolute pl-2 text-sm font-bold text-red-500">
@@ -126,7 +126,7 @@ export default function Contacts() {
                   <input
                     placeholder="E-mail"
                     {...register('email')}
-                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.email && 'border-red-400 bg-red-100 dark:border-red-500 dark:bg-red-950'} border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.email ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                   />
                   {formState.errors.email && (
                     <div className="absolute pl-2 text-sm font-bold text-red-500">
@@ -141,7 +141,7 @@ export default function Contacts() {
                   <input
                     placeholder="WhatsApp"
                     {...register('phone')}
-                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.phone && 'border-red-400 bg-red-100 dark:border-red-500 dark:bg-red-950'} border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.phone ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                   />
                   {formState.errors.phone && (
                     <div className="absolute pl-2 text-sm font-bold text-red-500">
@@ -164,7 +164,7 @@ export default function Contacts() {
                 <textarea
                   placeholder="Mensagem"
                   {...register('message')}
-                  className={`h-40 w-full resize-none rounded-xl border-2 ${formState.errors.message && 'border-red-400 bg-red-100 dark:border-red-500 dark:bg-red-950'} border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                  className={`h-40 w-full resize-none rounded-xl border-2 ${formState.errors.message ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                 />
                 {formState.errors.message && (
                   <div className="absolute pl-2 text-sm font-bold text-red-500">
