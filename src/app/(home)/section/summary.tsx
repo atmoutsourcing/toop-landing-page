@@ -39,11 +39,10 @@ export function Summary() {
 
         <div className="flex flex-col gap-3 px-0 text-center text-sm font-normal dark:text-zinc-300 md:text-justify md:text-base">
           <span>
-            O TOOP, desenvolvido pela ATM Outsourcing, é a solução definitiva
-            para otimizar e transformar a gestão do seu negócio. Com integração
-            de Inteligência Artificial, analisa dados em tempo real e
-            proporciona insights estratégicos para uma tomada de decisão mais
-            ágil e assertiva.
+            O TOOP é a solução definitiva para otimizar e transformar a gestão
+            do seu negócio. Com integração de Inteligência Artificial, analisa
+            dados em tempo real e proporciona insights estratégicos para uma
+            tomada de decisão mais ágil e assertiva.
           </span>
           <span className="dark:text-zinc-300">
             Seja para otimizar fluxos operacionais, integrar equipes ou
