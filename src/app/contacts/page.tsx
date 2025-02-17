@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-import Ellipse from '../../../public/Ellipse.svg'
 import { EnvelopeSimple, MapPin, Phone } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -50,7 +48,7 @@ export default function Contacts() {
   }
 
   return (
-    <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] flex-col items-center gap-20 p-4 md:flex-row">
+    <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] flex-col items-center gap-32 p-4 md:flex-row">
       <div className="flex max-w-[50%] flex-col gap-1">
         <span className="text-3xl font-bold tracking-tight">
           Será um prazer atendê-lo
@@ -64,7 +62,6 @@ export default function Contacts() {
             eficiente. Precisa de suporte? Nossa equipe está pronta para ajudar.
             Entre em contato!
           </p>
-
           <div className="flex flex-col gap-2">
             <div className="flex flex-row items-center gap-2">
               <Phone className="h-6 w-6 text-icons dark:text-zinc-400" />
@@ -92,14 +89,8 @@ export default function Contacts() {
       </div>
 
       <div className="relative flex items-center">
-        <Image
-          src={Ellipse}
-          alt="ellipse"
-          className="absolute hidden scale-125 dark:hidden md:block"
-        />
-
-        <div className="inset-0 z-10 flex items-center justify-center">
-          <div className="h-auto w-auto flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[470px] md:w-[512px]">
+        <div className="flex items-center justify-center">
+          <div className="h-auto w-auto flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[470px] md:w-[550px]">
             <h1 className="flex justify-center text-2xl font-bold">
               Envie sua mensagem
             </h1>
