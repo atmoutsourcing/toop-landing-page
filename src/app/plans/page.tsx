@@ -21,7 +21,7 @@ type Confetti = {
 export default function Plans() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.2,
+    threshold: 0.1,
   })
   const shootRealisticConfetti = () => {
     const count = 200
@@ -72,7 +72,7 @@ export default function Plans() {
 
   return (
     <div className="flex h-auto w-full flex-col font-inter">
-      <div className="mb-16 mt-52 flex flex-col items-center justify-center gap-24 text-center">
+      <div className="mb-10 mt-52 flex flex-col items-center justify-center text-center">
         <div
           className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:from-blue-500 dark:to-blue-600 dark:blur-[250px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
@@ -98,15 +98,14 @@ export default function Plans() {
 
           <div className="flex flex-col gap-2">
             <div className="font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
-              Nosso plano está totalmente de{'  '}
-              <span className="text-yellow-500 dark:text-yellow-400">
-                GRÁTIS
-              </span>{' '}
-              durante 2025
+              Nosso plano está totalmente{'  '}
             </div>
 
             <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
-              Aproveite e contrate agora!
+              <span className="text-yellow-500 dark:text-yellow-400">
+                GRÁTIS
+              </span>{' '}
+              durante 2025 Aproveite e contrate agora!
             </div>
           </div>
         </div>
@@ -232,7 +231,7 @@ export default function Plans() {
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
               <span className="text-sm dark:text-zinc-300">
-                🎉 Boas notícias! Todas os recursos do TOOP estão 100% liberadas
+                🎉 Boas notícias! Todas os recursos do TOOP estão 100% liberados
                 para você aproveitar ao máximo! 🚀💙
               </span>
             </div>
