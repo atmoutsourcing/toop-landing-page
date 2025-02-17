@@ -3,23 +3,28 @@
 import Image from 'next/image'
 import Ellipse from '../../../public/Ellipse.svg'
 import { EnvelopeSimple, MapPin, Phone } from 'phosphor-react'
-import { Input } from '@/components/input'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 const formEmailSchema = z.object({
-  business: z.string(),
-  email: z.string().email(),
-  name: z.string(),
-  phone: z.string(),
-  message: z.string(),
+  business: z.string().optional(),
+  email: z
+    .string()
+    .min(1, 'Campo obrigatório')
+    .email('Formato de email inválido'),
+  name: z.string().min(1, 'Campo obrigatório'),
+  phone: z
+    .string()
+    .min(1, 'Campo obrigatório')
+    .regex(/^\d{11}$/, 'Formato inválido'),
+  message: z.string().min(1, 'Campo obrigatório'),
 })
 
 type FormEmailSchema = z.infer<typeof formEmailSchema>
 
 export default function Contacts() {
-  const { register, handleSubmit } = useForm<FormEmailSchema>({
+  const { register, handleSubmit, formState } = useForm<FormEmailSchema>({
     resolver: zodResolver(formEmailSchema),
   })
 
@@ -45,8 +50,8 @@ export default function Contacts() {
   }
 
   return (
-    <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] flex-col items-center gap-36 p-4 md:flex-row">
-      <div className="flex flex-col gap-1">
+    <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] flex-col items-center gap-20 p-4 md:flex-row">
+      <div className="flex max-w-[50%] flex-col gap-1">
         <span className="text-3xl font-bold tracking-tight">
           Será um prazer atendê-lo
         </span>
@@ -90,49 +95,87 @@ export default function Contacts() {
         <Image
           src={Ellipse}
           alt="ellipse"
-          className="absolute block scale-125 dark:hidden"
+          className="absolute hidden scale-125 dark:hidden md:block"
         />
 
         <div className="inset-0 z-10 flex items-center justify-center">
-          <div className="bg-b-zinc-200 min-w-399 min-h-550 h-auto max-h-[550px] w-auto max-w-[652px] flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[550px] md:w-[612px]">
+          <div className="h-auto w-auto flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[470px] md:w-[512px]">
             <h1 className="flex justify-center text-2xl font-bold">
               Envie sua mensagem
             </h1>
 
             <form
               onSubmit={handleSubmit(handleSendEmail)}
-              className="mt-6 flex flex-col gap-4"
+              className="mt-6 flex flex-col gap-6"
             >
               <div className="flex flex-row gap-2">
-                <Input placeholder="Nome" {...register('name')} />
+                <div className="w-[50%]">
+                  <input
+                    placeholder="Nome"
+                    {...register('name')}
+                    className={`h-10 w-full rounded-xl border-[2px] ${formState.errors.name ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                  />
+                  {formState.errors.name && (
+                    <div className="absolute pl-2 text-sm font-bold text-red-500">
+                      {formState.errors.name.message}
+                    </div>
+                  )}
+                </div>
 
-                <Input placeholder="E-mail" {...register('email')} />
+                <div className="w-[50%]">
+                  <input
+                    placeholder="E-mail"
+                    {...register('email')}
+                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.email ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                  />
+                  {formState.errors.email && (
+                    <div className="absolute pl-2 text-sm font-bold text-red-500">
+                      {formState?.errors?.email?.message}
+                    </div>
+                  )}
+                </div>
               </div>
 
               <div className="flex flex-row gap-2">
-                <input
-                  placeholder="WhatsApp"
-                  {...register('phone')}
-                  className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
-                />
+                <div className="w-[50%]">
+                  <input
+                    placeholder="WhatsApp"
+                    {...register('phone')}
+                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.phone ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                  />
+                  {formState.errors.phone && (
+                    <div className="absolute pl-2 text-sm font-bold text-red-500">
+                      {formState.errors.phone.message}
+                    </div>
+                  )}
+                </div>
 
-                <input
-                  type="text"
-                  placeholder="Empresa"
-                  {...register('business')}
-                  className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
-                />
+                <div className="w-[50%]">
+                  <input
+                    type="text"
+                    placeholder="Empresa"
+                    {...register('business')}
+                    className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
+                  />
+                </div>
               </div>
 
-              <textarea
-                placeholder="Mensagem"
-                {...register('message')}
-                className="h-40 w-full resize-none rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
-              />
+              <div>
+                <textarea
+                  placeholder="Mensagem"
+                  {...register('message')}
+                  className={`h-40 w-full resize-none rounded-xl border-2 ${formState.errors.message ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                />
+                {formState.errors.message && (
+                  <div className="absolute pl-2 text-sm font-bold text-red-500">
+                    {formState.errors.message.message}
+                  </div>
+                )}
+              </div>
 
               <button
                 type="submit"
-                className="bg-b-zinc-400 left-1/2 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200 md:mt-10"
+                className="bg-b-zinc-400 mt-2 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
               >
                 Enviar
               </button>
