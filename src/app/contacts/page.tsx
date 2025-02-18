@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import VMasker from 'vanilla-masker'
 import { useEffect } from 'react'
 import { toast } from 'sonner'
+import { Button } from '@/components/button'
 
 const formEmailSchema = z.object({
   business: z.string().optional(),
@@ -62,8 +63,8 @@ export default function Contacts() {
 
       toast.success('Mensagem enviada com sucesso!', {
         description:
-          'nossa equipe recebeu sua mensagem irá respondê-la em breve',
-        duration: 3000,
+          'nossa equipe recebeu sua mensagem irá respondê-lo em breve.',
+        duration: 4000,
       })
 
       reset()
@@ -79,15 +80,15 @@ export default function Contacts() {
 
   return (
     <div className="mx-auto mb-20 mt-20 flex max-w-[1440px] flex-col items-center gap-32 p-4 md:flex-row">
-      <div className="flex max-w-[50%] flex-col gap-1">
-        <span className="text-3xl font-bold tracking-tight">
+      <div className="flex w-auto flex-col gap-1">
+        <span className="text-xl font-bold tracking-tight md:text-2xl">
           Será um prazer atendê-lo
         </span>
 
         <hr className="my-4 border-t border-zinc-300 dark:border-zinc-700" />
 
         <div className="flex flex-col gap-4">
-          <p className="text-md font-medium">
+          <p className="text-sm font-medium">
             O TOOP facilita sua integração de forma rápida e eficiente. Precisa
             de suporte? Nossa equipe está pronta para ajudar. Entre em contato!
           </p>
@@ -193,13 +194,15 @@ export default function Contacts() {
                 )}
               </div>
 
-              <button
+              <Button>Enviar</Button>
+
+              {/* <button
                 type="submit"
                 className="bg-b-zinc-400 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
                 disabled={isSubmitting}
               >
                 Enviar
-              </button>
+              </button> */}
             </form>
           </div>
         </div>

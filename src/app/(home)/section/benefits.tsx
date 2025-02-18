@@ -2,7 +2,7 @@ export function Benefits() {
   return (
     <div className="flex flex-col items-center justify-center gap-[40] px-4 py-10 md:h-screen">
       <div
-        className="absolute hidden h-[1000px] w-[5%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[180px] dark:from-blue-500 dark:to-blue-950 dark:blur-[150px] md:flex"
+        className="absolute hidden h-[900px] w-[80] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[180px] dark:from-blue-500 dark:to-blue-950 dark:blur-[150px] md:flex"
         style={{ transform: 'rotate(-58.67deg)', zIndex: '-1' }}
       />
       <h1 className="pb-12 text-center text-2xl font-bold tracking-tighter dark:text-zinc-300 md:text-start md:text-3xl">
@@ -12,7 +12,7 @@ export function Benefits() {
       <div className="flex w-full flex-col gap-16 font-inter md:pl-[10%]">
         <div className="grid grid-cols-1 justify-between gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
           <div className="md:max-w-[350px]">
-            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
+            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-500">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -28,7 +28,7 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[350px]">
-            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
+            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-500">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -45,7 +45,7 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[350px]">
-            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
+            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-500">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -64,7 +64,7 @@ export function Benefits() {
 
         <div className="grid grid-cols-1 gap-16 text-center sm:grid-cols-2 md:grid-cols-3 md:gap-10 md:text-left">
           <div className="md:max-w-[350px]">
-            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
+            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-500">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -80,7 +80,7 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[350px]">
-            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
+            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-500">
               <span className="font-light text-zinc-950 dark:text-zinc-100">
                 |
               </span>{' '}
@@ -95,7 +95,7 @@ export function Benefits() {
           </div>
 
           <div className="md:max-w-[350px]">
-            <h2 className="pb-5 text-xl font-semibold text-sky-500 dark:text-sky-400">
+            <h2 className="pb-5 text-xl font-semibold text-blue-600 dark:text-blue-500">
               <div className="flex items-center gap-2">
                 <span className="font-light text-zinc-950 dark:text-zinc-100">
                   |

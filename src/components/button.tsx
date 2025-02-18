@@ -2,7 +2,7 @@ import { ComponentProps, ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const buttonVariants = tv({
-  base: 'items-center w-full rounded-full bg-zinc-950 px-6 py-3 text-zinc-50 duration-500 font-bold hover:opacity-80 dark:bg-zinc-50 dark:text-zinc-950',
+  base: 'items-center w-full rounded-2xl bg-blue-800 px-6 py-3 text-zinc-50 duration-500 font-bold hover:bg-blue-800/80',
   variants: {
     variant: {
       primary: 'text-sm',

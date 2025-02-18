@@ -74,7 +74,7 @@ export default function Plans() {
     <div className="flex h-auto w-full flex-col font-inter">
       <div className="mb-10 mt-52 flex flex-col items-center justify-center text-center">
         <div
-          className="absolute mb-10 hidden h-[150px] w-[90%] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:from-blue-500 dark:to-blue-600 dark:blur-[250px] md:flex"
+          className="absolute mb-10 hidden h-[60px] w-[1200px] rounded-[8px] bg-gradient-radial from-[#bfdbfe] to-[#2563eb] blur-[150px] dark:from-blue-500 dark:to-blue-600 dark:blur-[250px] md:flex"
           style={{ transform: 'rotate(20deg)', zIndex: '-1' }}
         />
 
@@ -103,7 +103,7 @@ export default function Plans() {
 
             <div className="mb-56 font-plusJakartaSans text-3xl font-bold dark:text-zinc-200 md:text-4xl">
               <span className="text-yellow-500 dark:text-yellow-400">
-                GRÁTIS
+                Grátis
               </span>{' '}
               durante 2025 Aproveite e contrate agora!
             </div>
@@ -182,11 +182,14 @@ export default function Plans() {
             </div>
           </div>
         </motion.div>
-
+        {/* flex min-h-[450px] max-w-[390px] flex-1 flex-col gap-3 rounded-3xl
+        border border-zinc-200 bg-zinc-50 p-4 px-5 shadow-lg transition ease-out
+        hover:scale-110 dark:border-zinc-800 dark:bg-shapePrimary
+        dark:shadow-zinc-900 md:scale-105 */}
         <motion.div
           style={{ transitionDuration: '1.2s', transitionDelay: '0.8s' }}
           ref={ref}
-          className={`flex min-h-[450px] max-w-[380px] flex-col gap-3 rounded-3xl duration-1000 ${inView ? 'opacity-100' : 'opacity-0'} border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out dark:border-zinc-700 dark:bg-shapePrimary md:scale-110`}
+          className={`flex min-h-[450px] max-w-[390px] flex-col gap-3 rounded-3xl shadow-lg duration-1000 dark:shadow-zinc-900 ${inView ? 'opacity-100' : 'opacity-0'} -zinc-200 border bg-zinc-50 p-4 px-5 transition ease-out dark:border-zinc-800 dark:bg-shapePrimary md:scale-110`}
         >
           <div className="flex flex-col gap-4">
             <div className="flex flex-row items-center gap-1 pt-3">
@@ -210,34 +213,31 @@ export default function Plans() {
                 FREE
               </h1>
 
-              <p className="space-y-4 font-inter text-sm font-bold leading-tight dark:text-zinc-400">
+              <p className="space-y-4 font-inter text-sm font-medium leading-tight text-zinc-900 dark:text-zinc-200">
                 100% Gratuito até o fim de 2025!!
               </p>
             </div>
           </div>
 
-          <div className="py-2 font-inter text-xl font-bold dark:text-zinc-300">
+          <div className="py-2 font-inter text-2xl font-bold dark:text-zinc-200">
             R$ 0,00/mês
           </div>
 
           <Link href="https://wa.me/5518996187681">
-            <button className="w-full rounded-full bg-zinc-950 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200">
-              Contratar agora!
-            </button>
+            <Button>Contratar agora!</Button>
           </Link>
 
           <div className="mt-4 h-[1px] w-full bg-gray-500" />
 
           <div className="flex flex-col gap-2 pt-4">
             <div className="flex flex-row gap-2 font-inter text-xs">
-              <span className="text-sm dark:text-zinc-300">
+              <span className="text-sm dark:text-zinc-200">
                 🎉 Boas notícias! Todas os recursos do TOOP estão 100% liberados
-                para você aproveitar ao máximo! 🚀💙
+                para você aproveitar ao máximo! 💙
               </span>
             </div>
           </div>
         </motion.div>
-
         <motion.div
           style={{ transitionDuration: '1.2s', transitionDelay: '0.4s' }}
           ref={ref}

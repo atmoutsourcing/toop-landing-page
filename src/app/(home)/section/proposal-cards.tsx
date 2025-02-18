@@ -80,7 +80,7 @@ export function ProposalCards() {
             </div>
           </div>
 
-          <div className="flex min-h-[450px] max-w-[380px] flex-1 flex-col gap-3 rounded-3xl border border-zinc-300 bg-zinc-100 p-4 px-5 transition ease-out hover:scale-110 dark:border-zinc-800 dark:bg-shapePrimary md:scale-105">
+          <div className="flex min-h-[450px] max-w-[390px] flex-1 flex-col gap-3 rounded-3xl border border-zinc-200 bg-zinc-50 p-4 px-5 shadow-lg transition ease-out hover:scale-110 dark:border-zinc-800 dark:bg-shapePrimary dark:shadow-zinc-900 md:scale-105">
             <div className="flex flex-col gap-4">
               <div className="flex flex-row items-center gap-1 pt-3">
                 <Image
@@ -99,33 +99,33 @@ export function ProposalCards() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-2xl font-bold leading-[22px] text-transparent">
+                <h1 className="items-center bg-gradient-to-b from-[#22D3EE] via-[#0EA5E9] to-[#3B82F6] bg-clip-text font-inter text-3xl font-bold leading-[22px] text-transparent">
                   FREE
                 </h1>
 
-                <p className="space-y-4 font-inter text-sm font-bold leading-tight dark:text-zinc-400">
+                <p className="space-y-4 font-inter text-sm font-bold leading-tight dark:text-zinc-200">
                   100% Gratuito até o fim de 2025!!
                 </p>
               </div>
             </div>
 
-            <div className="py-2 font-inter text-xl font-bold dark:text-zinc-300">
+            <div className="py-2 font-inter text-2xl font-bold dark:text-zinc-200">
               R$ 0,00/mês
             </div>
 
             <Link href="https://wa.me/5518996187681">
-              <button className="w-full rounded-full bg-zinc-950 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200">
+              <button className="w-full rounded-2xl bg-blue-800 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-blue-800/80">
                 Contratar agora!
               </button>
             </Link>
 
-            <div className="mt-4 h-[1px] w-full bg-gray-600" />
+            <div className="mt-4 h-[1px] w-full bg-zinc-400 dark:bg-zinc-600" />
 
             <div className="flex flex-col gap-2 pt-4">
               <div className="flex flex-row gap-2 font-inter text-xs">
-                <span className="text-sm dark:text-zinc-300">
+                <span className="text-sm dark:text-zinc-200">
                   🎉 Boas notícias! Todas os recursos do TOOP estão 100%
-                  liberadas para você aproveitar ao máximo! 🚀💙
+                  liberadas para você aproveitar ao máximo! 💙
                 </span>
               </div>
             </div>

@@ -81,7 +81,7 @@ export default function AboutUs() {
           <CarouselContent>
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
+                <h1 className="text-[40px] font-bold text-blue-600 dark:text-blue-500">
                   +72.544
                 </h1>
                 <p className="text-[16px]">Smarthphones gerenciados</p>
@@ -90,7 +90,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
+                <h1 className="text-[40px] font-bold text-blue-600 dark:text-blue-500">
                   +38.025
                 </h1>
                 <p className="text-[16px]">Manutenções feitas</p>
@@ -99,7 +99,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
+                <h1 className="text-[40px] font-bold text-blue-600 dark:text-blue-500">
                   +6.633
                 </h1>
                 <p className="text-[16px]">Logísticas reversas</p>
@@ -108,7 +108,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
+                <h1 className="text-[40px] font-bold text-blue-600 dark:text-blue-500">
                   +1.977
                 </h1>
                 <p className="text-[16px]">Reposições por roubo</p>
@@ -117,7 +117,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
+                <h1 className="text-[40px] font-bold text-blue-600 dark:text-blue-500">
                   +28.070
                 </h1>
                 <p className="text-[16px]">Pedidos enviados</p>
@@ -126,7 +126,7 @@ export default function AboutUs() {
 
             <CarouselItem className="pt-10 md:basis-1/2 lg:basis-1/4">
               <div className="flex h-[122px] w-[248px] flex-col items-center justify-center">
-                <h1 className="text-[40px] font-bold text-sky-500 dark:text-sky-400">
+                <h1 className="text-[40px] font-bold text-blue-600 dark:text-blue-500">
                   +9.463
                 </h1>
                 <p className="text-[16px]">Telas substituídas</p>
@@ -186,8 +186,7 @@ export default function AboutUs() {
 
           <div className="flex flex-col justify-center text-sm font-bold dark:text-zinc-300">
             <h1 className="pb-4 pl-10 text-left text-2xl">
-              A{' '}
-              <span className="text-sky-500 dark:text-sky-400">
+              <span className="text-blue-600 dark:text-blue-500">
                 ATM Outsourcing
               </span>
             </h1>
@@ -205,7 +204,7 @@ export default function AboutUs() {
           <div className="flex flex-col justify-center pr-10 text-sm font-bold dark:text-zinc-300">
             <h1 className="pb-4 text-right text-2xl">
               Somos a{' '}
-              <span className="text-sky-500 dark:text-sky-400">
+              <span className="text-blue-600 dark:text-blue-500">
                 ATM Outsourcing
               </span>
             </h1>
@@ -250,8 +249,7 @@ export default function AboutUs() {
 
           <div className="flex flex-col justify-center text-sm dark:text-zinc-300">
             <h1 className="pb-2 pt-10 text-center text-xl font-bold">
-              A{' '}
-              <span className="text-sky-500 dark:text-sky-400">
+              <span className="text-blue-600 dark:text-blue-500">
                 ATM Outsourcing
               </span>
             </h1>
@@ -273,12 +271,12 @@ export default function AboutUs() {
             alt="imagem atm"
             className="w-[350px] rounded-3xl"
           />
-          <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl text-sky-500 dark:text-sky-400 md:flex" />
+          <div className="absolute inset-0 left-[38%] top-[310%] -z-10 hidden h-[200px] w-[250px] rounded-xl text-blue-600 dark:text-blue-500 md:flex" />
 
           <div className="flex flex-col justify-center text-sm font-normal dark:text-zinc-300">
             <h1 className="pb-2 pt-10 text-center text-xl font-bold">
               Somos a{' '}
-              <span className="text-sky-500 dark:text-sky-400">
+              <span className="text-blue-600 dark:text-blue-500">
                 ATM Outsourcing
               </span>
             </h1>

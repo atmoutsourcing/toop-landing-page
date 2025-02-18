@@ -19,7 +19,7 @@ export function Ai() {
             initial={{ opacity: 0, x: -100 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="font-plusJakartaSans text-xl font-bold text-sky-500 dark:text-sky-400 md:text-4xl"
+            className="font-plusJakartaSans text-xl font-bold text-blue-600 dark:text-blue-500 md:text-4xl"
           >
             <h1>Gestão EMM com Integração Inteligente de IA</h1>
           </motion.div>
