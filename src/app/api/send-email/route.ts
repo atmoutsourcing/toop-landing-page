@@ -9,31 +9,28 @@ export async function POST(req: NextRequest) {
   const { name, email, phone, message, business } = await req.json()
 
   if (!name || !email || !phone || !message) {
-    return NextResponse.json({ message: 'Missing required fields' })
+    return NextResponse.json(
+      { error: 'Missing required fields' },
+      { status: 400 },
+    )
   }
 
   try {
-    try {
-      const data = await resend.emails.send({
-        from: `${name} <${process.env.EMAIL_FROM_EMAIL}>`,
-        to: [`${process.env.EMAIL_TO_EMAIL}`],
-        subject: `TOOP: Email enviado por ${name}`,
-        react: SendEmail({
-          name: `${name}`,
-          email: `${email}`,
-          phone: `${phone}`,
-          message: `${message}`,
-          business: `${business}`,
-        }),
-      })
+    const data = await resend.emails.send({
+      from: `${name} <${process.env.EMAIL_FROM_EMAIL}>`,
+      to: [`${process.env.EMAIL_TO_EMAIL}`],
+      subject: `TOOP: Email enviado por ${name}`,
+      react: SendEmail({
+        name: `${name}`,
+        email: `${email}`,
+        phone: `${phone}`,
+        message: `${message}`,
+        business: `${business}`,
+      }),
+    })
 
-      return NextResponse.json({ data })
-    } catch (error) {
-      return NextResponse.json({ error })
-    }
+    return NextResponse.json({ data }, { status: 200 })
   } catch (error) {
-    NextResponse.json({ error })
+    return NextResponse.json({ error }, { status: 4000 })
   }
-
-  return NextResponse.json({ message: 'krl' })
 }

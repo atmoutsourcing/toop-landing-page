@@ -4,6 +4,9 @@ import { EnvelopeSimple, MapPin, Phone } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import VMasker from 'vanilla-masker'
+import { useEffect } from 'react'
+import { toast } from 'sonner'
 
 const formEmailSchema = z.object({
   business: z.string().optional(),
@@ -15,16 +18,28 @@ const formEmailSchema = z.object({
   phone: z
     .string()
     .min(1, 'Campo obrigatório')
-    .regex(/^\d{11}$/, 'Formato inválido'),
+    .regex(/^\(\d{2}\) \d{5}-\d{4}$/, 'Formato inválido'),
   message: z.string().min(1, 'Campo obrigatório'),
 })
 
 type FormEmailSchema = z.infer<typeof formEmailSchema>
 
 export default function Contacts() {
-  const { register, handleSubmit, formState } = useForm<FormEmailSchema>({
+  const {
+    register,
+    handleSubmit,
+    formState: { isSubmitting, errors },
+    reset,
+  } = useForm<FormEmailSchema>({
     resolver: zodResolver(formEmailSchema),
   })
+
+  useEffect(() => {
+    const phoneInput = document.querySelector('input[name="phone"]')
+    if (phoneInput) {
+      VMasker(phoneInput).maskPattern('(99) 99999-9999')
+    }
+  }, [])
 
   async function handleSendEmail(data: FormEmailSchema) {
     const response = await fetch('/api/send-email', {
@@ -34,17 +49,32 @@ export default function Contacts() {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        name: data.name,
         business: data.business,
+        name: data.name,
         email: data.email,
-        message: data.message,
         phone: data.phone,
+        message: data.message,
       }),
     })
+
     if (response.ok) {
       const data = await response.json()
+
+      toast.success('Mensagem enviada com sucesso!', {
+        description:
+          'nossa equipe recebeu sua mensagem irá respondê-la em breve',
+        duration: 3000,
+      })
+
+      reset()
       return Response.json(data)
+    } else {
+      toast.error('Erro ao enviar mensagem, tente novamente!', {
+        duration: 3000,
+      })
     }
+
+    reset()
   }
 
   return (
@@ -58,9 +88,8 @@ export default function Contacts() {
 
         <div className="flex flex-col gap-4">
           <p className="text-md font-medium">
-            No Grupo ATM, o TOOP facilita sua integração de forma rápida e
-            eficiente. Precisa de suporte? Nossa equipe está pronta para ajudar.
-            Entre em contato!
+            O TOOP facilita sua integração de forma rápida e eficiente. Precisa
+            de suporte? Nossa equipe está pronta para ajudar. Entre em contato!
           </p>
           <div className="flex flex-col gap-2">
             <div className="flex flex-row items-center gap-2">
@@ -90,7 +119,7 @@ export default function Contacts() {
 
       <div className="relative flex items-center">
         <div className="flex items-center justify-center">
-          <div className="h-auto w-auto flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[470px] md:w-[550px]">
+          <div className="h-auto w-auto flex-col rounded-2xl border bg-zinc-50 p-8 shadow-lg dark:bg-shapePrimary md:h-[490px] md:w-[570px]">
             <h1 className="flex justify-center text-2xl font-bold">
               Envie sua mensagem
             </h1>
@@ -104,11 +133,11 @@ export default function Contacts() {
                   <input
                     placeholder="Nome"
                     {...register('name')}
-                    className={`h-10 w-full rounded-xl border-[2px] ${formState.errors.name ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                    className={`h-10 w-full rounded-xl border-[2px] ${errors.name ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                   />
-                  {formState.errors.name && (
+                  {errors.name && (
                     <div className="absolute pl-2 text-sm font-bold text-red-500">
-                      {formState.errors.name.message}
+                      {errors.name.message}
                     </div>
                   )}
                 </div>
@@ -117,11 +146,11 @@ export default function Contacts() {
                   <input
                     placeholder="E-mail"
                     {...register('email')}
-                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.email ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                    className={`h-10 w-full rounded-xl border-2 ${errors.email ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                   />
-                  {formState.errors.email && (
+                  {errors.email && (
                     <div className="absolute pl-2 text-sm font-bold text-red-500">
-                      {formState?.errors?.email?.message}
+                      {errors?.email?.message}
                     </div>
                   )}
                 </div>
@@ -132,11 +161,11 @@ export default function Contacts() {
                   <input
                     placeholder="WhatsApp"
                     {...register('phone')}
-                    className={`h-10 w-full rounded-xl border-2 ${formState.errors.phone ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                    className={`h-10 w-full rounded-xl border-2 ${errors.phone ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                   />
-                  {formState.errors.phone && (
+                  {errors.phone && (
                     <div className="absolute pl-2 text-sm font-bold text-red-500">
-                      {formState.errors.phone.message}
+                      {errors.phone.message}
                     </div>
                   )}
                 </div>
@@ -146,7 +175,7 @@ export default function Contacts() {
                     type="text"
                     placeholder="Empresa"
                     {...register('business')}
-                    className="h-10 w-full rounded-xl border border-zinc-200 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
+                    className="h-10 w-full rounded-xl border border-zinc-300 p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 placeholder:dark:text-zinc-400"
                   />
                 </div>
               </div>
@@ -155,18 +184,19 @@ export default function Contacts() {
                 <textarea
                   placeholder="Mensagem"
                   {...register('message')}
-                  className={`h-40 w-full resize-none rounded-xl border-2 ${formState.errors.message ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
+                  className={`h-40 w-full resize-none rounded-xl border-2 ${errors.message ? 'border-red-500 bg-red-100 dark:border-red-500 dark:bg-red-950' : 'border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900'} p-4 text-sm font-medium text-zinc-800 outline-none placeholder:font-bold dark:text-zinc-100 placeholder:dark:text-zinc-400`}
                 />
-                {formState.errors.message && (
+                {errors.message && (
                   <div className="absolute pl-2 text-sm font-bold text-red-500">
-                    {formState.errors.message.message}
+                    {errors.message.message}
                   </div>
                 )}
               </div>
 
               <button
                 type="submit"
-                className="bg-b-zinc-400 mt-2 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
+                className="bg-b-zinc-400 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
+                disabled={isSubmitting}
               >
                 Enviar
               </button>
