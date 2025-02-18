@@ -194,15 +194,7 @@ export default function Contacts() {
                 )}
               </div>
 
-              <Button>Enviar</Button>
-
-              {/* <button
-                type="submit"
-                className="bg-b-zinc-400 h-10 w-full rounded-xl bg-zinc-950 text-sm font-bold text-zinc-50 shadow-md transition hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
-                disabled={isSubmitting}
-              >
-                Enviar
-              </button> */}
+              <Button disabled={isSubmitting}>Enviar</Button>
             </form>
           </div>
         </div>
