@@ -10,17 +10,15 @@ export function Accessibility() {
   })
 
   return (
-    <div className="mx-20 flex flex-col items-center justify-between gap-28 pb-[10%] md:flex-row">
+    <div className="mx-10 flex flex-col items-center justify-between pb-[150px] md:mx-20 md:flex-row md:gap-28 md:pb-[10%]">
       <motion.div
         ref={ref}
-        className="flex max-w-[50%] flex-col items-center justify-center gap-8"
+        className="flex flex-col items-center justify-center gap-6 md:max-w-[50%] md:gap-8"
         initial={{ opacity: 0 }}
         animate={
           inView
             ? {
                 opacity: 1,
-
-                transform: 'translateX(0px)',
               }
             : {}
         }
@@ -29,7 +27,7 @@ export function Accessibility() {
         <h1 className="font-plusJakartaSans text-xl font-bold text-blue-600 dark:text-blue-500 md:text-4xl">
           Toop acessível para todos
         </h1>
-        <div className="flex flex-col gap-3 text-left font-normal leading-5">
+        <div className="flex flex-col gap-3 text-center font-normal leading-5 md:text-left">
           <p>
             O TOOP foi desenvolvido com um forte compromisso com a
             acessibilidade, garantindo que pessoas com deficiência visual possam
@@ -49,7 +47,7 @@ export function Accessibility() {
       </motion.div>
       <motion.div
         ref={ref}
-        className={`mt-4 flex max-w-[50%] duration-500 md:mx-4`}
+        className={`mt-4 flex max-w-[80%] duration-500 md:mx-4 md:max-w-[50%]`}
         initial={{ opacity: 0 }}
         animate={
           inView
