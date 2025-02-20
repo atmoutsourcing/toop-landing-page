@@ -13,6 +13,7 @@ import { Summary } from './section/summary'
 import { Benefits } from './section/benefits'
 import { ProposalCards } from './section/proposal-cards'
 import { Questions } from './section/questions'
+import { Accessibility } from './section/accessibility'
 
 export default function Home() {
   return (
@@ -66,6 +67,8 @@ export default function Home() {
       <Benefits />
 
       <Ai />
+
+      <Accessibility />
 
       <ProposalCards />
 
