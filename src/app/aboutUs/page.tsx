@@ -31,7 +31,7 @@ export default function AboutUs() {
 
   return (
     <div className="mx-auto flex max-w-[1440px] flex-col overflow-hidden font-inter">
-      <div className="group mb-80 mt-52 flex cursor-pointer flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
+      <div className="group mb-80 mt-52 flex flex-col items-center justify-center overflow-hidden group-hover:duration-1000 md:px-56">
         <div className="flex flex-col items-center gap-3">
           <Image
             src={iconeWhite}
