@@ -26,7 +26,7 @@ export function Header() {
       <div className={'w-screen font-inter'}>
         <header className="mx-auto flex max-w-[1440px] p-6">
           <div className="flex-1">
-            <Link href="/" className="cur sor-pointer">
+            <Link href="/" className="cursor-pointer">
               <Image
                 src={logoDark}
                 alt="Logo"

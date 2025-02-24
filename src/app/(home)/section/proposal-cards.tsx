@@ -114,9 +114,7 @@ export function ProposalCards() {
             </div>
 
             <Link href="https://wa.me/5518996187681">
-              <button className="w-full rounded-2xl bg-blue-800 px-6 py-3 text-[14px] font-bold text-zinc-50 duration-500 hover:bg-blue-800/80">
-                Contratar agora!
-              </button>
+              <Button>Contratar agora!</Button>
             </Link>
 
             <div className="mt-4 h-[1px] w-full bg-zinc-400 dark:bg-zinc-600" />
