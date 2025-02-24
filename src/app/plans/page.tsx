@@ -105,7 +105,7 @@ export default function Plans() {
               <span className="text-yellow-500 dark:text-yellow-400">
                 Grátis
               </span>{' '}
-              durante 2025 Aproveite e contrate agora!
+              durante 2025 aproveite e contrate agora!
             </div>
           </div>
         </div>

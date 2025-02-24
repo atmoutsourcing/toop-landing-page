@@ -11,19 +11,19 @@ import { Button } from '../button'
 import { AlignJustify } from 'lucide-react'
 
 export function HeaderScroll() {
-  const [scrollPosition, setScrollPosition] = useState(0)
   const [isOpen, setIsOpen] = useState(false)
 
   const pathname = usePathname()
-  const [windowHeightPosition, setWindowHeightPosition] = useState(0)
+
+  const [isSticky, setIsSticky] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      const position = window.scrollY
-      const windowHeight = window.innerHeight
-
-      setScrollPosition(position)
-      setWindowHeightPosition(windowHeight)
+      if (window.scrollY < window.innerHeight) {
+        setIsSticky(false)
+      } else {
+        setIsSticky(true)
+      }
     }
 
     handleScroll()
@@ -35,7 +35,7 @@ export function HeaderScroll() {
   return (
     <div
       style={{ zIndex: '10' }}
-      className={`absolute w-screen transform overflow-hidden bg-zinc-50 font-inter shadow-sm shadow-zinc-200 transition-all duration-200 dark:bg-zinc-950 dark:shadow-zinc-800 md:fixed ${scrollPosition > windowHeightPosition ? 'h-[70px] opacity-100' : 'fixed h-0 opacity-0'}`}
+      className={`absolute w-screen transform overflow-hidden bg-zinc-50 font-inter shadow-sm shadow-zinc-200 transition-all duration-200 dark:bg-zinc-950 dark:shadow-zinc-800 md:fixed ${isSticky ? 'h-[70px] opacity-100' : 'fixed h-0 opacity-0'}`}
     >
       <header className={`mx-auto flex max-w-[1440px] px-6 py-3`}>
         <div className="flex-1">
